@@ -4,22 +4,52 @@
 	padding: 0;
 }
 
+
 .hero
 {
 	height: 100vh;
 	width: 100%;
-	background-image: url("../img/sky2.jpg");
+	background-image: url("img/sky2.jpg");
 	background-position: center;
     background-size: cover;
     position: relative;
     overflow-x: hidden;
 }
 
+
+
+@media screen and (max-width: 750px) {
+
+
+	div.login-form h1{
+ 		font-size: 30px;
+		}
+
+	div.login-form{
+		width: 200px;
+		margin-top: 40px;
+	}
+
+	div.home{
+    	width: 45px;
+    	height: 45px;
+    	right: 20px;
+  	}
+
+}
+
+
+@media screen and (max-width: 1500px) {
+	div.car-animation{
+		position: fixed;
+	}
+}
+
 .highway{
 	height: 200px;
 	width: 1200%;
 	display: block;
-	background-image: url("../img/road2.png"); 
+	background-image: url("img/road2.png"); 
 	position: absolute;
 	bottom: 0;
 	left: 0;
@@ -39,7 +69,7 @@
 .city{
 	height: 400px;
 	width: 500%;
-	background-image: url("../img/city.png");
+	background-image: url("img/city.png");
 	position: absolute;
 	bottom: 150px;
 	left: 0;
@@ -57,12 +87,18 @@
 }
 
 
+.car-animation{
+	display: flex;
+	justify-content: space-around;
+	align-content:  flex-start;
+}
+
 .car{
 	width: 300px;
 	left: 40%;
 	bottom: 100px;
 	transform: translateX(-50%);
-	position: absolute;
+	position: fixed;
 	z-index: 2;
 }
 
@@ -87,9 +123,9 @@
 
 .wheel{
 	left: 50%;
-	bottom: 233px;
+	bottom: 20%;
 	transform: translateX(-50%);
-	position: absolute;
+	position: fixed;
 	z-index: 2;
 }
 
@@ -100,13 +136,13 @@
 }
 
 .back-wheel{
-	left: -190px;
-	position: absolute;
+	left: -220%;
+	position: fixed;
 }
 
 .front-wheel{
-	left: 113px;
-	position: absolute;
+	left:200%;
+	position: relative;
 }
 
 
@@ -158,7 +194,7 @@
 .login-btn{
 	margin-top: 60px;
 	margin-bottom: 20px;
-	background-image: url("../img/cloud.jpg");
+	background-image: url("img/cloud.jpg");
 	height: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -187,13 +223,14 @@
 }
 
 .home{
-	background: url("../img/home.png") no-repeat;
-    width: 50px;
-    height: 50px;
+	background: url("img/home.png") no-repeat;
+    width: 60px;
+    height: 60px;
     background-position: center;
     background-size: cover;
     top: 20px;
     right: 20px;
     position: fixed;
     border-radius: 50%;
+    z-index: 2;
 }

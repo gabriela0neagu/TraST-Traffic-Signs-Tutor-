@@ -1,16 +1,55 @@
+html { 
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: flex-start;
+}
+
+@media screen and (min-width: 601px) {
+  div.title {
+    font-size: 120px;
+  }
+
+  div.menu{
+      bottom: 80px;
+  }
+  
+}
+
+@media screen and (max-width: 600px) {
+  div.title {
+    font-size: 70px;
+  }
+
+  div.signUp{
+    width: 45px;
+    height: 45px;
+  }
+
+  div.profile{
+    width: 45px;
+    height: 45px;
+    top: 100px;
+  }
+
+  div.menu{
+      bottom: 30px;
+  }
+}
 
 body {
-  background-image: url("../img/way.jpg");
-  height: 100%;
-  background-position: right top;
-  background-repeat: no-repeat;
+  background-image: url("img/way.jpg") ;
+  background-position: center center;
+  background-attachment: fixed;
   background-size: cover;
+  background-color: #464646;
+  overflow: hidden;
  }
 
 
 .title {
   display: flex;
-  align-items: center;
   justify-content: center;
   background: 50% 100% / 50% 50% no-repeat
               radial-gradient(ellipse at bottom, #cc7a00, transparent, transparent);
@@ -18,8 +57,8 @@ body {
   /*defines how far the background (color or image) should extend within an element*/
   background-clip: text;
   color: transparent;
-  font-size: 120px;
   font-family: "Source Sans", sans-serif;
+  
   animation: reveal 3000ms ease-in-out forwards 200ms,
              glow 2500ms linear infinite 2000ms;
 }  
@@ -39,9 +78,10 @@ body {
   }
 
 
-.wrap{
+.menu{
+  display: flex;
   position: relative;
-  bottom: 120px;
+  bottom: 100px;
   width: 80vmin; 
   height: 80vmin;
   margin: 0 auto;
@@ -80,7 +120,7 @@ a:nth-child(1){
   transition: transform 0.4s 0.15s;
 }
 a:nth-child(1) div{
-  background-image: url("../img/img1.jpg");
+  background-image: url("img/img1.jpg");
   height: 100%;
   background-position: left;
   background-size: cover;
@@ -99,7 +139,7 @@ a:nth-child(2){
   
 }
 a:nth-child(2) div{
-  background-image:url("../img/capture.jpg");
+  background-image:url("img/capture.jpg");
   height: 100%;
   background-size: cover;
   background-position: top;
@@ -113,7 +153,7 @@ a:nth-child(3){
   transition:transform 0.4s 0.25s;
 }
 a:nth-child(3) div{
-  background-image:url("../img/img3.jpg");
+  background-image:url("img/img3.jpg");
   height: 100%;
   background-size: cover;
   background-position: center;
@@ -127,7 +167,7 @@ a:nth-child(4){
   transition:transform .4s .3s;
 }
 a:nth-child(4) div{
-  background-image:url("../img/img4.jpg");
+  background-image:url("img/img4.jpg");
   height: 100%;
   background-size: cover;
   background-position: center;
@@ -144,7 +184,7 @@ a:nth-child(5){
   transform:scale(1);
 }
 a:nth-child(5) div{
-  background-image:url("../img/im.jpg");
+  background-image:url("img/im.jpg");
   height: 100%;
   background-size: cover;
   background-position: center;
@@ -187,11 +227,11 @@ span span:after, span span:before{
 span span:after{
   top: 1.5vmin;
 }
-span:hover + .wrap, .wrap:hover{
+span:hover + .menu, .menu:hover{
   transform: scale(0.8) translateZ(0px);
   opacity: 1;
 }
-span:hover + .wrap a, .wrap:hover a{
+span:hover + .menu a, .menu:hover a{
   transform: scale(1) translateZ(0px);
 }
 
@@ -202,26 +242,29 @@ a:hover div{
 
 
 .signUp {
-    background: url("../img/add.png") no-repeat;
-    width: 50px;
-    height: 50px;
+    display: flex;
+    background: url("img/add.png") no-repeat;
+    width: 60px;
+    height: 60px;
     background-position: center;
     background-size: cover;
     top: 40px;
     right: 30px;
-    position: fixed;
+    position: absolute;
     border-radius: 50%;
   }
 
 
  .profile {
-    background: url("../img/profile.png") no-repeat;
-    width: 50px;
-    height: 50px;
+    display: flex;
+
+    background: url("img/profile.png") no-repeat;
+    width: 60px;
+    height: 60px;
     background-position: center;
     background-size: cover;
-    top: 40px;
-    right: 90px;
-    position: fixed;
+    top: 130px;
+    right: 30px;
+    position: absolute;
     border-radius: 50%;
   }
