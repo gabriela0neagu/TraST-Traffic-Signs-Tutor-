@@ -25,12 +25,20 @@ html {
   div.signUp{
     width: 45px;
     height: 45px;
+    top: 80px;
   }
 
   div.profile{
     width: 45px;
     height: 45px;
-    top: 100px;
+    top: 130px;
+  }
+
+
+  div.logOut{
+    width: 45px;
+    height: 45px;
+    top: 180px;
   }
 
   div.menu{
@@ -57,7 +65,7 @@ body {
   /*defines how far the background (color or image) should extend within an element*/
   background-clip: text;
   color: transparent;
-  font-family: "Source Sans", sans-serif;
+  font-family: 'Faster One', cursive;
   
   animation: reveal 3000ms ease-in-out forwards 200ms,
              glow 2500ms linear infinite 2000ms;
@@ -184,10 +192,9 @@ a:nth-child(5){
   transform:scale(1);
 }
 a:nth-child(5) div{
-  background-image:url("img/im.jpg");
+  background-image:url("img/leaderboard.png");
   height: 100%;
-  background-size: cover;
-  background-position: center;
+  background-position: center bottom;
   background-repeat: no-repeat;
 }
 
@@ -263,8 +270,23 @@ a:hover div{
     height: 60px;
     background-position: center;
     background-size: cover;
-    top: 130px;
+    top: 110px;
     right: 30px;
     position: absolute;
     border-radius: 50%;
   }
+
+ .logOut {
+    display: flex;
+
+    background: url("img/logout.png") no-repeat;
+    width: 60px;
+    height: 60px;
+    background-position: center;
+    background-size: cover;
+    top: 180px;
+    right: 30px;
+    position: absolute;
+    border-radius: 50%;
+  }
+

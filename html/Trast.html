@@ -4,6 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Faster+One&display=swap" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="Trast.css">
 <meta name="theme-color" content="#333641">
 <title>TraST</title>
@@ -13,15 +14,23 @@
 <div class ="title">  TraST </div>
  <span><span></span></span>
   <div class="menu">
+  <!-- legislatie -->
   <a href="#"><div></div></a>
+  <!-- categorii -->
   <a href="#"><div></div></a>
+  <!-- semne rutiere -->
   <a href="#"><div></div></a>
-  <a href="#"><div></div></a>
+  <!-- chestionare -->
+  <a href="Quizez.html"><div></div></a>
+  <!-- leaderboard -->
   <a href="#"><div></div></a>
 </div>
 
-<div class="signUp" onclick="window.location.href = 'SignUpPage.html';"> </div>
-<div class="profile" onclick="window.location.href = 'ProfilePage.html';"> </div>
+<div class="<?php session_start(); if(!isset($_SESSION['ID']) || empty($_SESSION['ID'])) echo 'signUp';?>" onclick="window.location.href = 'SignUpPage.html';"> </div>
+<div class="<?php session_start(); if(isset($_SESSION['ID'])) echo 'profile';?>" onclick="window.location.href = 'Profile.html';"></div>
+
+<div class="<?php if(isset($_SESSION['ID'])) echo 'logOut';?>" onclick="window.location.href = 'logout.php';"></div>
+
 </body>
 
 

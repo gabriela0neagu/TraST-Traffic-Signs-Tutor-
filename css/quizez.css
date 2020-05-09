@@ -1,0 +1,94 @@
+body {
+ 
+ }
+
+.organizer{
+  width: 90%;
+  padding-left: 14%;
+  display: block;
+  margin: 0 auto;
+}
+
+.category{
+    max-width: 80%; 
+    align-self: center;
+	border-style: groove;
+	width: 100%;
+	background-color: rgb(32,32,32,0.2);
+	font-family: "Permanent Marker", cursive;
+	font-size: 20px;
+	padding-top: 2%;
+	padding-bottom: 2%;
+	text-align: center;
+	color: white;	
+}
+
+
+
+.survey{
+    border-style: inset;
+	border-color: white;
+	border-width: 1.5px;
+	box-shadow: 0 0  5px 0.5px black;
+	margin-left: 2%;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	font-family: "Permanent", cursive;
+	color: white;
+	font-size: 20px;
+	width: 30%;
+}
+
+.survey-head{
+	text-align: center;
+	border-bottom: solid;
+	border-width: 1px;
+	border-color: white;
+	padding-bottom: 5%;
+	padding-top: 5%;
+	padding-right: 5%;
+	padding-left: 5%;
+	background-color: rgb(32,32,32,0.2);
+	font-size: 17px;
+	font-weight: bold;
+	color: purple;
+}
+
+.survey-body{
+   padding-top: 20%;
+   padding-bottom: 20%;
+   background-image: url("img/survey.jpg");
+   background-position: center;
+   text-align: center;
+   color: #43233c;
+   text-shadow: 2px 2px white;
+}
+
+.survey-open{
+	position: relative;
+	border-color: purple;
+	border-radius: 10px;
+	font-family: "Permanent", cursive;
+	color: white;
+    background-image: url("img/survey.jpg");
+    background-position: center;
+    width: 70%;
+    font-size: 100%;
+    box-shadow: 0 0  10px 2px;
+}
+
+
+.surveys-box{
+    max-width: 80%; 
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+	flex-flow: row;
+	flex-wrap: wrap;
+	align-items: center;
+	height: auto;
+	font-family: "Permanent", cursive;
+	color: white;
+	font-size: 20px;
+	border-color: black;
+}

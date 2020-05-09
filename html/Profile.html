@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="Profile.css">
+	<script defer src="profile.js"></script>
 	<meta name="theme-color" content="#333641">
 	<title>Profile</title>
 </head>
@@ -16,137 +17,46 @@
 			<img src="img/user2.png"> 
 		 </div>
 		<div class="profile-bar"> 
-			<div class="bar-field"> Username </div>
-			<div class="bar-field"> Prenume</div>
-			<div class="bar-field"> Nume </div>
-			<div class="bar-field"> Email </div>
+			<div class="bar-field"> <?php session_start(); echo $_SESSION['Username'];?> </div>
+			<div class="bar-field">  <?php echo $_SESSION['FirstName'];?></div>
+			<div class="bar-field">  <?php echo $_SESSION['LastName'];?> </div>
+			<div class="bar-field">  <?php echo $_SESSION['Email'];?> </div>
+			<div class = "bar-field"> <?php echo $_SESSION['Score'];?> </div>
 		</div>
 	</div>
 
 	<div class="text-side"> 
 
 	    <div class="title">  Bine ai venit în cont! </div>
-	    <br></br> <br/></br>
+	   
 	    <div class= "text">
-		   <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<b> <i> Pentru a învăța eficient îți recomandăm să urmezi în totalitate cei 4 pași de învățare: </b></i> </br>
-		   <br> &nbsp; &nbsp; 📚 Pasul 1: CURSUL DE LEGISLAȚIE ➫ Aici găsești toată legislația și teoria structurată pe cinci cursuri. </br>
-		   <br> &nbsp; &nbsp; 🛑 Pasul 2: INDICATOARE ȘI MARCAJE ➫ Aici găsești toate indicatoarele și marcajele rutiere explicate pe înțelesul tuturor. </br>
-	       <br> &nbsp; &nbsp; 🎒 Pasul 3: MEDIU DE ÎNVĂȚARE ➫ Aici găsești toate întrebările de la examenul oficial DRPCIV, cu răspunsuri corecte, verificate de profesioniști. </br>
-	       <br> &nbsp; &nbsp; 📝 Pasul 4: Chestionare DRPCIV ➫ Aici găsești chestionare DRPCIV conținând toate întrebările oficiale de la poliție. Îți vei testa cunoștințele acumulate în primii trei pași de învățare.</br>
+		    Pentru a învăța eficient îți recomandăm să urmezi în totalitate cei 3 pași de învățare:<br/> 
+		    <br/>📚 Pasul 1: CURSUL DE LEGISLAȚIE ➫ Aici găsești toată legislația și teoria structurată pe cinci cursuri. <br/>
+		   <br/>🛑 Pasul 2: INDICATOARE ȘI MARCAJE ➫ Aici găsești toate indicatoarele și marcajele rutiere explicate pe înțelesul tuturor. <br/>
+	       <br/>📝 Pasul 3: Chestionare DRPCIV ➫ Aici găsești chestionare DRPCIV conținând toate întrebările oficiale de la poliție. Îți vei testa cunoștințele acumulate în primii doi pași de învățare.<br/>
+	       <br/>  Urmărește-ți constant progresul și lasă-te motivat de clasamentul nostru pentru a face parte la rândul tău dintre cei mai sârguincioși utilizatori. ✧*｡٩(ˊᗜˋ*)و✧*｡
+
 		</div>
 
 		<div class="activity">
 
-			    <div class="category green"> 📚 Pasul 1: CURSUL DE LEGISLAȚIE </div>
-				<div class="box">
+               <div class = "step-title"> 
+              		 <div class="subtitle green">📚 Pasul 1: CURSUL DE LEGISLAȚIE </div>
+               </div>
 
-					<div class="category"><b> &nbsp; Curs de mecanică auto </b> </div>
-					<div class="box">	
-					 	<div class="progress">
-					 		<div class="progress-value1"> 75% </div>
-					 	</div>
-					</div>
-					 
-					 <div class="category"><b> &nbsp; Curs de prim-ajutor </b> </div>
-					 <div class="box">	
-						 <div class="progress">
-						 	<div class="progress-value3 green2"> 40% </div>
-					     </div>
-					</div>
-				</div>
+			   <div id="signsCategory" class = "step-title"> 
+			   		<div class="subtitle blue">🛑 Pasul 2: INDICATOARE ȘI MARCAJE  </div> 
+			   </div>
 
-				
-			    <div class="category yellow"> 🛑 Pasul 2: INDICATOARE ȘI MARCAJE</div>
-				<div class="box">
+			   <div id="quizCategory" class = "step-title">
+			    	 <div class="subtitle yellow"> 📝 Pasul 3: Chestionare DRPCIV </div>
+			   </div>
+		</div>
 
-				   <div class="category"><b>&nbsp; Indicatoare de prioritate</b></div>
-				   <div class="box"> 	
-					 	<div class="progress">
-					 		<div class="progress-value2"> 20% </div>
-					 	</div>
-					</div>
-				</div>
+<div class="home" onclick="window.location.href = 'Trast.html';"> </div>
 
-			    <div class="category blue"> 🎒 Pasul 3: MEDIU DE ÎNVĂȚARE </div>
-				<div class="box"> 
-				
-				    <div class="category"><b> &nbsp; Categoria A(A1, A2, AM) </b> </div>
-					<div class="box"> 
-						<div class="progress">
-					 		<div class="progress-value3 blue2"> 40% </div>
-					 	</div>
-	                </div>
-			    </div>
+<div class="<?php session_start(); if(isset($_SESSION['ID'])) echo 'logOut';?>" onclick="window.location.href = 'logout.php';"></div>
 
-			<div class="category purple"> 📝 Pasul 4: Chestionare DRPCIV </div>
-				<div class="box">
-		    		
-		    		<div class="category"> <b>&nbsp; Categoria B(B,B1) </b> </div>
-				    <div class="box2">
-					       <div class="survey "> 
-								<div class="survey-head"> Chestionar predefinit 5</div>
-								<div class="survey-body hover-admis"> 
-	                       			<div class="survey-score"> 24/26 </div> ADMIS
-						 		</div>
-				        	</div>
-
-				         	<div class="survey"> 
-								<div class="survey-head"> Chestionar predefinit10</div>
-								<div class="survey-body hover-respins"> 
-	                       			<div class="survey-score"> 20/26 </div> RESPINS
-						 		</div>
-				            </div>
-
-					        <div class="survey"> 
-								<div class="survey-head"> Chestionar predefinit10</div>
-								<div class="survey-body hover-respins"> 
-		                       		<div class="survey-score"> 15/26 </div> RESPINS
-							 	</div>
-					        </div>
-
-					        <div class="survey"> 
-								<div class="survey-head"> Chestionar predefinit10</div>
-								<div class="survey-body hover-admis"> 
-		                       			<div class="survey-score"> 26/26 </div> ADMIS
-							 	</div>
-					        </div>
-
-					        <div class="survey"> 
-								<div class="survey-head"> Chestionar predefinit10</div>
-								<div class="survey-body hover-respins"> 
-		                       			<div class="survey-score"> 20/26 </div> RESPINS
-							 	</div>
-					        </div>
-
-				     </div>
-
-
-						
-					    <div class="category"> <b>&nbsp; Categoria C(C,C1) </b> </div>
-						<div class="box2"> 
-					        <div class="survey"> 
-								<div class="survey-head"> Chestionar predefinit10</div>
-								<div class="survey-body hover-respins"> 
-		                       		<div class="survey-score"> 20/26 </div> RESPINS
-							 	</div>
-					        </div>
-
-					        <div class="survey"> 
-								<div class="survey-head"> Chestionar predefinit18</div>
-								<div class="survey-body hover-respins"> 
-		                       		<div class="survey-score"> 11/26 </div> RESPINS
-							 	</div>
-					        </div>
-					     </div>
-				</div>
-			</div>
-
-		 </div>
-
-	<br/>  <br/>  <br/>  <br/>	
-</div>
 </body>
-
-
 
 </html>

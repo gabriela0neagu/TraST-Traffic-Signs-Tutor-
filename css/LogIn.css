@@ -9,7 +9,7 @@
 {
 	height: 100vh;
 	width: 100%;
-	background-image: url("img/sky2.jpg");
+	background-image: url("img/sky3.jpg");
 	background-position: center;
     background-size: cover;
     position: relative;
@@ -21,7 +21,7 @@
 @media screen and (max-width: 750px) {
 
 
-	div.login-form h1{
+	div.title{
  		font-size: 30px;
 		}
 
@@ -46,8 +46,9 @@
 }
 
 .highway{
+	background-position: center center;
 	height: 200px;
-	width: 1200%;
+	width: 5000%;
 	display: block;
 	background-image: url("img/road2.png"); 
 	position: absolute;
@@ -56,12 +57,12 @@
 	right: 0;
 	z-index: 1;
 	background-repeat: repeat-x;
-	animation: highway 5s linear infinite;
+	animation: highway 2s linear infinite;
 }
 
 @keyframes highway{
 	100%{
-		transform: translateX(-3400px);
+		transform: translateX(-800px);
 	}
 }
 
@@ -167,11 +168,11 @@
 }
 
 
-.login-form h1{
+.title{
 	margin-top: 100px;
-	font-family:"Source Sans", sans-serif;
-	color: #000;
-	font-size: 40px;
+	font-family: 'Fredericka the Great', cursive;
+	color: #fff;
+	font-size: 50px;
 }
 
 .login-form input{
@@ -194,7 +195,7 @@
 .login-btn{
 	margin-top: 60px;
 	margin-bottom: 20px;
-	background-image: url("img/cloud.jpg");
+	background-image: url("img/org2.jpg");
 	height: 100%;
     background-position: center;
     background-repeat: no-repeat;

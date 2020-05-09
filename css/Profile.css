@@ -7,6 +7,7 @@ body {
   background-color: #464646;
   display: flex;
   margin-right: 4%;
+  margin-bottom: 20%;
  }
 
  .profile-info{
@@ -44,6 +45,7 @@ body {
 	padding-bottom: 4px;
 	text-align: center;
 	color: white;	
+	word-wrap: break-word;
 }
 
 .text-side{
@@ -56,6 +58,7 @@ body {
 
 .title{
 	margin-top: 2%;
+	margin-bottom: 8%;
 	font-family:'Fredericka the Great', cursive;
 	font-size: 50px;
 	color: white;
@@ -64,11 +67,10 @@ body {
 
 
 .text {
-	position: static;
+	position: center;
 	text-align: justify-all;
-	padding-left: 2%;
-	padding-right: 2%;
-	padding-bottom: 2%;
+	margin: auto;
+	padding: 2% 5% 5% 5%;
 	background-color: rgb(32,32,32,0.2);
 	font-family: "Permanent Marker", cursive;
 	font-size: 20px;
@@ -78,147 +80,60 @@ body {
 .activity {
         display: block;
         padding-bottom: : 5%;
+        margin-top: 5%;
 }
 
 
-.category{
-    margin-top: 4%; 
-	border-style: groove;
-	width: 100%;
-	background-color: rgb(32,32,32,0.2);
-	font-family: "Permanent Marker", cursive;
-	font-size: 20px;
-	padding-top: 2%;
-	padding-bottom: 2%;
+.step-title {
+	 text-align: center;
+	 color: white;
+	 padding-top: 1%;
+	 padding-bottom: 1%;
+	 margin-top: 2%;
+	 font-family: "Permanent Marker", cursive;
+	 font-size: 150%;
+	 border-style: inset;
+	 border-color: white;
+	 background-color: rgb(32,32,32,0.2);
+}
+
+
+.category-title {
 	text-align: center;
-	color: white;	
-}
-
-.yellow{
-	background-color: rgb(255, 255, 26, 0.4);
-}
-
-.blue{
-	background-color: rgb(0, 230, 230, 0.4);
-}
-
-.green{
-	background-color: rgb(92, 214, 92, 0.4);
-}
-
-.green2{
-	background-color: rgb(92, 214, 92, 0.8);
-}
-
-.purple{
-	background-color: rgb(198, 83, 198, 0.4);
-}
-
-.blue2{
-	background-color: rgb(0, 230, 230, 0.8);	
-}
-
-.box{
-	border-style: groove;
-	border-color: white;
-	border-width: 2px;
-	width: 100%;
-	left: 2%;
-	height: auto;
-	font-family: "Permanent", cursive;
-	color: white;
-	font-size: 20px;
-}
-
-.progress{
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
-	position: relative;
-	margin-top: 5%;
-	margin-bottom: 5%;
-	margin-left: 2%;
-	width: 90%;
-	height: auto;
-	border-radius: 100px;
-    background: rgb(56, 56, 56, 0.5);
-}
-
-.progress-value1{
-    animation: load 3s normal forwards;
-	box-shadow: 0 10px 40px -10px #fff;
-	background-color: rgb(92, 214, 92, 0.8);
-	width: 0;
-	height: 5%;
-	border-radius: 100px;
-	text-align: center;
-	font-family: "Permanent", cursive;
-	font: 20px;
-}
-
-.progress-value2{
-    animation: loadload 3s normal forwards;
-	box-shadow: 0 10px 40px -10px #fff;
-	background-color: rgb(255, 255, 26, 0.8);
-	width: 0;
-	height: 5%;
-	border-radius: 100px;
-	text-align: center;
-	font-family: "Permanent", cursive;
-	font: 20px;
-}
-
-.progress-value3{
-    animation: alsoload 3s normal forwards;
-	box-shadow: 0 10px 40px -10px #fff;
-	width: 0;
-	height: 5%;
-	border-radius: 100px;
-	text-align: center;
-	font-family: "Permanent", cursive;
-	font: 20px;
-}
-
-@keyframes load {
-    0% { width: 0; }
-  100% { width: 75%; }
-}
-
-@keyframes loadload {
-    0% { width: 0; }
-  100% { width: 20%; }
-}
-
-@keyframes alsoload {
-    0% { width: 0; }
-  100% { width: 40%; }
+	 color: white;
+	 padding-top: 1%;
+	 padding-bottom: 1%;
+	 margin-top: 2%;
+	 font-family: "Permanent Marker", cursive;
+	 font-size: 100%;
+	 border-style: inset;
+	 border-color: white;
+	 background-color: rgb(32,32,32,0.2);
 }
 
 
-.box2{
+.surveys-box {
+	max-width: 80%; 
+    width: 100%;
     display: inline-flex;
+    justify-content: center;
 	flex-flow: row;
 	flex-wrap: wrap;
 	align-items: center;
-	width: 100%;
-	margin-right: 10%;
 	height: auto;
 	font-family: "Permanent", cursive;
 	color: white;
 	font-size: 20px;
-	
+
 }
 
+
 .survey{
-    border-style: inset;
-	border-color: white;
-	border-width: 1.5px;
-	margin-left: 2%;
-	margin-top: 5%;
-	margin-bottom: 5%;
+	margin: 5% 0% 4% 5%;
 	font-family: "Permanent", cursive;
 	color: white;
 	font-size: 20px;
+	max-width: 50%;
 	width: 30%;
 }
 
@@ -227,52 +142,66 @@ body {
 	border-bottom: solid;
 	border-width: 1px;
 	border-color: white;
-	padding-bottom: 5%;
-	padding-top: 5%;
-	padding-right: 5%;
-	padding-left: 5%;
-	background-image: url("img/survey.jpg");
-	background-position: center;
-    background-size: center;
-	font-size: 17px;
-}
-
-.survey-body{
-   padding-top: 20%;
-   padding-bottom: 20%;
-   background-image: url("img/silver.jpg");
-   text-align: center;
-   color: #43233c;
-   text-shadow: 2px 2px white;
-}
-
-.survey-score{
-	position: relative;
-	left: 10%;
-	margin-bottom: 10%; 
-	padding-bottom: 10%;
-	padding-top: 10%;
-	padding-left : 5%;
-	padding-right: 3%;
-	background-image: url("img/survey.jpg");
-	background-position: center;
-    background-size: center;
-	width: 70%;
-	height: 70%;
-	border-style: inset;
-	border-radius: 50%;
-	border-color: white;
-	text-align: center;
-	text-shadow: 2px 2px #43233c;
+	background-color: rgb(255, 255, 26, 0.6);
+	font-size: 100%;
+	font-weight: bold;
 	color: white;
 }
 
-
-.hover-admis:hover {
-    color: green;
+.survey-body{
+   width: auto;
+   height: auto;
+   background-image: url("img/orange.jpg");
+   padding-top: 5%;
+   padding-bottom: 5%;
+   background-position: center;
+   text-align: center;
+   color: #43233c;
 }
 
 
-.hover-respins:hover {
-    color: red;
+  .hide {
+  	display: none;
+  }
+
+
+  .admis:hover{
+  	color: #009900;
+  }
+
+  .respins:hover{
+  	color: red;
+  }
+
+
+.subtitle{
+	 text-align: center;
+	 color: white;
+	 padding-top: 1%;
+	 padding-bottom: 1%;
+	 margin-top: 2%;
+	 font-family: "Permanent Marker", cursive;
+	 font-size: 100%;
+	 border-style: inset;
+	 border-color: white;
+	 background-color: rgb(32,32,32,0.2);
+
+}
+
+  .purple{
+	background-color: rgb(198, 83, 198, 0.4);
+}
+
+.yellow{
+	background-color: rgb(255, 255, 26, 0.4);
+}
+
+
+.green{
+	background-color: rgb(92, 214, 92, 0.4);
+}
+
+
+.blue{
+	background-color: rgb(0, 230, 230, 0.4);
 }

@@ -1,16 +1,15 @@
+
 <!DOCTYPE html>
 <html>
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#333641">
+<link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great&display=swap" rel="stylesheet">
 <title>Log In</title>
 </head>
-
-<link rel="stylesheet" type="text/css" href="LogIn.css">
-
 <body>
+<link rel="stylesheet" type="text/css" href="LogIn.css">
 
 <div class="hero">
   <div class="highway"> </div>
@@ -27,16 +26,26 @@
 </div> 
 
 <div class="login-form">
-  <form class="" action="LogIn.html" method="post">
-    <h1>Logare</h1>
-    <input type="text" placeholder="Username" class="txtb">
-    <input type="text" style="-webkit-text-security: disc;" placeholder="Parolă" class="txtb">
+  <form action="connect.php" method="post">
+    <div class="title">Logare</div>
+    <input type="text" name = "username" placeholder="Username" class="txtb" required>
+    <input type="text" name= "password" style="-webkit-text-security: disc;" placeholder="Parolă" class="txtb" required>
+
+    <div class="errorMessage"><?php 
+            session_start();
+            if($_SESSION["errors"] == 1)  
+            { echo '<i style="color: #ffffff; font-family:Permanent Marker, cursive;" > 
+       Username sau parolă invalidă ༼ಢ_ಢ༽ </i> ';
+            $_SESSION["errors"] = 0;
+          }
+      ?></div>
     <input type="submit" value="Loghează-te" class="login-btn">
-    <a href="SignUpPage.html"> Vrei sa iti creezi cont? </a>
+    <a href="SignUpPage.html"> Vrei să iți creezi cont? </a>
   </form>
 </div>
 
 <div class="home" onclick="window.location.href = 'Trast.html';"> </div>
+
 
 </body>
 

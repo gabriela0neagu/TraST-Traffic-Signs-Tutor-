@@ -5,20 +5,34 @@ html {
     align-content: flex-start;
     align-items: flex-start;
     display: flex;  
-    overflow: right;
+    overflow: hidden;
 }
 
+body{
+	background-image: url("img/idk2.jfif"); 
+	background-position: center center;
+}
 
-body {
-  background-image: url("img/sgn2.jpg");
-  height: 100%;
-  background-position: center center;
-  background-attachment: fixed;
-  background-size: cover;
-  background-color: #464646;
-  background-repeat: no-repeat;
- }
+ .img{
+	height: 900%;
+	display: block;
+	background-position: center center;
+	
+	background-image: url("img/idk2.jfif"); 
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 0;
+	background-repeat: repeat-y;
+	animation: highway 4s linear infinite;
+}
 
+@keyframes highway{
+	100%{
+		transform: translateY(100px);
+	}
+}
 
 @media screen and (min-width: 750px) {
 	div.signup-form{
@@ -45,9 +59,9 @@ body {
 }
 
 .title{
-	font-family: "Source Sans", sans-serif;
-	color: #000;
-	font-size: 50px;
+	font-family: 'Fredericka the Great', cursive;
+	color: #fff;
+	font-size:50px;
 	margin: 0 auto;
 }
 
@@ -77,6 +91,7 @@ body {
 	margin: 20px 0;
 	background: rgba(255, 255, 255, 0.5);
 	border-radius: 6px;
+	color: #fff;
 }
 
 .signup-btn{
