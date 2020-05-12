@@ -22,11 +22,12 @@ function setClick(idx){
               setPages = JSON.parse(this.responseText)
                // console.log(setPages);
                 localStorage.setItem('pages', JSON.stringify(setPages))
+
              console.log(setPages)
 
             }
         };
-        xmlhttp.open("GET","getpage.php?q="+idx)
+        xmlhttp.open("GET","getpage-preventiv.php?q="+idx)
         xmlhttp.send()
         
      
@@ -34,7 +35,7 @@ function setClick(idx){
 function showPage(id)
 {
 	setClick(id)
- window.document.location = './template-mecanica.html'
+  window.document.location = './template-preventiv.html'
 }
  
  var mybutton = document.getElementById("myBtn");

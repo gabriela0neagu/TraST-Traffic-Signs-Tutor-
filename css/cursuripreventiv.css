@@ -5,8 +5,7 @@
 
 body {
     background-image: url("preventiv.jpg");
-    
-  background-size: 1600px 300px;
+  background-size: 1900px 400px;
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   width: 100%
@@ -93,6 +92,13 @@ body {
 .slidemenu #slide-item-3:checked ~ .slider .bar{ margin-left: 50%; }
 .slidemenu #slide-item-4:checked ~ .slider .bar{ margin-left: 75%; }
 
+/*.titlu h1{
+  text-align: center;
+  color: white;
+  border-top:double #555;
+  border-bottom:double #555;
+}*/
+
 .row {  
   display: -ms-flexbox; 
   display:flex; 
@@ -116,6 +122,7 @@ body {
   cursor: pointer;
 
 }
+
 .continut 
 {-ms-flex: 70%; /* IE10 */
   flex: 70%;
@@ -125,36 +132,57 @@ body {
 .continut p{
  position: relative;
   text-align: left;
+  display: flex;
 }
 
 
-.capitole {
+.continut .capitole {
+  margin: 1px 0px 50px 10px;
+  width: 100%;
+  position: relative;
   display: flex;
-   position: relative;
-  width :100%;
+  flex-direction: row;
   justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 100px 100px;
+  align-items: flex-start;
+  align-content: space-between;
+ 
+  
  
 }
-.capitole1 {
-  display: flex;
-  width :100%;
-  justify-content: space-around;
- 
-}
-.capito1{
-   width: 200px;
-  height: 200px;
+.box-capito{
+   width: 250px;
+  height: 250px;
+  order: 5;
   padding: 2rem 1rem;
   background:#eee;
   position: relative;
   display: flex;
   align-items: flex-end;
-  box-shadow: 0px 7px 10px rgba(0,0,0,0.5);
+  justify-content: space-around;
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
   transition:0.5s ease-in-out;
 }
-
+/*
+.box-capito:hover{
+  transform:  translateY(50px);
+}
 .capito1:hover{
-  transform:  translateY(70px);
+  transform:  translateY(50px);
+}*/
+.box-capito:before{
+  content: "";
+  position: absolute;
+  top:0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height:100%;
+    background: linear-gradient(to bottom,rgba(255,0,0,0),rgba(255,0,0,1));
+    z-index:2;
+    transition: 0.5s all;
+    opacity: 1;
 }
 
 .capito1:before{
@@ -170,11 +198,20 @@ body {
     transition: 0.5s all;
     opacity: 1;
 }
-
+.box-capito:hover:before{
+  opacity: 1;
+}
 .capito1:hover:before{
   opacity: 1;
 }
-
+.box-capito .box-capito-head img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 .capito1 img{
   width: 100%;
   height: 100%;
@@ -182,6 +219,14 @@ body {
   position: absolute;
   top: 0;
   left: 0;
+}
+.box-capito .box-capito-body{
+  position: relative;
+  z-index: 3;
+  color: #fff;
+  opacity: 0;
+  transform: translateY(30px);
+  transition:0.5s all;
 }
 
 .capito1 .info{
@@ -192,9 +237,22 @@ body {
   transform: translateY(30px);
   transition:0.5s all;
 }
+
+.box-capito:hover .box-capito-body{
+  opacity:1;
+  transform: translateY(0px);
+}
 .capito1:hover .info{
   opacity:1;
   transform: translateY(0px);
+}
+.box-capito .box-capito-body h3{
+  position: relative;
+  z-index: 3;
+  color: #eee;
+  opacity: 0;
+  transform: translateY(30px);
+  transition:0.5s all;
 }
 
 .capito1 .info h3{
@@ -205,13 +263,26 @@ body {
   transform: translateY(30px);
   transition:0.5s all;
 }
+.box-capito .box-capito-body h3{
+  opacity: 1;
+  transform: translateY(0px);
+}
 
 .capito1:hover .info h3{
   opacity: 1;
   transform: translateY(0px);
 }
 
-
+.box-capito .box-capito-bodyh3 .capito-open{
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  background: #fff;
+  color: #000;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+}
 .capito1 .info .btn{
   text-decoration: none;
   padding: 0.5rem 1rem;
@@ -223,15 +294,6 @@ body {
   transition: 0.4s ease-in-out;
 }
 
-
-.footer {
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   background-color: #f1f1f1;
-   color: white;
-   text-align: center;
-}
 
 .butoane:hover a{
   color: black;
@@ -295,3 +357,5 @@ body {
     width: 100%;
   }
 }
+
+
