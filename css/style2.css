@@ -4,14 +4,15 @@
 }
 
 body {
-    background-image: url("street.jpg");
 
-    background-size: 1800px 400px;
+
+    background-size: 1600px 300px;
     font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    width: 100%
+    margin: auto;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
 }
-
 .clear{
     clear: both;
 }
@@ -93,27 +94,21 @@ body {
 .slidemenu #slide-item-3:checked ~ .slider .bar{ margin-left: 50%; }
 .slidemenu #slide-item-4:checked ~ .slider .bar{ margin-left: 75%; }
 
-/*.titlu h1{
-  text-align: center;
-  color: white;
-  border-top:double #555;
-  border-bottom:double #555;
-}*/
 
 .row {
     display: -ms-flexbox;
     display:flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap; /
+flex-wrap: wrap;
 }
 
-.side {
+.cuprins {
     -ms-flex: 15%; /* IE10 */
     flex: 15%;
     background-color: #f1f1f1;
     padding: 20px;
 }
-.side a{
+.cuprins a{
     text-align: right;
     color:black;
     text-decoration: none;
@@ -121,41 +116,58 @@ body {
     font-size: 15px;
     font-weight: bold;
     cursor: pointer;
+}
 
-}
-.continut
-{-ms-flex: 70%; /* IE10 */
-    flex: 70%;
-    background-color: white;
-    padding: 15px;
-}
-.continut p{
-    position: relative;
-    text-align: left;
-}
 
 /*iolanda */
 
 .holdingcontainer{
     max-width: 100%;
-    display: flex;
+    display: inline-flex;
     background: white;
-    padding: 20px;
+    padding: 50px;
     box-sizing: border-box;
-
     flex-flow: wrap;
     justify-content: space-between;
+
+}
+.container-indicator{
+    display: inline-flex;
+    justify-content: center;
+    flex-flow: row;
+    max-width: 80%;
+    width: 100%;
+    flex-flow: row;
+    flex-wrap: wrap;
+    margin: 2% 2% 2% 2%;
 }
 
 .internalcontainerL{
     flex: 1;
-    background: #ffc728;
+    background: #E58E37;
     padding: 30px;
     font-size: 12px;
     font-family: 'Roboto', sans-serif;
     text-align: center;
     margin: 3px;
+    max-width: 30%;
 
+
+}
+
+.internalcontainerL h1{
+    max-width: 100%;
+    align-self: center;
+    border-style: groove;
+    width: 100%;
+    background-color: rgb(32,32,32,0.2);
+    font-family: "Permanent Marker", cursive;
+    font-size: 20px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 2%;
+    text-align: center;
+    color: white;
 }
 
 .internalcontainerL img{
@@ -163,6 +175,30 @@ body {
     max-width: 150px;
     align-items: center;
 }
+.holdingcontainer p{
+    text-indent: 30px;
+    text-align: justify;
+    letter-spacing: 3px;
+    font-family: "Permanent Marker", cursive;
+    font-size: 18px;
+}
+.open-info{
+    margin: 15px 0 0;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 900;
+    color: #333;
+    padding: 5px;
+    border: 1px solid #333;
+}
+.descriere{
+    text-indent: 30px;
+    text-align: justify;
+    letter-spacing: 3px;
+    font-family: "Permanent Marker", cursive;
+    font-size: 18px;
+}
+
 
 
 

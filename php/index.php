@@ -5,7 +5,7 @@ require_once ('./php/component.php');
 
 
 // create instance of Createdb class
-$database = new CreateDb( "tw", "indicatoareavertizare");
+$database = new CreateDb( "tw", "indicatoare_si_marcaje");
 
 ?>
 
@@ -18,9 +18,9 @@ $database = new CreateDb( "tw", "indicatoareavertizare");
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Indicatoare si marcaje</title>
     <link rel="stylesheet" href="style2.css">
+    <script defer src="categorie.js"></script>
 </head>
 <body>
-
 
 <nav class="slidemenu">
 
@@ -30,7 +30,7 @@ $database = new CreateDb( "tw", "indicatoareavertizare");
 
     <!-- Item 2 -->
     <input type="radio" name="slideItem" id="slide-item-2" class="slide-toggle"/>
-    <label for="slide-item-2"><p class="icon">★</p><span><a href="curslegislatie1.html">Curs de legislatie </a></span></label>
+    <label for="slide-item-2"><p class="icon">★</p><span><a href="http://localhost/tw/curslegislatie1.html">Curs de legislatie </a></span></label>
 
     <!-- Item 3 -->
     <input type="radio" name="slideItem" id="slide-item-3" class="slide-toggle"/>
@@ -50,51 +50,82 @@ $database = new CreateDb( "tw", "indicatoareavertizare");
 
 
 <div class="row">
-    <div class="side">
-        <h2>Legislatia rutiera: </h2>
+    <div class="cuprins">
 
-        <a href="cursurimecanica.html" class="btn"> Curs de mecanica</a>
-        <br>
-        <br>
-        <a href="cursuriajutor.html" class="btn"> Curs de prim-ajutor</a>
-        <br>
-        <br>
-        <a href="cursuriecologic.html" class="btn"> Conducerea ecologica
-        </a>
-        <br>
-        <br>
-        <a href="cursuripreventiv.html" class="btn"> Conduita preventiva</a>
-        <br></div>
+        <h2>Indicatoare si marcaje </h2>
+        <p>
+            <a href="indicatoare-de-avertizare.html" class="btn"> Indicatoare de avertizare</a>
+            <br>
+            <br>
+            <a href="indicatoare-de-prioritate.html" class="btn"> Indicatoare de prioritate</a>
+            <br>
+            <br>
+            <a href="indicatoare-de-interzicere-sau-restrictie.html" class="btn"> Indicatoare de interzicere sau restricție</a>
+            <br>
+            <br>
+            <a href="indicatoare-de-obligare.html" class="btn"> Indicatoare de obligare</a>
+            <br>
+            <br>
+            <a href="indicatoare-de-orientare.html" class="btn"> Indicatoare de orientare</a>
+            <br>
+            <br>
+            <a href="indicatoare-de-informare.html" class="btn"> Indicatoare de informare</a>
+            <br>
+            <br>
+            <a href="indicatoare-de-informare-turistica.html" class="btn"> Indicatoare de informare turistică</a>
+            <br>
+            <br>
+            <a href="panouri-aditionale.html" class="btn"> Panouri adiționale</a>
+            <br>
+            <br>
+            <a href="semafoare-pentru-dirijarea-circulatiei.html" class="btn"> Semafoare pentru dirijarea circulației</a>
+            <br>
+            <br>
+            <a href="semnale-luminoase-la-trecerile-la-nivel-cu-calea-ferata.html" class="btn"> Semnale luminoase la trecerile la nivel cu calea ferată</a>
+            <br>
+            <br>
+            <a href="dispozitive-luminoase-pentru-dirijarea-circulatiei-pe-benzi.html" class="btn"> Dispozitive luminoase pentru dirijarea circulației pe benzi</a>
+            <br>
+            <br>
+            <a href="marcaje-transversale.html" class="btn"> Marcaje transversale</a>
+            <br>
+            <br>
+            <a href="marcaje-diverse.html" class="btn"> Marcaje diverse</a>
+            <br>
+            <br>
+            <a href="marcaje-temporare-pentru-semnalizarea-lucrarilor-in-zona-drumului-public.html" class="btn">  Marcaje temporare pentru semnalizarea lucrărilor în zona drumului public</a>
+            <br>
+            <br>
+            <a href="marcaje-laterale.html" class="btn"> Marcaje laterale</a>
+            <br>
+            <br>
+            <a href="indicatoare-rutiere-temporare.html" class="btn"> Indicatoare rutiere temporare</a>
+            <br>
+            <br>
+            <a href="mijloace-de-semnalizare-a-lucrarilor.html" class="btn"> Mijloace de semnalizare a lucrărilor</a>
+            <br>
+            <br>
+            <a href="indicator-kilometric.html" class="btn"> Indicator kilometric</a>
+            <br>
+            <br>
+            <a href="indicator-hectometric.html" class="btn"> Indicator hectometric</a>
+            <br>
+            <br>
+        </p>
+    </div>
 
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-
-    </p>
-    <div class='continut'>
-        <p>Va prezentam o sursa completa de informatie pentru toti cei interesati de eventualele probleme sau defectiuni ce pot aparea la masini, site-ul oferind sprijin in depistarea acestora inainte de a merge la service.</p>
-        <p>Pe aceasta pagina va punem la dispozitie informatii despre rolul diferitelor parti componente ale autovehiculelor, despre modul de functionare al acestora dar si despre eventualele defectiuni ce pot aparea datorita uzurii sau a altor factori externi (ploaie, inghet, etc). De asemenea, tot aici gasiti si ce masuri preventive sau de remediere puteti lua in cazul aparitiei anumitor simptome la masina proprie. Indiferent ca aveti probleme cu ambreiajul, cu cutia de viteze, cu sistemul de directie sau chiar cu modul in care functioneaza motorul, va oferim informatii generale despre cele mai frecvente defectiuni ce pot aparea precum si despre cauzele acestora.</p>
-        <p>Informatia de pe site-ul nostru vrea sa aiba rolul unui curs de mecanica auto pentru proaspetii soferi care nu s-au confruntat pana in prezent cu astfel de probleme.</p>
-        <p>Citind aceasta informatie veti putea depista din timp eventualele probleme ce pot aparea sau chiar veti putea evita aparitia unor astfel de probleme prin cateva actiuni preventive simple de genul inlocuirea lichidelor si a filtrelor la termenele recomandate de producatori, verificarea gradului de uzura al diferitelor componente (ex. placute si discuri de frana) sau chiar verificarea presiunii din anvelope (o presiune prea mare sau prea mica putand duce la uzura prematura a acestora).</p>
-
-        <br>
-        <br>
-     <div class="holdingcontainer">
+        <div class="holdingcontainer">
 
                 <?php
                 $result=$database->getData();
                 while ($row=mysqli_fetch_assoc($result)){
-                    component($row['titlu'],$row['descriere'],$row['img']);
+                    component($row['titlu'],$row['img']);
                 }
                 ?>
 
         </div>
 
-</div>
-</div>
+
 
 </body>
 </html>
