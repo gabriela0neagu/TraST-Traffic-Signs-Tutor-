@@ -5,8 +5,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great&display=swap" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="Profile.css">
-	<script defer src="profile.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/Profile.css">
+	<script defer src="../javascript/profile.js"></script>
 	<meta name="theme-color" content="#333641">
 	<title>Profile</title>
 </head>
@@ -14,7 +14,7 @@
 <body>
 	<div class="profile-info">
 		<div class="profile-picture"> 
-			<img src="img/user2.png"> 
+			<img src="../img/user2.png"> 
 		 </div>
 		<div class="profile-bar"> 
 			<div class="bar-field"> <?php session_start(); echo $_SESSION['Username'];?> </div>
@@ -25,11 +25,9 @@
 		</div>
 	</div>
 
-	<div class="text-side"> 
-
-	    <div class="title">  Bine ai venit în cont! </div>
-	   
+	<div class="text-side"> 	   
 	    <div class= "text">
+	    	<div class="title">  Bine ai venit în cont! </div>
 		    Pentru a învăța eficient îți recomandăm să urmezi în totalitate cei 3 pași de învățare:<br/> 
 		    <br/>📚 Pasul 1: CURSUL DE LEGISLAȚIE ➫ Aici găsești toată legislația și teoria structurată pe cinci cursuri. <br/>
 		   <br/>🛑 Pasul 2: INDICATOARE ȘI MARCAJE ➫ Aici găsești toate indicatoarele și marcajele rutiere explicate pe înțelesul tuturor. <br/>
@@ -41,7 +39,7 @@
 		<div class="activity">
 
                <div class = "step-title"> 
-              		 <div class="subtitle green">📚 Pasul 1: CURSUL DE LEGISLAȚIE </div>
+              		 <div class="subtitle purple">📚 Pasul 1: CURSUL DE LEGISLAȚIE </div>
                </div>
 
 			   <div id="signsCategory" class = "step-title"> 
@@ -49,13 +47,13 @@
 			   </div>
 
 			   <div id="quizCategory" class = "step-title">
-			    	 <div class="subtitle yellow"> 📝 Pasul 3: Chestionare DRPCIV </div>
+			    	 <div class="subtitle pink"> 📝 Pasul 3: Chestionare DRPCIV </div>
 			   </div>
 		</div>
 
-<div class="home" onclick="window.location.href = 'Trast.html';"> </div>
+<div class="home" onclick="window.location.href = '../html/Trast.html';"> </div>
 
-<div class="<?php session_start(); if(isset($_SESSION['ID'])) echo 'logOut';?>" onclick="window.location.href = 'logout.php';"></div>
+<div class="<?php session_start(); if(isset($_SESSION['ID'])) echo 'logOut';?>" onclick="window.location.href = '../php/logout.php';"></div>
 
 </body>
 

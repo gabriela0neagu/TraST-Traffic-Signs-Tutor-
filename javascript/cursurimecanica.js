@@ -26,7 +26,7 @@ function setClick(idx){
 
             }
         };
-        xmlhttp.open("GET","getpage.php?q="+idx)
+        xmlhttp.open("GET","../php/getpage.php?q="+idx)
         xmlhttp.send()
         
      
@@ -34,7 +34,7 @@ function setClick(idx){
 function showPage(id)
 {
 	setClick(id)
- window.document.location = './template-mecanica.html'
+ window.document.location = '../html/template-mecanica.html'
 }
  
  var mybutton = document.getElementById("myBtn");

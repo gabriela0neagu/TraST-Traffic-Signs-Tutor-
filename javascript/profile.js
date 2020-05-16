@@ -11,7 +11,7 @@ function getScore(idQuiz)
               score = this.responseText;
                 }
         }
-        xmlhttp.open("GET","getScore.php?idQuiz="+ idQuiz, false)
+        xmlhttp.open("GET","../php/getScore.php?idQuiz="+ idQuiz, false)
         xmlhttp.send()
   return score
 }

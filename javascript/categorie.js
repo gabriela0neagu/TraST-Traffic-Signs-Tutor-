@@ -2,11 +2,10 @@ var infobuttons = document.getElementsByClassName('open-info')
 Array.prototype.forEach.call(infobuttons, myFunc)
 function myFunc(item, index)
 {
-    item.onclick = function() {getinfo(index) }
+    item.onclick = function() { getinfo(index) }
 
 }
 function getinfo(id){
-    console.log('papa')
     localStorage.setItem('numarCategorie', JSON.stringify(id))
     if (window.XMLHttpRequest) {
         xmlhttp = new XMLHttpRequest()
@@ -20,8 +19,9 @@ function getinfo(id){
             sessionStorage.setItem('descriere', this.responseText)
         }
     }
-    xmlhttp.open("GET","getIndicatoare.php?id="+id,false)
+    xmlhttp.open("GET","../php/getIndicatoare.php?id="+id,false)
     xmlhttp.send()
-    window.document.location = './categorieind.html'
+
+    window.document.location = '../html/categorieind.html'
 
 }

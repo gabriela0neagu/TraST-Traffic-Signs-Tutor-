@@ -22,7 +22,7 @@ var numar=0
         }
     }
     var numeTabel=getName(id)
-    xmlhttp.open("GET","getNumberIndicatoare.php?nume="+numeTabel,false)
+    xmlhttp.open("GET","../php/getNumberIndicatoare.php?nume="+numeTabel,false)
 
     xmlhttp.send()
     return numar
@@ -96,7 +96,7 @@ for(i=1;i<=numarIndicatoare;i++)
     buton.classList.add('buton-indicator');
     buton.id=i;
    buton.onclick = (e)=>{
-       window.open(`/indicatoare/indicator/getIndicator.php?name=${getName((numarCategorie))}&nr=${e.target.id}`, 'blank')
+   window.document.location=`../php/getIndicator.php?name=${getName((numarCategorie))}&nr=${e.target.id}`
    }
    indicator.appendChild(buton)
 
@@ -116,7 +116,7 @@ function getTitle(nrCategorie, nrIndicator) {
         }
     }
     var numeTabel=getName(nrCategorie)
-    xmlhttp.open("GET","getTitle.php?nume="+numeTabel+"&nr="+nrIndicator,false)
+    xmlhttp.open("GET","../php/getTitle.php?nume="+numeTabel+"&nr="+nrIndicator,false)
 
     xmlhttp.send()
     return titlu
@@ -136,7 +136,7 @@ function getImage(nrCategorie, nrIndicator) {
         }
     }
     var numeTabel=getName(nrCategorie)
-    xmlhttp.open("GET","getImage.php?nume="+numeTabel+"&nr="+nrIndicator,false)
+    xmlhttp.open("GET","../php/getImage.php?nume="+numeTabel+"&nr="+nrIndicator,false)
 
     xmlhttp.send()
     return titlu
@@ -145,6 +145,6 @@ function getImage(nrCategorie, nrIndicator) {
 function showOutput(id)
 {
     console.log(setClick(id))
-    window.document.location = './indicator.html'
+    window.document.location = '../html/indicator.html'
 }
 

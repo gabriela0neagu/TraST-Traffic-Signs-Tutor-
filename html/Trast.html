@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="https://fonts.googleapis.com/css?family=Faster+One&display=swap" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="Trast.css">
+<link rel="stylesheet" type="text/css" href="../css/Trast.css">
 <meta name="theme-color" content="#333641">
 <title>TraST</title>
 </head>
@@ -14,22 +14,22 @@
 <div class ="title">  TraST </div>
  <span><span></span></span>
   <div class="menu">
-  <!-- legislatie -->
-  <a href="#"><div></div></a>
   <!-- categorii -->
   <a href="#"><div></div></a>
+  <!-- legislatie -->
+  <a href="../html/curslegislatie1.html"><div></div></a>
   <!-- semne rutiere -->
-  <a href="#"><div></div></a>
+  <a href="../php/index.php"><div></div></a>
   <!-- chestionare -->
-  <a href="Quizez.html"><div></div></a>
+  <a href="../html/Quizez.html"><div></div></a>
   <!-- leaderboard -->
-  <a href="#"><div></div></a>
+  <a href="../html/Leaderboard.html"><div></div></a>
 </div>
 
-<div class="<?php session_start(); if(!isset($_SESSION['ID']) || empty($_SESSION['ID'])) echo 'signUp';?>" onclick="window.location.href = 'SignUpPage.html';"> </div>
-<div class="<?php session_start(); if(isset($_SESSION['ID'])) echo 'profile';?>" onclick="window.location.href = 'Profile.html';"></div>
+<div class="<?php session_start(); if(!isset($_SESSION['ID']) || empty($_SESSION['ID'])) echo 'signUp';?>" onclick="window.location.href = '../html/SignUpPage.html';"> </div>
+<div class="<?php session_start(); if(isset($_SESSION['ID'])) echo 'profile';?>" onclick="window.location.href = '../html/Profile.html';"></div>
 
-<div class="<?php if(isset($_SESSION['ID'])) echo 'logOut';?>" onclick="window.location.href = 'logout.php';"></div>
+<div class="<?php if(isset($_SESSION['ID'])) echo 'logOut';?>" onclick="window.location.href = '../php/logout.php';"></div>
 
 </body>
 

@@ -9,7 +9,7 @@ html {
 }
 
 body{
-	background-image: url("img/idk2.jfif"); 
+	background-image: url("../img/idk2.jfif"); 
 	background-position: center center;
 }
 
@@ -18,7 +18,7 @@ body{
 	display: block;
 	background-position: center center;
 	
-	background-image: url("img/idk2.jfif"); 
+	background-image: url("../img/idk2.jfif"); 
 	position: absolute;
 	bottom: 0;
 	left: 0;
@@ -97,7 +97,7 @@ body{
 .signup-btn{
 	margin-top: 60px;
 	margin-bottom: 20px;
-	background-image: url("img/org2.jpg");
+	background-image: url("../img/org2.jpg");
 	height: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -127,7 +127,7 @@ body{
 
 .home{
 	display: flex;
-	background: url("img/home.png") no-repeat;
+	background: url("../img/home.png") no-repeat;
     width: 60px;
     height: 60px;
     background-position: center;

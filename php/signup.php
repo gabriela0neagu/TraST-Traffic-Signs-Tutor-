@@ -49,7 +49,7 @@ if(!empty($firstName) || !empty($lastName) || !empty($username) || !empty($passw
 			      }
 
 			    }
-		     header('location:Trast.html');
+		     header('location:../html/Trast.html');
 		     die();
 			}
 			else{

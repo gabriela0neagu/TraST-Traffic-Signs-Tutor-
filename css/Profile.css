@@ -1,6 +1,6 @@
 
 body {
-  background-image: url("img/p_bg.jpeg") ;
+  background-image: url("../img/leaderboard-bck2.jpeg") ;
   background-position: center center;
   background-attachment: fixed;
   background-size: cover;
@@ -8,10 +8,15 @@ body {
   display: flex;
   margin-right: 4%;
   margin-bottom: 20%;
+   text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000; 
  }
 
  .profile-info{
- 	margin-left: 2%; 
+ 	margin-left: 3%; 
     margin-top: 2%; 
     width: 30%;
  }
@@ -39,7 +44,8 @@ body {
 	border-style: groove;
 	width: 80%;
 	border-radius: 20%;
-	font-family: "Permanent Marker", cursive;
+	background-color: rgb(32,32,32,0.3);
+	 font-family: Arial, Helvetica, sans-serif;
 	font-size: 20px;
 	padding-top: 4px;
 	padding-bottom: 4px;
@@ -49,18 +55,25 @@ body {
 }
 
 .text-side{
+	margin-top:2%; 
 	width: 70%;
 	display: inline-flex;
 	flex-direction: column;
     flex-wrap: wrap;
     word-wrap: break-word;
+
 }
 
 .title{
+	 text-shadow:
+    0px 0px 0 #000,
+    0px 0px 0 #000,
+    0px 0px 0 #000,
+    0px 0px 0 #000; 
 	margin-top: 2%;
 	margin-bottom: 8%;
-	font-family:'Fredericka the Great', cursive;
-	font-size: 50px;
+ 	font-family:'Fredericka the Great', cursive;
+ font-size: 50px;
 	color: white;
 	text-align: center;
 }
@@ -71,9 +84,8 @@ body {
 	text-align: justify-all;
 	margin: auto;
 	padding: 2% 5% 5% 5%;
-	background-color: rgb(32,32,32,0.2);
-	font-family: "Permanent Marker", cursive;
-	font-size: 20px;
+	background-color: rgb(32,32,32,0.3);
+ font-family: Arial, Helvetica, sans-serif;	font-size: 20px;
 	color: white;
 }
 
@@ -90,8 +102,7 @@ body {
 	 padding-top: 1%;
 	 padding-bottom: 1%;
 	 margin-top: 2%;
-	 font-family: "Permanent Marker", cursive;
-	 font-size: 150%;
+ font-family: Arial, Helvetica, sans-serif;	 font-size: 150%;
 	 border-style: inset;
 	 border-color: white;
 	 background-color: rgb(32,32,32,0.2);
@@ -104,8 +115,7 @@ body {
 	 padding-top: 1%;
 	 padding-bottom: 1%;
 	 margin-top: 2%;
-	 font-family: "Permanent Marker", cursive;
-	 font-size: 100%;
+ font-family: Arial, Helvetica, sans-serif;	 font-size: 100%;
 	 border-style: inset;
 	 border-color: white;
 	 background-color: rgb(32,32,32,0.2);
@@ -121,8 +131,7 @@ body {
 	flex-wrap: wrap;
 	align-items: center;
 	height: auto;
-	font-family: "Permanent", cursive;
-	color: white;
+ font-family: Arial, Helvetica, sans-serif;	color: white;
 	font-size: 20px;
 
 }
@@ -130,8 +139,7 @@ body {
 
 .survey{
 	margin: 5% 0% 4% 5%;
-	font-family: "Permanent", cursive;
-	color: white;
+ font-family: Arial, Helvetica, sans-serif;	color: white;
 	font-size: 20px;
 	max-width: 50%;
 	width: 30%;
@@ -139,10 +147,10 @@ body {
 
 .survey-head{
 	text-align: center;
+	background-color: rgb(153, 0, 51, 0.4);
 	border-bottom: solid;
 	border-width: 1px;
 	border-color: white;
-	background-color: rgb(255, 255, 26, 0.6);
 	font-size: 100%;
 	font-weight: bold;
 	color: white;
@@ -151,7 +159,7 @@ body {
 .survey-body{
    width: auto;
    height: auto;
-   background-image: url("img/orange.jpg");
+   background-color: #d6d6c2;
    padding-top: 5%;
    padding-bottom: 5%;
    background-position: center;
@@ -180,8 +188,7 @@ body {
 	 padding-top: 1%;
 	 padding-bottom: 1%;
 	 margin-top: 2%;
-	 font-family: "Permanent Marker", cursive;
-	 font-size: 100%;
+ font-family: Arial, Helvetica, sans-serif;	 font-size: 100%;
 	 border-style: inset;
 	 border-color: white;
 	 background-color: rgb(32,32,32,0.2);
@@ -192,16 +199,10 @@ body {
 	background-color: rgb(198, 83, 198, 0.4);
 }
 
-.yellow{
-	background-color: rgb(255, 255, 26, 0.4);
+.pink{
+	background-color: rgb(153, 0, 51, 0.4);
 }
-
-
-.green{
-	background-color: rgb(92, 214, 92, 0.4);
-}
-
 
 .blue{
-	background-color: rgb(0, 230, 230, 0.4);
+	background-color: rgb(51, 51, 255, 0.4);
 }

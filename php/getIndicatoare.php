@@ -8,8 +8,8 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Indicatoare si marcaje</title>
-    <link rel="stylesheet" href="style2.css">
-    <script defer src="categorie.js"></script>
+    <link rel="stylesheet" href="../css/style2.css">
+    <script defer src="../javascript/categorie.js"></script>
 </head>
 <body>
 
@@ -51,7 +51,7 @@ if (!$con) {
     die('Could not connect: ' . mysqli_error($con));
 }
 
-$sql="SELECT * FROM indicatoare2 WHERE id='$id'";
+$sql="SELECT * FROM indicatoare_si_marcaje WHERE id='$id'";
 $result = mysqli_query($con,$sql);
 
 $row = mysqli_fetch_assoc($result);

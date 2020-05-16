@@ -1,6 +1,6 @@
 <?php
-require_once ('./indicator.php');
-require_once ('php/CreateDb.php');
+require_once ('../php/indicator.php');
+require_once ('../php/CreateDb.php');
 $tabel = $_GET['name'];
 $nrIndicator = intval($_GET['nr']);
 $database = new CreateDb( "tw", $tabel);
@@ -14,7 +14,9 @@ $database = new CreateDb( "tw", $tabel);
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Indicator</title>
-    <link rel="stylesheet" href="indicator.css">
+    <link rel="styles
+
+    heet" href="../css/indicator.css">
 </head>
 
 <body>

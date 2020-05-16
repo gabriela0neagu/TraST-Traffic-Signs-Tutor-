@@ -9,24 +9,24 @@
 <title>Log In</title>
 </head>
 <body>
-<link rel="stylesheet" type="text/css" href="LogIn.css">
+<link rel="stylesheet" type="text/css" href="../css/LogIn.css">
 
 <div class="hero">
   <div class="highway"> </div>
   <div class="city"> </div>
   <div class="car-animation">
     <div class="car">
-      <img src="img/car.png">
+      <img src="../img/car.png">
      </div>
      <div class="wheel">
-       <img src="img/wheel.png" class="back-wheel">
-       <img src="img/wheel.png" class="front-wheel">
+       <img src="../img/wheel.png" class="back-wheel">
+       <img src="../img/wheel.png" class="front-wheel">
      </div>
    </div>
 </div> 
 
 <div class="login-form">
-  <form action="connect.php" method="post">
+  <form action="../php/connect.php" method="post">
     <div class="title">Logare</div>
     <input type="text" name = "username" placeholder="Username" class="txtb" required>
     <input type="text" name= "password" style="-webkit-text-security: disc;" placeholder="Parolă" class="txtb" required>
@@ -40,11 +40,11 @@
           }
       ?></div>
     <input type="submit" value="Loghează-te" class="login-btn">
-    <a href="SignUpPage.html"> Vrei să iți creezi cont? </a>
+    <a href="../html/SignUpPage.html"> Vrei să iți creezi cont? </a>
   </form>
 </div>
 
-<div class="home" onclick="window.location.href = 'Trast.html';"> </div>
+<div class="home" onclick="window.location.href = '../html/Trast.html';"> </div>
 
 
 </body>
