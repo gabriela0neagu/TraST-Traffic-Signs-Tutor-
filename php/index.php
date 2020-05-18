@@ -47,23 +47,14 @@ $database = new CreateDb( "tw", "indicatoare_si_marcaje");
         <div class="bar"></div>
     </div>
 </nav>
-
-
-<div class="row">
-   
-
-        <div class="holdingcontainer">
-
-               '<?php
-                $result=$database->getData();
-                while ($row=mysqli_fetch_assoc($result)){
-                    component($row['titlu'],$row['img']);
-                }
-                ?>' 
-
-        </div>
-
-</div>
+    <div class="container">
+         <?php
+            $result=$database->getData();
+             while ($row=mysqli_fetch_assoc($result)){
+              component($row['titlu'],$row['img']);
+            }
+        ?>
+    </div>
 
 
 </body>

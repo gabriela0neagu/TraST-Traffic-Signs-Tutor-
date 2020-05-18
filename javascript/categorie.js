@@ -1,4 +1,4 @@
-var infobuttons = document.getElementsByClassName('open-info')
+var infobuttons = document.getElementsByClassName('buton-indicator')
 Array.prototype.forEach.call(infobuttons, myFunc)
 function myFunc(item, index)
 {

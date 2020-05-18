@@ -2,17 +2,17 @@
 function indicator($titlu, $img, $descriere)
 {
     $element = "
-            <div class=\"internalcontainerL\">
                 <form action=\"getIndicator.php\" method=\"post\">
-                        <h1>$titlu</h1>
-                        <div>
-                            <img src=\"$img\" alt=\"Image1\" class=\"dasimages\" >
+                       <div class=\"box\">
+                        <div class=\"imgBx\">
+                          <img src=\"$img\" alt=\"Image1\" >
                         </div>
-                        <div>
+                        <div class=\"content\">
+                         <h2>$titlu</h2>
                         <p>$descriere</p>
                         </div>
+                       </div> 
                   </form>
-             </div>
     ";
     echo $element;
 }

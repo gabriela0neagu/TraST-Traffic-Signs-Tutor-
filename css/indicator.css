@@ -110,79 +110,54 @@ body{
 }
 
 
-.holdingcontainer{
-    max-width: 300%;
-    margin: auto;
-    display: inline-flex;
-    background: #FFC076;
-    padding: 50px;
+.box
+{ 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 1000px;
+    padding: 20px;
     box-sizing: border-box;
-    flex-flow: wrap;
-    justify-content: space-between;
+    border-radius: 4px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+    display: flex;
+    
+ }
 
-}
-.container-indicator{
-    display: inline-flex;
-    justify-content: center;
-    flex-flow: row;
-    max-width: 80%;
-    width: 100%;
-    flex-flow: row;
-    flex-wrap: wrap;
-    margin: 2% 2% 2% 2%;
-}
+ .box:hover
+ {
+        box-shadow: 0 15px 30px rgba(0,0,0,.5);
 
-.internalcontainerL{
-    flex: 1;
-    background: #ffb156;
-    padding: 30px;
-    font-size: 12px;
-    font-family: 'Roboto', sans-serif;
-    text-align: center;
-    margin-left: 370px;
-    max-width: 30%;
-    align-self: center;
+ }
+ .box .imgBx
+ {
+    width: 150px;
+    flex: 0 0 150px;
+ }
 
-
-}
-
-.internalcontainerL h1{
+ .box .imgBx img
+ {
     max-width: 100%;
-    align-self: center;
-    border-style: groove;
-    width: 100%;
-    background-color: rgb(32,32,32,0.2);
-    font-family: "Permanent Marker", cursive;
-    font-size: 20px;
-    padding-top: 2%;
-    padding-bottom: 2%;
-    padding-left: 2%;
-    text-align: center;
-    color: white;
-}
+ }
 
-.internalcontainerL img{
-    margin-left: 10px;
-    max-width: 150px;
-    align-items: center;
-}
-.holdingcontainer p{
-    text-indent: 30px;
-    text-align: justify;
-    letter-spacing: 3px;
-    font-family: "Permanent Marker", cursive;
-    font-size: 18px;
-}
-.descriere{
-    text-indent: 30px;
-    text-align: justify;
-    letter-spacing: 3px;
-    font-family: "Permanent Marker", cursive;
-    font-size: 18px;
-    margin: auto;
-}
+ .box .content
+ {
+    padding-left: 20px;
+ }
 
-@media screen and (max-width: 768px){
-    .holdingcontainer{
-        flex-direction: column-reverse;
-    }
+ .box .content h2
+ {
+    margin: 0;
+    padding-left: 0;
+    font-size: 22px;
+    color: #787878;
+
+ }
+.box .content p
+{
+    margin: 0;
+    padding: 10px 0 0;
+    text-align: justify;
+    color: #787878;
+}

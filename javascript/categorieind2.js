@@ -1,9 +1,11 @@
+/*
 var descriere=sessionStorage.getItem('descriere')
 const elementDescriere=document.createElement('div')
 elementDescriere.innerHTML=descriere
 elementDescriere.classList.add('descriere')
 document.body.appendChild(elementDescriere)
 
+*/
 var numarCategorie= JSON.parse(localStorage.getItem('numarCategorie'))+1
 
 function getNumberIndicatoare(id) {
@@ -17,8 +19,6 @@ var numar=0
         if (this.readyState == 4) {
             // infoind = JSON.parse(this.responseText)
             numar=this.responseText
-
-
         }
     }
     var numeTabel=getName(id)
@@ -76,29 +76,55 @@ return name
 
 var numarIndicatoare=getNumberIndicatoare(numarCategorie)
 var i
-var container=document.createElement('div')
-container.classList.add('container-indicator')
-document.body.appendChild(container)
+
+var containerElement=document.createElement('div')
+containerElement.classList.add('container')
+document.body.appendChild(containerElement)
+
 for(i=1;i<=numarIndicatoare;i++)
 {
-    console.log(i)
-   var indicator=document.createElement('div')
-    indicator.classList.add('internalcontainerL')
-    container.appendChild(indicator)
-    var titlu=document.createElement('h1')
-    titlu.innerHTML=getTitle(numarCategorie,i)
-    indicator.appendChild(titlu)
+    var cardElement=document.createElement('div')
+    cardElement.classList.add('card')
+    containerElement.appendChild(cardElement)
+
+    var face1Element = document.createElement('div')
+    face1Element.classList.add('face')
+    face1Element.classList.add('face1')
+    cardElement.appendChild(face1Element)
+    
+
+    var contentElement = document.createElement('div')
+    contentElement.classList.add('content')
+    face1Element.appendChild(contentElement)
+
     var imagine = document.createElement("IMG");
-   imagine.setAttribute("src", getImage(numarCategorie,i));
-   indicator.appendChild(imagine)
-   var buton = document.createElement("BUTTON");
-   buton.innerHTML='Vezi indicator';
+    imagine.setAttribute("src", getImage(numarCategorie,i));
+    contentElement.appendChild(imagine)
+
+
+    var titlu=document.createElement('h3')
+    titlu.innerHTML=getTitle(numarCategorie,i)
+    contentElement.appendChild(titlu)
+
+
+    var face2Element = document.createElement('div')
+    face2Element.classList.add('face')
+    face2Element.classList.add('face2')
+    cardElement.appendChild(face2Element)
+    
+
+    var contentElement2 = document.createElement('div')
+    contentElement2.classList.add('content')
+    face2Element.appendChild(contentElement2)
+
+    var buton = document.createElement("BUTTON");
+    buton.innerHTML='Vezi explicatia aici';
     buton.classList.add('buton-indicator');
+    contentElement2.appendChild(buton)
     buton.id=i;
    buton.onclick = (e)=>{
    window.document.location=`../php/getIndicator.php?name=${getName((numarCategorie))}&nr=${e.target.id}`
    }
-   indicator.appendChild(buton)
 
 }
 
@@ -140,11 +166,5 @@ function getImage(nrCategorie, nrIndicator) {
 
     xmlhttp.send()
     return titlu
-}
-
-function showOutput(id)
-{
-    console.log(setClick(id))
-    window.document.location = '../html/indicator.html'
 }
 

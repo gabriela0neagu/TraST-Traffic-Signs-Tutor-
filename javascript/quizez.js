@@ -5,7 +5,6 @@ Array.prototype.forEach.call(solveButtons, myFunc)
 
 function myFunc(item, index)
 {
-	//console.log('lele de la ' + index);
 	item.onclick = function() {showOutput(index) }
 }
 
