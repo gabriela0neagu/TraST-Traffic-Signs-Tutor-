@@ -1,6 +1,20 @@
- var mybutton = document.getElementById("myBtn");
+var infoButtons = document.getElementsByClassName("btn")
+Array.prototype.forEach.call(infoButtons, myFunc)
 
-// When the user scrolls down 20px from the top of the document, show the button
+function myFunc(item, index)
+{
+	item.onclick = function() {showPage(index) }
+}
+
+function showPage(id)
+{
+ sessionStorage.setItem('idPrimAjutor', id)
+
+ window.document.location = '../html/template-primajutor.html'
+}
+
+ var mybutton = document.getElementById("myBtn");
+// When btnth;e user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {

@@ -1,3 +1,127 @@
+//genereaza in mod dinamic progress-bars
+const mainLegislationDiv = document.getElementById('legislationCategory')
+
+var boxMecanica = document.createElement('div')
+boxMecanica.classList.add('progress-box')
+
+var boxPrimajutor = document.createElement('div')
+boxPrimajutor.classList.add('progress-box')
+
+var boxEcologic = document.createElement('div')
+boxEcologic.classList.add('progress-box')
+
+var boxPreventiv = document.createElement('div')
+boxPreventiv.classList.add('progress-box')
+
+
+mainLegislationDiv.appendChild(boxMecanica)
+mainLegislationDiv.appendChild(boxPrimajutor)
+mainLegislationDiv.appendChild(boxEcologic)
+mainLegislationDiv.appendChild(boxPreventiv)
+
+var mecanica = document.createElement("div")
+var primajutor = document.createElement("div")
+var ecologic = document.createElement("div")
+var preventiv = document.createElement("div")
+
+mecanica.classList.add('category-title')
+mecanica.innerHTML = 'Curs de mecanică auto 👨🏻‍🔧'
+primajutor.classList.add('category-title')
+primajutor.innerHTML = 'Curs de prim-ajutor 💉'
+ecologic.classList.add('category-title')
+ecologic.innerHTML = 'Curs de conducere ecologică 🍃'
+preventiv.classList.add('category-title')
+preventiv.innerHTML = 'Curs de conduită preventivă 🤕'
+
+
+boxMecanica.appendChild(mecanica)
+boxPrimajutor.appendChild(primajutor)
+boxEcologic.appendChild(ecologic)
+boxPreventiv.appendChild(preventiv)
+
+function getPercentage(curs)
+{
+  let percentage=''
+   if (window.XMLHttpRequest) {
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp = new XMLHttpRequest()
+        } else {
+            // code for IE6, IE5
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP")
+        }
+        xmlhttp.onreadystatechange = function() {
+              if (this.readyState == 4 && this.status == 200) {
+                percentage = JSON.parse(this.responseText)
+            }
+        };
+        xmlhttp.open("GET","../php/getPercentage.php?curs="+curs, false)
+        xmlhttp.send()
+        
+     return percentage
+}
+
+var progressBar1 = document.createElement('div')
+progressBar1.classList.add('progress')
+
+var value1 = (getPercentage('mecanica_auto') * 100 /14).toFixed(2)
+progressValue1 = document.createElement('div')
+progressValue1.classList.add('progress-value')
+progressValue1.setAttribute('style', 'width:' + value1 + '%')
+if(value1!= 0.00)
+  progressValue1.innerHTML= value1 + '%'
+else
+  progressBar1.innerHTML= '0%'
+
+progressBar1.appendChild(progressValue1)
+boxMecanica.appendChild(progressBar1)
+
+
+var progressBar2 = document.createElement('div')
+progressBar2.classList.add('progress')
+
+var value2 = getPercentage('prim_ajutor') * 100 /4
+progressValue2 = document.createElement('div')
+progressValue2.classList.add('progress-value')
+progressValue2.setAttribute('style', 'width:' + value2 +'%')
+if(value2)
+ progressValue2.innerHTML= value2 +'%'
+else
+  progressBar2.innerHTML= value2 +'%'
+
+progressBar2.appendChild(progressValue2)
+boxPrimajutor.appendChild(progressBar2)
+
+var progressBar3 = document.createElement('div')
+progressBar3.classList.add('progress')
+
+var value3 = getPercentage('conducere_ecologica') * 100 /2
+progressValue3 = document.createElement('div')
+progressValue3.classList.add('progress-value')
+progressValue3.setAttribute('style', 'width:'+ value3 +'%')
+if(value3)
+  progressValue3.innerHTML= value3 +'%'
+else
+  progressBar3.innerHTML= value3 +'%'
+
+progressBar3.appendChild(progressValue3)
+boxEcologic.appendChild(progressBar3)
+
+
+var progressBar4 = document.createElement('div')
+progressBar4.classList.add('progress')
+
+var value4 = getPercentage('conduita_preventiva') * 100 /10
+progressValue4 = document.createElement('div')
+progressValue4.classList.add('progress-value')
+progressValue4.setAttribute('style', 'width:' + value4 +'%')
+if(value4)
+  progressValue4.innerHTML= value4 +'%'
+else
+  progressBar4.innerHTML= value4 +'%'
+progressBar4.appendChild(progressValue4)
+boxPreventiv.appendChild(progressBar4)
+
+
 //genereaza in mod dinamic chestionarele cu scorurile aferente
 function getScore(idQuiz)
 {

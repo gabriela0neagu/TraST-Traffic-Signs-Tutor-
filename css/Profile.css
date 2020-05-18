@@ -206,3 +206,45 @@ body {
 .blue{
 	background-color: rgb(51, 51, 255, 0.4);
 }
+
+
+.progress-box{
+	border-style: groove;
+	border-color: white;
+	border-width: 2px;
+	width: 100%;
+	left: 2%;
+	height: auto;
+	font-family: "Permanent", cursive;
+	color: white;
+	font-size: 20px;
+}
+
+.progress{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	position: relative;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	margin-left: 2%;
+	width: 95%;
+	height: auto;
+	border-radius: 100px;
+    background: rgb(56, 56, 56, 0.7);
+}
+
+
+
+.progress-value{
+	box-shadow: 0 10px 40px -10px #fff;
+	background-color: rgb(198, 83, 198, 0.5);
+	width: 5%;
+	height: auto;
+	border-radius: 100px;
+	text-align: center;
+	font-family: "Permanent", cursive;
+	font: 20px;
+}
+
+

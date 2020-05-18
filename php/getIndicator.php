@@ -14,9 +14,7 @@ $database = new CreateDb( "tw", $tabel);
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Indicator</title>
-    <link rel="styles
-
-    heet" href="../css/indicator.css">
+    <link rel="stylesheet" href="../css/indicator.css">
 </head>
 
 <body>

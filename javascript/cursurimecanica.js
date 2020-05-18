@@ -8,32 +8,9 @@ function myFunc(item, index)
 	item.onclick = function() {showPage(index) }
 }
 
-
-function setClick(idx){
-	 if (window.XMLHttpRequest) {
-            // code for IE7+, Firefox, Chrome, Opera, Safari
-            xmlhttp = new XMLHttpRequest()
-        } else {
-            // code for IE6, IE5
-            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP")
-        }
-        xmlhttp.onreadystatechange = function() {
-              if (this.readyState == 4 && this.status == 200) {
-              setPages = JSON.parse(this.responseText)
-               // console.log(setPages);
-                localStorage.setItem('pages', JSON.stringify(setPages))
-             console.log(setPages)
-
-            }
-        };
-        xmlhttp.open("GET","../php/getpage.php?q="+idx)
-        xmlhttp.send()
-        
-     
-}
 function showPage(id)
 {
-	setClick(id)
+ sessionStorage.setItem('idPaginaMecanica', id)
  window.document.location = '../html/template-mecanica.html'
 }
  
