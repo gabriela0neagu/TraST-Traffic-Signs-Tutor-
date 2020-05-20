@@ -66,6 +66,7 @@ progressBar1.classList.add('progress')
 var value1 = (getPercentage('mecanica_auto') * 100 /14).toFixed(2)
 progressValue1 = document.createElement('div')
 progressValue1.classList.add('progress-value')
+progressValue1.classList.add('purple')
 progressValue1.setAttribute('style', 'width:' + value1 + '%')
 if(value1!= 0.00)
   progressValue1.innerHTML= value1 + '%'
@@ -79,14 +80,15 @@ boxMecanica.appendChild(progressBar1)
 var progressBar2 = document.createElement('div')
 progressBar2.classList.add('progress')
 
-var value2 = getPercentage('prim_ajutor') * 100 /4
+var value2 = (getPercentage('prim_ajutor') * 100 /4).toFixed(2)
 progressValue2 = document.createElement('div')
 progressValue2.classList.add('progress-value')
+progressValue2.classList.add('purple')
 progressValue2.setAttribute('style', 'width:' + value2 +'%')
-if(value2)
+if(value2!= 0.00)
  progressValue2.innerHTML= value2 +'%'
 else
-  progressBar2.innerHTML= value2 +'%'
+  progressBar2.innerHTML= '0%'
 
 progressBar2.appendChild(progressValue2)
 boxPrimajutor.appendChild(progressBar2)
@@ -94,14 +96,15 @@ boxPrimajutor.appendChild(progressBar2)
 var progressBar3 = document.createElement('div')
 progressBar3.classList.add('progress')
 
-var value3 = getPercentage('conducere_ecologica') * 100 /2
+var value3 = (getPercentage('conducere_ecologica') * 100 /2).toFixed(2)
 progressValue3 = document.createElement('div')
 progressValue3.classList.add('progress-value')
+progressValue3.classList.add('purple')
 progressValue3.setAttribute('style', 'width:'+ value3 +'%')
-if(value3)
+if(value3!= 0.00)
   progressValue3.innerHTML= value3 +'%'
 else
-  progressBar3.innerHTML= value3 +'%'
+  progressBar3.innerHTML= '0%'
 
 progressBar3.appendChild(progressValue3)
 boxEcologic.appendChild(progressBar3)
@@ -110,17 +113,103 @@ boxEcologic.appendChild(progressBar3)
 var progressBar4 = document.createElement('div')
 progressBar4.classList.add('progress')
 
-var value4 = getPercentage('conduita_preventiva') * 100 /10
+var value4 = (getPercentage('conduita_preventiva') * 100 /10).toFixed(2)
 progressValue4 = document.createElement('div')
 progressValue4.classList.add('progress-value')
+progressValue4.classList.add('purple')
 progressValue4.setAttribute('style', 'width:' + value4 +'%')
-if(value4)
+if(value4!=0.00)
   progressValue4.innerHTML= value4 +'%'
 else
-  progressBar4.innerHTML= value4 +'%'
+  progressBar4.innerHTML='0%'
 progressBar4.appendChild(progressValue4)
 boxPreventiv.appendChild(progressBar4)
 
+
+
+//genereaza in mod dinamic progress-bars pentru indicatoare si marcaje
+
+
+const mainSignsDiv = document.getElementById('signsCategory')
+
+var boxIndicatoare = document.createElement('div')
+boxIndicatoare.classList.add('progress-box')
+mainSignsDiv.appendChild(boxIndicatoare)
+
+
+var boxMarcaje = document.createElement('div')
+boxMarcaje.classList.add('progress-box')
+mainSignsDiv.appendChild(boxMarcaje)
+
+var indicatoare = document.createElement("div")
+var marcaje = document.createElement("div")
+
+
+indicatoare.classList.add('category-title')
+indicatoare.innerHTML = 'Indicatoare 🚸'
+marcaje.classList.add('category-title')
+marcaje.innerHTML = 'Marcaje ⬅️'
+
+boxIndicatoare.appendChild(indicatoare)
+boxMarcaje.appendChild(marcaje)
+
+
+function getProgress()
+{
+  let progress=''
+   if (window.XMLHttpRequest) {
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp = new XMLHttpRequest()
+        } else {
+            // code for IE6, IE5
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP")
+        }
+        xmlhttp.onreadystatechange = function() {
+              if (this.readyState == 4 && this.status == 200) {
+                progress = JSON.parse(this.responseText)
+            }
+        };
+        xmlhttp.open("GET","../php/getMarcaje.php", false)
+        xmlhttp.send()
+        
+     return progress
+}
+
+let progress = getProgress()
+
+var progressBarInd = document.createElement('div')
+progressBarInd.classList.add('progress')
+
+var valueInd = (progress.indicatoare.visited * 100 / progress.indicatoare.total).toFixed(2)
+progressValueInd = document.createElement('div')
+progressValueInd.classList.add('progress-value')
+progressValueInd.classList.add('blue')
+progressValueInd.setAttribute('style', 'width:' + valueInd + '%')
+if(valueInd!= 0.00)
+  progressValueInd.innerHTML= valueInd + '%'
+else
+  progressBarInd.innerHTML= '0%'
+
+progressBarInd.appendChild(progressValueInd)
+boxIndicatoare.appendChild(progressBarInd)
+
+
+
+var progressBarMar = document.createElement('div')
+progressBarMar.classList.add('progress')
+
+var valueMar = (progress.marcaje.visited * 100 / progress.marcaje.total).toFixed(2)
+progressValueMar = document.createElement('div')
+progressValueMar.classList.add('progress-value')
+progressValueMar.classList.add('blue')
+progressValueMar.setAttribute('style', 'width:' + valueMar + '%')
+if(valueMar!= 0.00)
+  progressValueMar.innerHTML= valueMar + '%'
+else
+  progressBarMar.innerHTML= '0%'
+
+progressBarMar.appendChild(progressValueMar)
+boxMarcaje.appendChild(progressBarMar)
 
 //genereaza in mod dinamic chestionarele cu scorurile aferente
 function getScore(idQuiz)

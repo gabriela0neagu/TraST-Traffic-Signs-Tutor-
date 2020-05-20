@@ -85,6 +85,14 @@ if(!empty($firstName) || !empty($lastName) || !empty($username) || !empty($passw
 			      	 	echo "[legislation] insert failed";
 			      }
 
+
+			      for($i=1; $i<=20; $i++)
+                  {
+        	        $insertQuerry = "INSERT INTO signs (userId, category) VALUES ('$currentId', '$i')";
+			      	 if ($conn->query($insertQuerry) != TRUE)
+			      	 	echo "[signs] insert failed";
+                   }
+
 			    }
 		     header('location:../html/Trast.html');
 		     die();
