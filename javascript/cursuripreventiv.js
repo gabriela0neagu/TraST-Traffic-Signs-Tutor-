@@ -8,34 +8,11 @@ function myFunc(item, index)
 	item.onclick = function() {showPage(index) }
 }
 
-
-function setClick(idx){
-	 if (window.XMLHttpRequest) {
-            // code for IE7+, Firefox, Chrome, Opera, Safari
-            xmlhttp = new XMLHttpRequest()
-        } else {
-            // code for IE6, IE5
-            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP")
-        }
-        xmlhttp.onreadystatechange = function() {
-              if (this.readyState == 4 && this.status == 200) {
-              setPages = JSON.parse(this.responseText)
-               // console.log(setPages);
-                localStorage.setItem('pages', JSON.stringify(setPages))
-
-             console.log(setPages)
-
-            }
-        };
-        xmlhttp.open("GET","getpage-preventiv.php?q="+idx)
-        xmlhttp.send()
-        
-     
-}
 function showPage(id)
 {
-	setClick(id)
-  window.document.location = './template-preventiv.html'
+  console.log(id)
+	sessionStorage.setItem('idPreventiv', id)
+  window.document.location = '../html/template-preventiv.html'
 }
  
  var mybutton = document.getElementById("myBtn");

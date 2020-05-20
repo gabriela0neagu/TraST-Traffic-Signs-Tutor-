@@ -47,7 +47,7 @@ html {
 }
 
 body {
-  background-image: url("img/way.jpg") ;
+  background-image: url("../img/way.jpg") ;
   background-position: center center;
   background-attachment: fixed;
   background-size: cover;
@@ -128,7 +128,7 @@ a:nth-child(1){
   transition: transform 0.4s 0.15s;
 }
 a:nth-child(1) div{
-  background-image: url("img/img1.jpg");
+  background-image: url("../img/img1.jpg");
   height: 100%;
   background-position: left;
   background-size: cover;
@@ -147,7 +147,7 @@ a:nth-child(2){
   
 }
 a:nth-child(2) div{
-  background-image:url("img/capture.jpg");
+  background-image:url("../img/capture.jpg");
   height: 100%;
   background-size: cover;
   background-position: top;
@@ -161,7 +161,7 @@ a:nth-child(3){
   transition:transform 0.4s 0.25s;
 }
 a:nth-child(3) div{
-  background-image:url("img/img3.jpg");
+  background-image:url("../img/img3.jpg");
   height: 100%;
   background-size: cover;
   background-position: center;
@@ -175,7 +175,7 @@ a:nth-child(4){
   transition:transform .4s .3s;
 }
 a:nth-child(4) div{
-  background-image:url("img/img4.jpg");
+  background-image:url("../img/img4.jpg");
   height: 100%;
   background-size: cover;
   background-position: center;
@@ -192,7 +192,7 @@ a:nth-child(5){
   transform:scale(1);
 }
 a:nth-child(5) div{
-  background-image:url("img/leaderboard.png");
+  background-image:url("../img/leaderboard.png");
   height: 100%;
   background-position: center bottom;
   background-repeat: no-repeat;
@@ -250,7 +250,7 @@ a:hover div{
 
 .signUp {
     display: flex;
-    background: url("img/add.png") no-repeat;
+    background: url("../img/add.png") no-repeat;
     width: 60px;
     height: 60px;
     background-position: center;
@@ -265,7 +265,7 @@ a:hover div{
  .profile {
     display: flex;
 
-    background: url("img/profile.png") no-repeat;
+    background: url("../img/profile.png") no-repeat;
     width: 60px;
     height: 60px;
     background-position: center;
@@ -279,7 +279,7 @@ a:hover div{
  .logOut {
     display: flex;
 
-    background: url("img/logout.png") no-repeat;
+    background: url("../img/logout.png") no-repeat;
     width: 60px;
     height: 60px;
     background-position: center;

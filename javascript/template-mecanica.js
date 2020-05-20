@@ -1,15 +1,50 @@
 
+let idMecanica= JSON.parse(sessionStorage.getItem('idPaginaMecanica'))
 
-pages= JSON.parse(localStorage.getItem('pages'))
+console.log(idMecanica)
 
-/*console.log(pages["title"])
-console.log(pages["continut"])
-console.log(pages["poz1"])
-console.log(pages["poz2"])
-console.log(pages["poz3"])
-console.log(pages["id"])*/
+function getInfo(idx){
+  let pages = ''
+  if (window.XMLHttpRequest) {
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp = new XMLHttpRequest()
+        } else {
+            // code for IE6, IE5
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP")
+        }
+        xmlhttp.onreadystatechange = function() {
+              if (this.readyState == 4 && this.status == 200) {
+                pages = JSON.parse(this.responseText)
+            }
+        };
+        xmlhttp.open("GET","../php/getpage.php?q="+idx, false)
+        xmlhttp.send()
+        return pages
+}
 
 
+function updateVisited(id, nume_curs) {
+  if (window.XMLHttpRequest) {
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp = new XMLHttpRequest()
+        } else {
+            // code for IE6, IE5
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP")
+        }
+        xmlhttp.onreadystatechange = function() {
+              if (this.readyState == 4 && this.status == 200) {
+                console.log(this.responseText)
+            }
+        };
+        xmlhttp.open("GET","../php/updateVisited.php?id="+id+"&curs="+nume_curs, false)
+        xmlhttp.send()
+}
+
+
+updateVisited(idMecanica, 'mecanica_auto')
+pages = getInfo(idMecanica)
+
+console.log(pages)
 
 const titluElem= document.getElementById('titlu')
 const continutElem= document.getElementById('info')
@@ -22,7 +57,7 @@ continutElem.innerText=pages["continut"]
 var i=0;
 var i=(i--);
 
-  
+
  for(i in pages.vector_poze)
  {
   //console.log(pages.vector_poze[i])

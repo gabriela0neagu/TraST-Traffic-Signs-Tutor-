@@ -1,3 +1,20 @@
+
+var infoButtons = document.getElementsByClassName("btn")
+
+Array.prototype.forEach.call(infoButtons, myFunc)
+
+function myFunc(item, index)
+{
+	item.onclick = function() {showPage(index) }
+}
+
+function showPage(id)
+{
+ sessionStorage.setItem('idPaginaEcologica', id)
+ window.document.location = '../html/template-ecologic.html'
+}
+
+
  var mybutton = document.getElementById("myBtn");
 
 // When the user scrolls down 20px from the top of the document, show the button

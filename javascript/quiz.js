@@ -16,7 +16,7 @@ nextButton.addEventListener('click', () => {
 	setNextQuestion()
 })
 exitButton.addEventListener('click', ()=>{
-	window.document.location = './Quizez.html'
+	window.document.location = '../html/Quizez.html'
 })
 
 
@@ -109,7 +109,7 @@ function updateScore(score){
             	console.log('script is: ' + this.responseText)
                 }
         }
-        xmlhttp.open("GET","updateScore.php?score="+score +"&id="+ id,false)
+        xmlhttp.open("GET","../php/updateScore.php?score="+score +"&id="+ id,false)
         xmlhttp.send()
 }
 

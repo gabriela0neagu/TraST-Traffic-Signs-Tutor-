@@ -4,7 +4,7 @@
 }
 
 body {
-    background-image: url("ambulanta.jpg");
+    background-image: url("../img/ambulanta.jpg");
     /*background-repeat: no-repeat;*/
   background-size: 1900px 300px;
   font-family: Arial, Helvetica, sans-serif;

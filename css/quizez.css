@@ -1,5 +1,12 @@
 body {
- 
+  padding: 0;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../img/leaderboard-bck2.jpeg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
  }
 
 .organizer{
@@ -14,7 +21,7 @@ body {
     align-self: center;
 	border-style: groove;
 	width: 100%;
-	background-color: rgb(32,32,32,0.2);
+	background-color: rgb(32,32,32,0.3);
 	font-family: "Permanent Marker", cursive;
 	font-size: 20px;
 	padding-top: 2%;
@@ -39,29 +46,27 @@ body {
 	width: 30%;
 }
 
+
 .survey-head{
-	text-align: center;
-	border-bottom: solid;
-	border-width: 1px;
-	border-color: white;
-	padding-bottom: 5%;
-	padding-top: 5%;
-	padding-right: 5%;
-	padding-left: 5%;
-	background-color: rgb(32,32,32,0.2);
-	font-size: 17px;
-	font-weight: bold;
-	color: purple;
+  text-align: center;
+  background-color: rgb(153, 0, 51, 1);
+  border-bottom: solid;
+  border-width: 1px;
+  border-color: white;
+  font-size: 100%;
+  font-weight: bold;
+  color: white;
 }
 
 .survey-body{
-   padding-top: 20%;
-   padding-bottom: 20%;
-   background-image: url("img/survey.jpg");
+   width: auto;
+   height: 80%;
+   background-color: #d6d6c2;
+   padding-top: 5%;
+   padding-bottom: 5%;
    background-position: center;
    text-align: center;
    color: #43233c;
-   text-shadow: 2px 2px white;
 }
 
 .survey-open{
@@ -70,7 +75,7 @@ body {
 	border-radius: 10px;
 	font-family: "Permanent", cursive;
 	color: white;
-    background-image: url("img/survey.jpg");
+  background-color: rgb(153, 0, 51, 1);
     background-position: center;
     width: 70%;
     font-size: 100%;
@@ -92,3 +97,5 @@ body {
 	font-size: 20px;
 	border-color: black;
 }
+
+

@@ -69,4 +69,15 @@ class CreateDb
         }
 
     }
+
+
+     public function getDataById($ID){
+        $sql = "SELECT * FROM $this->tablename WHERE id='$ID'";
+
+        $result = mysqli_query($this->con, $sql);
+
+        if(mysqli_num_rows($result) > 0){
+            return $result;
+        }
+    }
 }

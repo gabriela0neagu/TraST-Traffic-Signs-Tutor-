@@ -36,18 +36,18 @@ if (!empty($username)){
 			        if(!password_verify($password, $data['password']))
 			        {
 			        	$_SESSION["errors"]=1;
-			        	header('location:LogIn.html');
+			        	header('location:../html/LogIn.html');
 			        	die();
 			        }
 			}
 			else {
 				 $_SESSION["errors"] = 1;
-                 header('location:LogIn.html');
+                 header('location:../html/LogIn.html');
                  die();
 			}
 
 			if(isset($_SESSION['ID'])) {
-			    header('location:Profile.html');
+			    header('location:../html/Profile.html');
 			    die();
 			}
 			$conn->close();
