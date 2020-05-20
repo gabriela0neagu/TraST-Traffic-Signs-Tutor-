@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#333641">
+<title>Adaugare continut</title>
+<link rel="stylesheet" type="text/css" href="template-insert.css">
+<link href="https://fonts.googleapis.com/css?family=Faster+One&display=swap" rel="stylesheet">
+<!--script defer src="template-insert.js"></script-->
+<title>Adaugare continut</title>
+</head>
+<body>
+	<form name="insert-quiz" action=insertquizdetails.php method="post" id="form1">
+	<h1>
+		Insereaza intrebare noua
+	</h1>
+	
+		<label for="categorie">Categoria in care se incadreaza intrebarea:</label>
+		<input  type="text" name="categorie" value="">
+
+	    <label for="intrebare">Intrebarea pe care doriti sa o inserati:</label>
+		<input type="text" name="intrebare" value="">
+	
+        <label for="raspuns1">Varianta 1 de raspuns:</label>
+		<input  type="text" name="raspuns1" value="">
+
+	 <label for="raspuns2">Varianta 2 de raspuns: </label>
+	<input  type="text" name="raspuns2" value="">
+	
+	 <label for="raspuns3"> Varianta 3 de raspuns:</label>
+	<input  type="text" name="raspuns3" value="">
+	
+
+	 <label for="raspunsCorect">Varianta corecta de raspuns: </label>
+	<input  type="text" name="raspunsCorect" value="">
+<br>
+<br>
+<button type="submit" form="form1" class="submit-button" value="Submit">Incarca intrebarea</button>
+<br>
+<br>
+</form>
+
+
+</body>
+</html>

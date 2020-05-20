@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="adminPage.css">
+	<script defer src="adminPage.js"></script>
+	<meta name="theme-color" content="#333641">
+	<title>Profile</title>
+</head>
+
+<body>
+	<div class="profile-info">
+		<div class="profile-picture"> 
+			<img src="img/teo.jpg"> 
+		 </div>
+		<div class="profile-bar"> 
+			<div class="bar-field"> <?php session_start(); echo $_SESSION['Username'];?> </div>
+			<div class="bar-field">  <?php echo $_SESSION['FirstName'];?></div>
+			<div class="bar-field">  <?php echo $_SESSION['LastName'];?> </div>
+			<div class="bar-field">  <?php echo $_SESSION['Email'];?> </div>
+			<div class = "bar-field"> <?php echo $_SESSION['Score'];?> </div>
+		</div>
+	</div>
+
+	<div class="text-side"> 
+
+	    <div class="title">  Bine ai venit în contul de administrator! </div>
+	   
+	    <div class= "text">
+	    	👥 Pasul 1: UTILIZATORI➫ Sectiune dedicata adaugarii de noi administratori precum si stergerii utilizatorilor nedoriti.<br>
+		    
+		    <br/>📚 Pasul 2: CURSUL DE LEGISLAȚIE ➫ Sectiune dedicata modificarii informatiilor pe baza noutatilor aparute in legislatia rutiera <br/>
+		   <!--br/>🛑 Pasul 2: INDICATOARE ȘI MARCAJE ➫ Aici găsești toate indicatoarele și marcajele rutiere explicate pe înțelesul tuturor. <br/-->
+	       <br/>📝 Pasul 3: Chestionare DRPCIV ➫ Sectiune dedicata adaugarii/ stergerii/modificarii intrebarilor pentru o buna si corecta desfasurare a invatarii<br/>
+	       <br>
+	         Incepe editarea:
+
+		</div>
+
+		<div class="activity">
+			  <div id="signsCategory" class = "step-title"> 
+			   		<div class="subtitle blue">👥 Pasul 1: UTILIZATORI  </div> 
+			   		<br>
+			   		 <button onclick="newInsert1()" class="button-edit1">Acorda drepturi unui utilizator</button>
+			   		 <button onclick="newInsert1()" class="button-edit2">Sterge utilizator</button>
+			   		
+			   </div>
+
+               <div class = "step-title"> 
+              		 <div class="subtitle green">📚 Pasul 2: CURSUL DE LEGISLAȚIE </div>
+              		 <br>
+              		 <button onclick="newInsert1()" class="button-edit5">Editeaza sectiune</button>
+              		 
+               </div>
+
+			   <!--div id="signsCategory" class = "step-title"> 
+			   		<div class="subtitle blue">🛑 Pasul 3: INDICATOARE ȘI MARCAJE  </div> 
+			   		<br>
+			   		 <button onclick="newInsert1()" class="button-edit6">Editeaza sectiune</button>
+			   </div-->
+
+			   <div id="quizCategory" class = "step-title">
+			    	 <div class="subtitle yellow"> 📝 Pasul 3: Chestionare DRPCIV </div>
+			    	 <br>
+			    	  <button  onclick="newInsert1()" class="button-edit3">Insereaza noi intrebari</button>
+			    	  <button  onclick="newInsert1()" class="button-edit4">Sterge intrebari</button>
+			    	  <br>
+			    	  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+			   </div>
+		</div>
+		
+<div class="home" onclick="window.location.href = 'Trast.html';"> </div>
+
+<div class="<?php session_start(); if(isset($_SESSION['ID'])) echo 'logOut';?>" onclick="window.location.href = 'logout.php';"></div>
+</div>
+
+</body>
+
+</html>
