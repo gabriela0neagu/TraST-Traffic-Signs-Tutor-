@@ -1,11 +1,11 @@
-/*
+
 var descriere=sessionStorage.getItem('descriere')
 const elementDescriere=document.createElement('div')
 elementDescriere.innerHTML=descriere
 elementDescriere.classList.add('descriere')
 document.body.appendChild(elementDescriere)
 
-*/
+
 var numarCategorie= JSON.parse(localStorage.getItem('numarCategorie'))+1
 
 function getNumberIndicatoare(id) {
@@ -22,7 +22,7 @@ var numar=0
         }
     }
     var numeTabel=getName(id)
-    xmlhttp.open("GET","../php/getNumberIndicatoare.php?nume="+numeTabel,false)
+    xmlhttp.open("GET","getNumberIndicatoare.php?nume="+numeTabel,false)
 
     xmlhttp.send()
     return numar
@@ -57,15 +57,15 @@ function getName(id){
     if (id==13)
         name="marcaje_transversale";
     if (id==14)
-        name="marcaje_laterale";
-    if (id==15)
         name="marcaje_diverse";
-    if (id==16)
+    if (id==15)
         name="m_temp_semnaliz_lzdp";
+    if (id==16)
+        name="marcaje_laterale";
     if (id==17)
         name="m_semnaliz_lucrari";
     if (id==18)
-        name="marcaje_laterale";
+        name="m_semnaliz_lucrari";
     if (id==19)
         name="ind_kilometric";
     if (id==20)
@@ -123,7 +123,7 @@ for(i=1;i<=numarIndicatoare;i++)
     contentElement2.appendChild(buton)
     buton.id=i;
    buton.onclick = (e)=>{
-   window.document.location=`../php/getIndicator.php?name=${getName((numarCategorie))}&nr=${e.target.id}`
+   window.document.location=`getIndicator.php?name=${getName((numarCategorie))}&nr=${e.target.id}`
    }
 
 }
@@ -142,7 +142,7 @@ function getTitle(nrCategorie, nrIndicator) {
         }
     }
     var numeTabel=getName(nrCategorie)
-    xmlhttp.open("GET","../php/getTitle.php?nume="+numeTabel+"&nr="+nrIndicator,false)
+    xmlhttp.open("GET","getTitle.php?nume="+numeTabel+"&nr="+nrIndicator,false)
 
     xmlhttp.send()
     return titlu
@@ -162,7 +162,7 @@ function getImage(nrCategorie, nrIndicator) {
         }
     }
     var numeTabel=getName(nrCategorie)
-    xmlhttp.open("GET","../php/getImage.php?nume="+numeTabel+"&nr="+nrIndicator,false)
+    xmlhttp.open("GET","getImage.php?nume="+numeTabel+"&nr="+nrIndicator,false)
 
     xmlhttp.send()
     return titlu
