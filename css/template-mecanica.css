@@ -4,9 +4,8 @@
 }
 
 body {
-    background-image: url("../img/leaderboard-bck2.jpeg");
-   
-  background-size: 1900px 300px;
+    background-image: url("../img/curslegislatie.jpg");
+   background-size: 1900px 600px;
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   width: 100%
@@ -262,6 +261,7 @@ body {
 
 #myBtn:hover {
   background-color: #555;
+}
 
 @media screen and (max-width: 700px) {
   .row {   
@@ -271,8 +271,55 @@ body {
 
 
 @media screen and (max-width: 400px) {
-  .navbar a {
-    float: none;
-    width: 100%;
+  .row {   
+    flex-direction: column;
+  }
+  .titlu-c{
+    font-size: 10px;
+  }
+  .info-capitole{
+    font-size: 10px;
+  }
+    .cuprins{
+    font-size: 9px
+  }
+}
+}
+
+
+@media only screen and (max-width:800px) {
+  /* For tablets: */
+ .row {   
+    flex-direction: column;
+  }
+.titlu-c{
+    font-size: 12px;
+  }
+  .info-capitole{
+    font-size: 12px;
+  }
+  .galerie{
+    width: 50%;
+  }
+  .cuprins{
+    font-size: 11px
+  }
+}
+@media only screen and (max-width:500px) {
+  /* For mobile phones: */
+  .row {   
+    flex-direction: column;
+  }
+  .titlu-c{
+    font-size: 12px;
+  }
+  .info-capitole{
+    font-size: 12px;
+  }
+  .galerie{
+    width: 50%;
+  }
+  .cuprins{
+    font-size: 11px
   }
 }
