@@ -264,7 +264,6 @@ a:hover div{
 
  .profile {
     display: flex;
-
     background: url("../img/profile.png") no-repeat;
     width: 60px;
     height: 60px;
@@ -278,7 +277,6 @@ a:hover div{
 
  .logOut {
     display: flex;
-
     background: url("../img/logout.png") no-repeat;
     width: 60px;
     height: 60px;

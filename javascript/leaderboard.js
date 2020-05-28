@@ -38,11 +38,11 @@ let username=getConnectedUser()
 
 let usersArray = getUsers()
 var i 
-var table = document.getElementById("table")
+var table = document.getElementById("table").getElementsByTagName('tbody')[0]
 
 for(i=0 ; i<usersArray.length; i++)
 {	
-	var row = table.insertRow(i+1)
+	var row = table.insertRow(i)
 	var cell1 = row.insertCell(0)
 	var cell2 = row.insertCell(1)
 	var cell3 = row.insertCell(2)

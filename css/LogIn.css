@@ -224,14 +224,16 @@
 }
 
 .home{
+	display: flex;
 	background: url("../img/home.png") no-repeat;
     width: 60px;
     height: 60px;
     background-position: center;
     background-size: cover;
-    top: 20px;
-    right: 20px;
-    position: fixed;
+    top: 40px;
+    right: 80px;
+    position: absolute;  
     border-radius: 50%;
-    z-index: 2;
+    z-index: 10;
 }
+

@@ -1,3 +1,42 @@
+//completeaza profilul utilizatorului
+
+function getLoggedUser()
+{
+  let user = 0
+  if (window.XMLHttpRequest) {
+            xmlhttp = new XMLHttpRequest()
+        } else {
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP")
+        }
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4) {
+              user = JSON.parse(this.responseText)
+            }
+        }
+        xmlhttp.open("GET","../php/getLoggedUser.php", false)
+        xmlhttp.send()
+        return user
+}
+
+let user = getLoggedUser()
+document.getElementById('fname').innerHTML=user['firstName']
+document.getElementById('lname').innerHTML=user['lastName']
+document.getElementById('username').innerHTML=user['username']
+document.getElementById('email').innerHTML=user['email']
+document.getElementById('score').innerHTML=user['score']
+
+if(user['isAdmin'] == 1)
+{
+  var info = document.getElementById('profile-info')
+  let newField = document.createElement('BUTTON')
+  newField.classList.add('bar-field')
+  newField.classList.add('link')
+  newField.innerHTML='ADMINISTRATOR 🖱️'
+  newField.onclick= function(){ window.document.location = '../html/adminPage.html' }
+  info.appendChild(newField)
+}
+
+
 //genereaza in mod dinamic progress-bars
 const mainLegislationDiv = document.getElementById('legislationCategory')
 
@@ -361,3 +400,29 @@ for( i=1; i<=30; i++)
       }
     
    }
+
+
+
+
+
+ var scrollButton = document.createElement("BUTTON");
+ scrollButton.classList.add('myBtn')
+ scrollButton.innerHTML='Top'
+ document.body.appendChild(scrollButton)
+ scrollButton.onclick=function(){topFunction()}
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    scrollButton.style.display = "block";
+  } else {
+    scrollButton.style.display = "none";
+  }
+}
+
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}

@@ -2,119 +2,265 @@ body{
 width: 99%;
 height: 100%;
 display: block;
-background-image: url("img/font.jpg") ;
+background-image: url("../img/road7.jpg");
 background-size: cover;
+background-color: black;
+background-attachment: fixed;
 color: white;
+margin-bottom: 5%;
+margin-top: 2%;
 }
 
-h1{
-  margin-top: 3%;
-	text-align: center;
-	font-size: 40px;
-}
 
+.big-title {
+  display: flex; 
+  justify-content: center;
+  background: 50% 100% / 50% 50% no-repeat
+              radial-gradient(ellipse at bottom, #cc7a00, transparent, transparent);
+  -webkit-background-clip: text;
+  /*defines how far the background (color or image) should extend within an element*/
+  background-clip: text;
+  color: transparent;
+  font-family: 'Faster One', cursive;
+  
+  animation: reveal 3000ms ease-in-out forwards 200ms,
+             glow 2500ms linear infinite 2000ms;
+}  
+
+.title{
+  display: flex;
+  margin-bottom: 5%;
+  justify-content: center;
+  color: rgba(204,  122, 0, 0.7);
+  font-size: 300%;
+  text-shadow:
+    -1px -1px 0 #FFFFFF,
+    1px -1px 0 #FFFFFF,
+    -1px 1px 0 #FFFFFF,
+    1px 1px 0 #FFFFFF; 
+}
 
 .cadru{
+ display: flex;
+  flex-wrap: wrap;
+  background-color: rgb(32,32,32,0.3);
   border-top:  5px solid white;
   border-bottom:  5px solid white;
   border-left: 5px solid white;
   border-right:  5px solid white;
-  margin-left: 15%;
-  margin-right:15%;
-  margin-top: 10%;
+  margin-right: 10%;
+  margin-left: 10%;
+  width: auto;
+  max-width: 95%;
 }
+
 .table{
-  
- 	 
- 	  width: 80%;
- 	  height: 70%;
- 	  color: white;
- 	   text-shadow:
+   margin: 0 auto;
+  align-self: center;
+  width: 100%;
+  height: auto;
+  color: white;
+  font-size: 150%;
+  text-shadow:
     -1px -1px 0 #000,
     1px -1px 0 #000,
     -1px 1px 0 #000,
     1px 1px 0 #000; 
- 	  padding: 0px;
- 	    word-wrap: break-word;
-border-top:3px solid white;
-margin-left:15%; 
-    margin-right:15%;
-
-
-}
-.table-border{
-  width:80%; 
-    margin-left:10%; 
-    margin-right:10%;
-    margin-top: 4%;
-    margin-bottom: 4%;
-
+  table-layout: fixed;
 }
 
-.alert-succes{
-  margin-left: 10%;
-  margin-right:15%
-  font-size:20px;
-
-}
-.alert-warning{
-  margin-left: 10%;
-  margin-right:15%;
-  font-size:20px;1
-
-}
 
 table th{
-	border-bottom: 1px solid white;
-	font-size: 24px;
+  line-height: 220%;
+  border-bottom: 1px solid white;
+  font-size: 24px;
+  border-top: transparent;
+  border-right: 1px solid white;
 }
-
-
-table th:nth-child(1){
-	border-right: 1px solid white;
-  border-top: 1px solid white;
-  border-left: 1px solid white;
-
- }
-
- table th:nth-child(5){
- 	border-right: 1px solid white;
-  border-top: 1px solid white;
- 	
- }
- table th:nth-child(2){
- 	border-right: 1px solid white;
-  border-top: 1px solid white;
- }
-  table th:nth-child(3){
- 	border-right: 1px solid white;
-  border-top: 1px solid white;
- }
-
- table th:nth-child(4){
- 	border-right: 1px solid white;
-  border-top: 1px solid white;
- }
-
- table th:nth-child(6){
- 	border-right: 1px solid white;
-  border-top: 1px solid white;
- }
 
   
 table td{
-	text-align: center; 
-    vertical-align: middle;
-    font-size: 100%;
-    line-height: 220%;
-   border-right:  1px solid white;
-    border-bottom:  1px solid white;
-    border-left:  1px solid white;
-    margin-left: 20%;
-    margin-right: 20%;
+  text-align: center; 
+  vertical-align: middle;
+  font-size: 100%;
+  line-height: 100%;
+  line-height: 220%;
+  border-right: 1px solid white;
 }
 
 
+table th:nth-child(5){
+  border:transparent;
+  border-bottom: 1px solid white;
+}
+
+table td:nth-child(5)
+{
+  border-right: 1px solid transparent; 
+  border-top: 1px solid transparent;
+  border-left: 1px solid transparent;
+}
+
+.buttonAdminRights {
+ display: inline-block;
+  padding: 0.3em 1.2em;
+  margin:0 0.1em 0.1em 0.1em;
+  border:0.16em solid rgba(255,255,255,0);
+  border-radius:2em;
+  box-sizing: border-box;
+  text-decoration:none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight:300;
+  font-size: 60%;
+  color:#FFFFFF;
+  text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
+  text-align:center;
+  transition: all 0.2s;
+  word-wrap: break-word;
+  background-color: #E58E37;
+}
+
+.buttonAdminRightsOn {
+  background-color: #E58E37;
+  text-indent: 0.6em;
+}
+
+.buttonAdminRightsOff {
+  background-color: #b8b894;
+}
 
 
+.buttonAdminRightsOn:hover{
+  border:0.16em solid #b8b894;
+}
+
+.buttonAdminRightsOff:hover{
+  border:0.16em solid #E58E37;
+}
+
+.specialUser{
+  background-color:rgb(229, 142, 55, 0.4); 
+ }
+
+
+ .home{
+  display: flex;
+  background: url("../img/home.png") no-repeat;
+    width: 60px;
+    height: 60px;
+    background-position: center;
+    background-size: cover;
+    top: 40px;
+    right: 15px;
+    position: absolute;  
+    border-radius: 50%;
+}
+
+ .logOut {
+    display: flex;
+    background: url("../img/logout.png") no-repeat;
+    width: 55px;
+    height: 55px;
+    background-position: center;
+    background-size: cover;
+    top: 100px;
+    right: 15px;
+    position: absolute;
+    border-radius: 50%;
+  }
+
+
+   @keyframes reveal {
+    80%{
+      letter-spacing: 8px;
+    }
+    100% {
+      background-size: 300% 300%;
+    }
+  }
+  @keyframes glow {
+    40% {
+      text-shadow: 0 0 8px #fff;
+    }
+  }
+
+
+
+@media screen and (min-width: 601px) {
+  div.big-title {
+    font-size: 120px;
+  }
+
+  table td{
+    overflow-wrap: break-word;
+  }  
+}
+
+@media screen and (max-width: 600px) {
+  div.big-title {
+    font-size: 70px;
+  }  
+
+  div.title {
+    font-size: 20px;
+  }
+  
+  table {
+    border: 0;
+    word-wrap: normal;
+    hyphens: auto;
+  }
+
+  table caption {
+    font-size: 1.3em;
+  }
+  
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+  }
+  
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+    padding: 2% 2% 2% 2%;
+  }
+  
+  table td::before {
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  td:nth-of-type(1) {color: #e58e37;}
+
+  td:nth-of-type(1):before { content: "Id utilizator";}
+  td:nth-of-type(2):before { content: "Nume";}
+  td:nth-of-type(3):before { content: "Prenume";}
+  td:nth-of-type(4):before { content: "Nume utilizator"; }
+
+  td:nth-of-type(5) .buttonAdminRights {
+    font-size: 80%; 
+    margin: auto; 
+    display: block; 
+    align-self: center;
+  }
+  
+  table td:last-child {
+    border-bottom: 0;
+  }
+}
 

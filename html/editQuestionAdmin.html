@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#333641">
+<title>Editare continut</title>
+<link rel="stylesheet" type="text/css" href="../css/insertQuestionAdmin.css">
+<link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+<script type="text/javascript" defer src="../javascript/editQuestion.js"></script>
+</head>
+<body>
+	<div class="title">Editează întrebarea</div>
+	<form onsubmit="editQuestion(this)" action = "javascript:;" name="insert-quiz"  method="post" id="form1">
+	
+		<label for="categorie">Categorie:</label>
+		<input  id = "category" type="text" name="categorie" required>
+
+	    <label for="intrebare">Întrebare:</label>
+		<input id ="question" type="text" name="intrebare" required>
+	
+        <label for="raspuns1">Varianta 1 de răspuns:</label>
+		<input id="answ1" type="text" name="raspuns1" required>
+
+	 	<label for="raspuns2">Varianta 2 de răspuns: </label>
+		<input id="answ2" type="text" name="raspuns2" required>
+	
+	 	<label for="raspuns3"> Varianta 3 de răspuns:</label>
+		<input  id="answ3" type="text" name="raspuns3" required>
+	
+
+	 	<label for="raspunsCorect">Varianta corectă de răspuns: </label>
+		<input id="correct" type="text" name="raspunsCorect" value="" required>
+
+
+		<button id="editBtn" type="submit" form="form1" class="submit-button" value="Submit">Editează întrebarea</button>
+	</form>
+</body>
+</html>

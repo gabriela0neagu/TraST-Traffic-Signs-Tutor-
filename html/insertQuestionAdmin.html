@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#333641">
+<title>Adaugare continut</title>
+<link rel="stylesheet" type="text/css" href="../css/insertQuestionAdmin.css">
+<link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+<title>Adaugare continut</title>
+</head>
+<body>
+	<div class="title">Adaugă o nouă întrebare</div>
+
+	<form onsubmit="alert('Intrebarea a fost adaugată cu succes')" name="insert-quiz" action=../php/insertquizdetails.php method="post" id="form1">
+		<label for="categorie">Categoria în care se încadrează întrebarea:</label>
+		<input  type="text" name="categorie" value="" required>
+
+		<label for="intrebare">Întrebarea pe care doriți să o inserați:</label>
+		<input type="text" name="intrebare" value="" required>
+		
+	    <label for="raspuns1">Varianta 1 de răspuns:</label>
+		<input  type="text" name="raspuns1" value="" required>
+
+		<label for="raspuns2">Varianta 2 de răspuns: </label>
+		<input  type="text" name="raspuns2" value="" required>
+		
+		<label for="raspuns3"> Varianta 3 de răspuns:</label>
+		<input  type="text" name="raspuns3" value="" required>
+		
+
+		<label for="raspunsCorect">Varianta corectă de răspuns: </label>
+		<input  type="text" name="raspunsCorect" value="" required>
+		<br>
+		<br>
+		<button type="submit" form="form1" class="submit-button" value="Submit">Încarcă întrebarea</button>
+		<br>
+		<br>
+    </form>
+
+</body>
+</html>

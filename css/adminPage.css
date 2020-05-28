@@ -1,5 +1,5 @@
 body {
-  background-image: url("img/font.jpg") ;
+  background-image: url("../img/road7.jpg") ;
   background-position: center center;
   background-attachment: fixed;
   background-size: cover;
@@ -23,7 +23,7 @@ body {
  	background-size: cover;
     background-position: center;
     background-size: cover;   
-    height: 80%;
+    height: 90%;
     width: 80%;
     border-style: groove;
 	border-width:5px;
@@ -40,16 +40,23 @@ body {
 	border-style: groove;
 	width: 80%;
 	border-radius: 20%;
-	font-family: "Permanent Marker", cursive;
+	background-color: rgb(32,32,32,0.3);
+	font-family: Arial, Helvetica, sans-serif;
 	font-size: 20px;
 	padding-top: 4px;
 	padding-bottom: 4px;
 	text-align: center;
 	color: white;	
 	word-wrap: break-word;
+	 text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000; 
 }
 
 .text-side{
+	margin-top:2%; 
 	width: 70%;
 	display: inline-flex;
 	flex-direction: column;
@@ -58,10 +65,15 @@ body {
 }
 
 .title{
+	 text-shadow:
+    0px 0px 0 #000,
+    0px 0px 0 #000,
+    0px 0px 0 #000,
+    0px 0px 0 #000; 
 	margin-top: 2%;
 	margin-bottom: 8%;
-	font-family:'Fredericka the Great', cursive;
-	font-size: 50px;
+ 	font-family:'Fredericka the Great', cursive;
+ 	font-size: 50px;
 	color: white;
 	text-align: center;
 }
@@ -72,16 +84,15 @@ body {
 	text-align: justify-all;
 	margin: auto;
 	padding: 2% 5% 5% 5%;
-	background-color: rgb(32,32,32,0.2);
-	font-family: "Permanent Marker", cursive;
-	font-size: 20px;
+	background-color: rgb(32,32,32,0.3);
+ 	font-family: Arial, Helvetica, sans-serif;	font-size: 20px;
 	color: white;
 }
 
 .activity {
-        display: block;
-        padding-bottom: : 5%;
-        margin-top: 5%;
+    display: block;
+    padding-bottom: 5%;
+    margin-top: 5%;
 }
 
 
@@ -91,11 +102,14 @@ body {
 	 padding-top: 1%;
 	 padding-bottom: 1%;
 	 margin-top: 2%;
-	 font-family: "Permanent Marker", cursive;
-	 font-size: 150%;
+ 	 font-family: Arial, Helvetica, sans-serif;	 font-size: 150%;
 	 border-style: inset;
 	 border-color: white;
 	 background-color: rgb(32,32,32,0.2);
+}
+
+.orange{
+  background-color: rgb(255, 153, 51, 0.3);
 }
 
 
@@ -105,74 +119,11 @@ body {
 	 padding-top: 1%;
 	 padding-bottom: 1%;
 	 margin-top: 2%;
-	 font-family: "Permanent Marker", cursive;
-	 font-size: 100%;
+     font-family: Arial, Helvetica, sans-serif;	 font-size: 100%;
 	 border-style: inset;
 	 border-color: white;
 	 background-color: rgb(32,32,32,0.2);
 }
-
-
-.surveys-box {
-	max-width: 80%; 
-    width: 100%;
-    display: inline-flex;
-    justify-content: center;
-	flex-flow: row;
-	flex-wrap: wrap;
-	align-items: center;
-	height: auto;
-	font-family: "Permanent", cursive;
-	color: white;
-	font-size: 20px;
-
-}
-
-
-.survey{
-	margin: 5% 0% 4% 5%;
-	font-family: "Permanent", cursive;
-	color: white;
-	font-size: 20px;
-	max-width: 50%;
-	width: 30%;
-}
-
-.survey-head{
-	text-align: center;
-	border-bottom: solid;
-	border-width: 1px;
-	border-color: white;
-	background-color: rgb(255, 255, 26, 0.6);
-	font-size: 100%;
-	font-weight: bold;
-	color: white;
-}
-
-.survey-body{
-   width: auto;
-   height: auto;
-   background-image: url("img/orange.jpg");
-   padding-top: 5%;
-   padding-bottom: 5%;
-   background-position: center;
-   text-align: center;
-   color: #43233c;
-}
-
-
-  .hide {
-  	display: none;
-  }
-
-
-  .admis:hover{
-  	color: #009900;
-  }
-
-  .respins:hover{
-  	color: red;
-  }
 
 
 .subtitle{
@@ -181,32 +132,44 @@ body {
 	 padding-top: 1%;
 	 padding-bottom: 1%;
 	 margin-top: 2%;
-	 font-family: "Permanent Marker", cursive;
-	 font-size: 100%;
+ 	 font-family: Arial, Helvetica, sans-serif;	 font-size: 100%;
 	 border-style: inset;
 	 border-color: white;
-	 background-color: rgb(32,32,32,0.2);
-
-}
-
-  .purple{
-	background-color: rgba(255, 152, 54, 0.7);}
-
-.yellow{
-	background-color: rgba(255, 152, 54, 0.7);
 }
 
 
-.green{
-	background-color: rgba(255, 152, 54, 0.7);
+.buttonEdit{
+  display: inline-block;
+  padding: 0.3em 1.2em;
+  margin:0 0.1em 0.1em 0.1em;
+  border:0.16em solid rgba(255,255,255,0);
+  border-radius:2em;
+  box-sizing: border-box;
+  text-decoration:none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight:300;
+  font-size: 80%;
+  color:#FFFFFF;
+  text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
+  text-align:center;
+  transition: all 0.2s;
+  word-wrap: break-word;
+  background-color: #E58E37;
+}
+
+.buttonEdit:hover{
+  border:0.16em solid #b8b894;
+  background-color: #555;
 }
 
 
-.blue{
-	background-color: rgba(255, 152, 54, 0.7);
+.link{
+	cursor: pointer;
+	color:rgb(229, 142, 55);
 }
 
-#myBtn {
+
+.myBtn {
   display: none;
   position: fixed;
   bottom: 20px;
@@ -215,49 +178,40 @@ body {
   font-size: 18px;
   border: none;
   outline: none;
-  background-color:#E58E37;
+  background-color: #E58E37;
   color: white;
   cursor: pointer;
   padding: 15px;
   border-radius: 4px;
 }
 
-#myBtn:hover {
+.myBtn:hover {
   background-color: #555;
 }
 
-.button-edit1, .button-edit2,.button-edit3,.button-edit4,.button-edit5,.button-edit6{
 
-  font-size: 18px;
-  border: none;
-  outline: none;
-  background-color: #E58E37;
-  color: white;
-  padding: 15px;
-  border-radius: 4px;
-
+.home{
+  display: flex;
+  background: url("../img/home.png") no-repeat;
+    width: 60px;
+    height: 60px;
+    background-position: center;
+    background-size: cover;
+    top: 40px;
+    right: 15px;
+    position: absolute;  
+    border-radius: 50%;
 }
 
-.button-edit1:hover {
-background-color: #555;
-
-}
-.button-edit2:hover {
-background-color: #555;
-}
-.button-edit3:hover {
-background-color: #555;
-
-}
-.button-edit4:hover {
-background-color: #555;
-}
-.button-edit5:hover {
-background-color: #555;
-
-}
-.button-edit6:hover {
-background-color: #555;
-}
-
-
+ .logOut {
+    display: flex;
+    background: url("../img/logout.png") no-repeat;
+    width: 55px;
+    height: 55px;
+    background-position: center;
+    background-size: cover;
+    top: 100px;
+    right: 15px;
+    position: absolute;
+    border-radius: 50%;
+  }

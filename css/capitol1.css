@@ -13,16 +13,18 @@ body {
 .clear{
   clear: both;
 }
+
 .slide-toggle{
   display: none;
 }
+
 .slidemenu{
   font-family: arial, sans-serif;
   max-width: 600px;
   margin: 50px auto;
   overflow: hidden;
-  /* daaaaaaaaaaaaaaaa*/
 }
+
 .slidemenu label{
   width: 25%;
   text-align: center;
@@ -30,8 +32,8 @@ body {
   float: left;
   color: #eee;
   opacity: 0.5;
-
 }
+
 .slidemenu label:hover{
   cursor: pointer;
   color: #eee;
@@ -41,10 +43,12 @@ body {
   display: block;
   padding: 10px;    
 }
+
 .slidemenu label span a{
    color: #eee; 
    text-decoration:none   
 }
+
 .slidemenu label .icon{
   font-size: 20px;
   border: solid 4px #eee;
@@ -56,7 +60,6 @@ body {
   line-height: 50px;
   border-radius: 50%;
 }
-/*Bar Style*/
 
 .slider{
   width: 100%;
@@ -73,13 +76,12 @@ body {
   background: red;
   border-radius: 10px;
 }
-/*Animations*/
+
 .slidemenu label, .slider .bar {
   transition: all 500ms ease-in-out;
   -webkit-transition: all 500ms ease-in-out;
   -moz-transition: all 500ms ease-in-out;
 }
-/*Toggle*/
 
 .slidemenu .slide-toggle:checked + label{
   opacity: 1.5;
@@ -105,6 +107,7 @@ body {
   background-color: #f1f1f1;
   padding: 20px;
 }
+
 .side a{
   text-align: right;
   color:black;
@@ -115,30 +118,33 @@ body {
   cursor: pointer;
 }
 
-/* Main column */
 .main {   
-  -ms-flex: 70%; /* IE10 */
+  -ms-flex: 70%; 
   flex: 70%;
   background-color: white;
   padding: 15px;
 }
+
 .main img{
   width: 100%;
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
+
 .butoane:hover a{
   color: black;
-  text-align: center;
-   
+  text-align: center; 
 }
+
 .buton{
   display: flex;
 }
+
 .butoane{
  width:200px;
-  margin: auto;}
+  margin: auto;
+}
 
 .butoane a{
   text-align: center;
@@ -146,22 +152,18 @@ body {
   display: inline-block;
   padding: 8px 30px;
   color: white;
-
 }
 
 .previous {
-  
   color: white;
   display: inline;
   background-color: red;
-  
 }
-.next {
-  
+
+.next {  
   color: white;
   display: inline;
   background-color: red;
-   
 }
 
 #myBtn {

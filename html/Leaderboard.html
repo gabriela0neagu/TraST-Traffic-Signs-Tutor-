@@ -5,6 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Faster+One&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="../css/Leaderboard.css">
 	<script defer src="../javascript/leaderboard.js"></script>
 	<meta name="theme-color" content="#333641">
@@ -12,23 +13,35 @@
 </head>
 
 <body>
-	<div class="leaderboard-extern-box"> 
-		<div class="organizer">
+	<div class="big-title"> TraST </div>
+
+	<div class="organizer">
+
+		<div class="title"> Clasament </div>
 		    
-				<img class= "img" src="../img/rss.png">
-			
-			<div class="title"> Clasament </div>
-	    </div>
+		<img class= "img" src="../img/rss.png">
+	</div>
+
+	<div class="leaderboard-extern-box"> 
 		<table id = "table" class = "table">
 		  <thead>
 			<tr>
-				<th> Rank </th>
-				<th> Username </th>
+				<th> Poziție </th>
+				<th> Nume de utilizator </th>
 				<th> Scor </th>
 			</tr>
           </thead>
+          <tbody ></tbody>
 		</table>
+
 	</div>
+
+
+<div class="home" onclick="window.location.href = '../html/Trast.html';"> </div>
+
+<div class="<?php session_start(); if(isset($_SESSION['ID'])) echo 'logOut';?>" onclick="window.location.href = '../php/logout.php';"></div>
+
+
 </body>
 
 </html>

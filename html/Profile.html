@@ -16,12 +16,12 @@
 		<div class="profile-picture"> 
 			<img src="../img/user2.png"> 
 		 </div>
-		<div class="profile-bar"> 
-			<div class="bar-field"> <?php session_start(); echo $_SESSION['Username'];?> </div>
-			<div class="bar-field">  <?php echo $_SESSION['FirstName'];?></div>
-			<div class="bar-field">  <?php echo $_SESSION['LastName'];?> </div>
-			<div class="bar-field">  <?php echo $_SESSION['Email'];?> </div>
-			<div class = "bar-field"> <?php echo $_SESSION['Score'];?> </div>
+		<div id = "profile-info" class="profile-bar"> 
+			<div id="username" class="bar-field"> </div>
+			<div id="fname" class="bar-field"> </div>
+			<div id="lname" class="bar-field"> </div>
+			<div id="email" class="bar-field"> </div>
+			<div id="score" class = "bar-field"> </div>
 		</div>
 	</div>
 

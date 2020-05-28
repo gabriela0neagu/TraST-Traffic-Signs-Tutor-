@@ -13,8 +13,11 @@ $users = array();
 
 while($row = mysqli_fetch_assoc($result)) {
 	$userObj=new \stdClass();
+	$userObj->id = $row['id'];
 	$userObj->username = $row['username'];
 	$userObj->score= $row['score'];
+	$userObj->firstName = $row['firstName'];
+	$userObj->lastName = $row['lastName'];
     $users[]=$userObj;
 }
 

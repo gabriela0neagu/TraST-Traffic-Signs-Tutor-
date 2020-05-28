@@ -10,8 +10,10 @@ body{
 	align-items: center;
 	width: 100vw;
 	height: 100vh;
-	background-image: url("../img/survey-bck.jpg");
-	background-size: cover;
+  background-image: url("../img/road7.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 
 

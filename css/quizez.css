@@ -3,22 +3,131 @@ body {
   display: block;
   justify-content: center;
   align-items: center;
-  background-image: url("../img/leaderboard-bck2.jpeg");
-  background-attachment: fixed;
+  background-image: url("../img/road7.jpg");
   background-size: cover;
+  background-attachment: fixed;
   background-repeat: no-repeat;
+  word-break: break-all;
+  overflow-x: hidden;
  }
+
+
+
+@media screen and (max-width: 600px) {
+  div.survey-head{
+    font-size: 15px;
+  }
+
+  div.survey-body{
+    font-size: 15px;
+  }
+
+  div.survey-open{
+    font-size: 15px;
+  }
+}
+
+.clear{
+  clear: both;
+}
+
+.slide-toggle{
+  display: none;
+}
+
+.slidemenu{
+  font-family: arial, sans-serif;
+  max-width: 600px;
+  margin: 50px auto;
+  overflow: hidden;
+}
+
+.slidemenu label{
+  width: 25%;
+  text-align: center;
+  display: block;
+  float: left;
+  color: #E58E37;
+  opacity: 0.5;
+}
+
+.slidemenu label:hover{
+  cursor: pointer;
+  color: #eee;
+}
+
+.slidemenu label span{
+  display: block;
+  padding: 10px;    
+}
+
+.slidemenu label span a{
+   color: white;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000; 
+   text-decoration:none;  
+}
+
+.slidemenu label .icon{
+  font-size: 20px;
+  border: solid 4px #E58E37;
+  text-align: center;
+  height: 50px;
+  width: 50px;
+  display: block;
+  margin: 0 auto;
+  line-height: 50px;
+  border-radius: 50%;
+}
+
+.slider{
+  width: 100%;
+  height: 5px;
+  display: block;
+  background: #ccc;
+  margin-top: 30px;
+  border-radius: 5px;
+}
+
+.slider .bar{
+  width: 25%;
+  height: 10px;
+  background: #E58E37;
+  border-radius: 10px;
+}
+
+.slidemenu label, .slider .bar {
+  transition: all 500ms ease-in-out;
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+}
+
+
+.slidemenu .slide-toggle:checked + label{
+  opacity: 1.5;
+}
+
+
+.slidemenu #slide-item-1:checked ~ .slider .bar{ margin-left: 0; }
+.slidemenu #slide-item-2:checked ~ .slider .bar{ margin-left: 25%; }
+.slidemenu #slide-item-3:checked ~ .slider .bar{ margin-left: 50%; }
+.slidemenu #slide-item-4:checked ~ .slider .bar{ margin-left: 75%; }
+
+
+
 
 .organizer{
   width: 90%;
   padding-left: 14%;
   display: block;
-  margin: 0 auto;
 }
 
 .category{
-    max-width: 80%; 
-    align-self: center;
+  max-width: 80%; 
+  align-self: center;
 	border-style: groove;
 	width: 100%;
 	background-color: rgb(32,32,32,0.3);
@@ -33,7 +142,7 @@ body {
 
 
 .survey{
-    border-style: inset;
+  border-style: inset;
 	border-color: white;
 	border-width: 1.5px;
 	box-shadow: 0 0  5px 0.5px black;
@@ -49,7 +158,7 @@ body {
 
 .survey-head{
   text-align: center;
-  background-color: rgb(153, 0, 51, 1);
+  background-color: #E58E37;
   border-bottom: solid;
   border-width: 1px;
   border-color: white;
@@ -60,34 +169,33 @@ body {
 
 .survey-body{
    width: auto;
-   height: 80%;
    background-color: #d6d6c2;
-   padding-top: 5%;
-   padding-bottom: 5%;
+   padding-top: 15%;
+   padding-bottom: 15%;
    background-position: center;
    text-align: center;
-   color: #43233c;
+   background-color: rgb(32,32,32,0.2);
 }
 
 .survey-open{
 	position: relative;
-	border-color: purple;
+	border-color: white;
 	border-radius: 10px;
 	font-family: "Permanent", cursive;
 	color: white;
-  background-color: rgb(153, 0, 51, 1);
-    background-position: center;
-    width: 70%;
-    font-size: 100%;
-    box-shadow: 0 0  10px 2px;
+  background-color: #E58E37;
+  background-position: center;
+  width: 70%;
+  font-size: 100%;
+  box-shadow: 0 0  10px 2px;
 }
 
 
 .surveys-box{
-    max-width: 80%; 
-    width: 100%;
-    display: inline-flex;
-    justify-content: center;
+  max-width: 80%; 
+  width: 100%;
+  display: inline-flex;
+  justify-content: center;
 	flex-flow: row;
 	flex-wrap: wrap;
 	align-items: center;
