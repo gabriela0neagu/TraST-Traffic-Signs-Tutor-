@@ -30,37 +30,34 @@ body {
 .clear{
   clear: both;
 }
-
 .slide-toggle{
   display: none;
 }
-
 .slidemenu{
   font-family: arial, sans-serif;
-  max-width: 600px;
+  max-width: 800px;
   margin: 50px auto;
   overflow: hidden;
+  /* daaaaaaaaaaaaaaaa*/
 }
-
 .slidemenu label{
-  width: 25%;
+  width: 15%;
   text-align: center;
   display: block;
   float: left;
   color: #E58E37;
-  opacity: 0.5;
-}
+  opacity: 0.2;
 
+}
 .slidemenu label:hover{
   cursor: pointer;
-  color: #eee;
+  color: #E58E37;
 }
 
 .slidemenu label span{
   display: block;
   padding: 10px;    
 }
-
 .slidemenu label span a{
    color: white;
     text-shadow:
@@ -68,12 +65,11 @@ body {
     1px -1px 0 #000,
     -1px 1px 0 #000,
     1px 1px 0 #000; 
-   text-decoration:none;  
+   text-decoration:none   
 }
-
 .slidemenu label .icon{
-  font-size: 20px;
-  border: solid 4px #E58E37;
+  font-size: 22px;
+  border: solid 2px #E58E37;
   text-align: center;
   height: 50px;
   width: 50px;
@@ -82,9 +78,10 @@ body {
   line-height: 50px;
   border-radius: 50%;
 }
+/*Bar Style*/
 
 .slider{
-  width: 100%;
+  width: 90%;
   height: 5px;
   display: block;
   background: #ccc;
@@ -93,28 +90,30 @@ body {
 }
 
 .slider .bar{
-  width: 25%;
+  width: 15%;
   height: 10px;
   background: #E58E37;
   border-radius: 10px;
 }
-
+/*Animations*/
 .slidemenu label, .slider .bar {
   transition: all 500ms ease-in-out;
   -webkit-transition: all 500ms ease-in-out;
   -moz-transition: all 500ms ease-in-out;
 }
-
+/*Toggle*/
 
 .slidemenu .slide-toggle:checked + label{
-  opacity: 1.5;
+  opacity: 1;
 }
 
 
 .slidemenu #slide-item-1:checked ~ .slider .bar{ margin-left: 0; }
-.slidemenu #slide-item-2:checked ~ .slider .bar{ margin-left: 25%; }
-.slidemenu #slide-item-3:checked ~ .slider .bar{ margin-left: 50%; }
-.slidemenu #slide-item-4:checked ~ .slider .bar{ margin-left: 75%; }
+.slidemenu #slide-item-2:checked ~ .slider .bar{ margin-left: 17%; }
+.slidemenu #slide-item-3:checked ~ .slider .bar{ margin-left: 34%; }
+.slidemenu #slide-item-4:checked ~ .slider .bar{ margin-left: 51%; }
+.slidemenu #slide-item-5:checked ~ .slider .bar{ margin-left: 68%; }
+.slidemenu #slide-item-6:checked ~ .slider .bar{ margin-left: 85%; }
 
 
 

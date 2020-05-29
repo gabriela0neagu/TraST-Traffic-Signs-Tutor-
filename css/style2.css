@@ -3,6 +3,7 @@ body{
     margin-left: 5%;
     margin-top: 5%;
     margin-bottom: 5%;
+    
 }
 .clear{
   clear: both;
@@ -12,23 +13,23 @@ body{
 }
 .slidemenu{
   font-family: arial, sans-serif;
-  max-width: 600px;
+  max-width: 800px;
   margin: 50px auto;
   overflow: hidden;
   /* daaaaaaaaaaaaaaaa*/
 }
 .slidemenu label{
-  width: 25%;
+  width: 15%;
   text-align: center;
   display: block;
   float: left;
-  color: #eee;
-  opacity: 0.5;
+  color: #E58E37;
+  opacity: 0.2;
 
 }
 .slidemenu label:hover{
   cursor: pointer;
-  color: #eee;
+  color: #E58E37;
 }
 
 .slidemenu label span{
@@ -36,12 +37,17 @@ body{
   padding: 10px;    
 }
 .slidemenu label span a{
-   color: #eee; 
+   color: white;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000; 
    text-decoration:none   
 }
 .slidemenu label .icon{
   font-size: 20px;
-  border: solid 4px #eee;
+  border: solid 2px #E58E37;
   text-align: center;
   height: 50px;
   width: 50px;
@@ -53,7 +59,7 @@ body{
 /*Bar Style*/
 
 .slider{
-  width: 100%;
+  width: 90%;
   height: 5px;
   display: block;
   background: #ccc;
@@ -62,9 +68,9 @@ body{
 }
 
 .slider .bar{
-  width: 25%;
+  width: 15%;
   height: 10px;
-  background: red;
+  background: #E58E37;
   border-radius: 10px;
 }
 /*Animations*/
@@ -76,14 +82,16 @@ body{
 /*Toggle*/
 
 .slidemenu .slide-toggle:checked + label{
-  opacity: 1.5;
+  opacity: 1;
 }
 
 
 .slidemenu #slide-item-1:checked ~ .slider .bar{ margin-left: 0; }
-.slidemenu #slide-item-2:checked ~ .slider .bar{ margin-left: 25%; }
-.slidemenu #slide-item-3:checked ~ .slider .bar{ margin-left: 50%; }
-.slidemenu #slide-item-4:checked ~ .slider .bar{ margin-left: 75%; }
+.slidemenu #slide-item-2:checked ~ .slider .bar{ margin-left: 17%; }
+.slidemenu #slide-item-3:checked ~ .slider .bar{ margin-left: 34%; }
+.slidemenu #slide-item-4:checked ~ .slider .bar{ margin-left: 51%; }
+.slidemenu #slide-item-5:checked ~ .slider .bar{ margin-left: 68%; }
+.slidemenu #slide-item-6:checked ~ .slider .bar{ margin-left: 85%; }
 
 h3 {
   text-align: left;
