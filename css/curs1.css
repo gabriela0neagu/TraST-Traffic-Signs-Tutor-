@@ -7,13 +7,11 @@
 }
 
 body {
-    background: #222;
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
-  width: 100%;
-  display: block;
-  background-image: url("../img/road7.jpg");
-  background-size: cover;
+      background-image: url("../img/curslegislatie.jpg");
+ font-family: Arial, Helvetica, sans-serif;
+   background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
 
 }
 
@@ -59,17 +57,17 @@ body {
 }
 .slidemenu{
   font-family: arial, sans-serif;
-  max-width: 600px;
+  max-width: 800px;
   margin: 50px auto;
   overflow: hidden;
   /* daaaaaaaaaaaaaaaa*/
 }
 .slidemenu label{
-  width: 25%;
+  width: 15%;
   text-align: center;
   display: block;
   float: left;
-  color: #E58E37;
+  color: white;
   opacity: 0.2;
 
 }
@@ -93,7 +91,7 @@ body {
 }
 .slidemenu label .icon{
   font-size: 20px;
-  border: solid 2px #E58E37;
+  border: solid 2px white;
   text-align: center;
   height: 50px;
   width: 50px;
@@ -105,7 +103,7 @@ body {
 /*Bar Style*/
 
 .slider{
-  width: 100%;
+  width: 90%;
   height: 5px;
   display: block;
   background: #ccc;
@@ -114,7 +112,7 @@ body {
 }
 
 .slider .bar{
-  width: 25%;
+  width: 15%;
   height: 10px;
   background: #E58E37;
   border-radius: 10px;
@@ -133,13 +131,15 @@ body {
 
 
 .slidemenu #slide-item-1:checked ~ .slider .bar{ margin-left: 0; }
-.slidemenu #slide-item-2:checked ~ .slider .bar{ margin-left: 25%; }
-.slidemenu #slide-item-3:checked ~ .slider .bar{ margin-left: 50%; }
-.slidemenu #slide-item-4:checked ~ .slider .bar{ margin-left: 75%; }
+.slidemenu #slide-item-2:checked ~ .slider .bar{ margin-left: 17%; }
+.slidemenu #slide-item-3:checked ~ .slider .bar{ margin-left: 34%; }
+.slidemenu #slide-item-4:checked ~ .slider .bar{ margin-left: 51%; }
+.slidemenu #slide-item-5:checked ~ .slider .bar{ margin-left: 68%; }
+.slidemenu #slide-item-6:checked ~ .slider .bar{ margin-left: 85%; }
+
 .wrapper
 {
   display: flex;
- 
   justify-content: space-around;
 }
 
@@ -223,74 +223,192 @@ body {
   cursor: pointer;
   transition: 0.4s ease-in-out;
 }
-ul {
-  display: flex;
-  position: absolute;
-  top: 95%;
-  left: 90%;
-  transform: translate(-50%, -50%);
-}
 
-ul li {
-  list-style: none;
-}
-
-ul li a {
-  width: 50px;
-  height: 50px;
-  background-color: #fff;
-  text-align: center;
-  line-height: 50px;
-  font-size: 20px;
-  margin: 0 10px;
-  display: block;
-  border-radius: 50%;
-  position: relative;
+@media screen and (max-width: 1000px) {
+  .slidemenu{
+  font-family: arial, sans-serif;
+  max-width: 600px;
+  margin: 50px auto;
   overflow: hidden;
-  border: 3px solid #fff;
-  z-index: 1;
+  /* daaaaaaaaaaaaaaaa*/
+ }
+ .slidemenu label{
+  width: 15%;
+  text-align: center;
+  display: block;
+  float: left;
+  color: #E58E37;
+  opacity: 0.2;
+
+ }
+ .card{
+    width: 180px;
+    height: 180px;
+    padding: 10;
+    font-size: 15px;
+  }
+  .card .info p{
+  letter-spacing: 1px;
+  font-size: 10px;
+  margin-top: 8px;
+  margin-bottom: 20px;
+  }
+
+ .card .info .btn{
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  background: #fff;
+  color: #000;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+ }
+ ul{
+  width: 50%;
+  margin-bottom: 10px;
+ }
 }
 
-ul li a .icon {
-  position: relative;
-  color: #262626;
-  transition: .5s;
-  z-index: 3;
+@media screen and (max-width: 800px) {
+  .slidemenu{
+  font-family: arial, sans-serif;
+  max-width: 300px;
+  margin: 10px auto;
+  overflow: hidden;
+  /* daaaaaaaaaaaaaaaa*/
+ }
+ .slidemenu label{
+  width: 10%;
+  text-align: center;
+  display: block;
+  float: left;
+  color: #E58E37;
+  opacity: 0.2;
+ }
+  .card{
+    width: 180px;
+    height: 180px;
+  }
+  .info{
+   letter-spacing: 1px;
+   font-size: 8px;
+   margin-top: 4px;
+   margin-bottom: 10px;
+  }
+ .btn{
+  font-size: 5px;
+ }
+ 
 }
 
-ul li a:hover .icon {
-  color: #fff;
-  transform: rotateY(360deg);
+@media screen and (max-width: 600px) {
+ .slidemenu{
+  font-family: arial, sans-serif;
+  max-width:360px;
+  margin: 20px auto;
+  overflow: hidden;
+  /* daaaaaaaaaaaaaaaa*/
+ }
+ .slidemenu label{
+  width: 50%;
+  text-align: center;
+  display: block;
+  float: left;
+  color: #E58E37;
+  opacity: 0.2;
+ }
+ .slidemenu label span{
+  display: block;
+  padding: 50px;    
+ }
+ .slidemenu label span a
+ {
+   color: white;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000; 
+   text-decoration:none  ;
+   font-size: 6px; 
+  }
+  .card{
+    width: 200px;
+    height: 200px;
+    padding: 10;
+    font-size: 10px;
+  }
+  .card .info p{
+   letter-spacing: 1px;
+   font-size: 7px;
+   margin-top: 8px;
+   margin-bottom: 20px;
+  }
+ .card .info .btn{
+   text-decoration: none;
+   padding: 0.5rem 1rem;
+   background: #fff;
+   color: #000;
+   font-size: 5px;
+   font-weight: bold;
+   cursor: pointer;
+   transition: 0.4s ease-in-out;
+  }
+ 
+}
+@media only screen and (max-width:500px) {
+  .slidemenu{
+  font-family: arial, sans-serif;
+  max-width:200px;
+  max-height: 100px;
+  margin: 50px auto;
+  overflow: hidden;
+  /* daaaaaaaaaaaaaaaa*/
+ }
+ .slidemenu label{
+  width: 25%;
+  text-align: center;
+  display: block;
+  float: left;
+  color: #E58E37;
+  opacity: 0.2;
+ }
+  /* For mobile phones: */
+  
+  .wrapper 
+ {
+  display: block;
+ 
+ }
+ .card{
+    width: 200px;
+    height: 200px;
+    padding: 10;
+    font-size: 5px;
+  }
+  .card .info p{
+  letter-spacing: 1px;
+  font-size: 2px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+ }
+ .card .info h1{
+  letter-spacing: 1px;
+  font-size: 3px;
+  margin-top: 4px;
+  margin-bottom: 5px;
+ }
+ .card .info .btn{
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  background: #fff;
+  color: #000;
+  font-size: 3px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+ }
+ 
 }
 
-ul li a:before {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #f00;
-  transition: .5s;
-  z-index: 2;
-}
-
-ul li a:hover:before {
-  top: 0;
-}
-
-ul li:nth-child(1) a:before{
-  background: red;
-}
-
-ul li:nth-child(2) a:before{
-  background: red;
-}
-
-ul li:nth-child(3) a:before {
-  background: red;
-}
-
-ul li:nth-child(4) a:before {
-  background:red;
-}
