@@ -40,13 +40,10 @@
                 <li>
                      <a href="#mobile"><span>7.</span> Mobile UI Design Patterns</a>
                      <ol role="directory">
-                        <li> <a href="#bottom"><span>7.1</span> Bottom Navigation</a></li>
-                        <li> <a href="#splash"><span>7.2</span> Splash Screens</a></li>
-                        <li> <a href="#empty"><span>7.3</span> Empty States</a></li>
-                        <li> <a href="#custom"><span>7.4</span> Custom Tabs</a></li>
-                        <li> <a href="#drawer"><span>7.5</span> Drawer Menus</a></li>
-                        <li> <a href="#list/news"><span>7.6</span> Lists/News</a></li>
-                        <li> <a href="#comments"><span>7.7</span> Comments/Activity Feeds</a></li>
+                        <li> <a href="#meniu"><span>7.1</span> Menu</a></li>
+                        <li> <a href="#chestionare"><span>7.2</span> Chestionare</a></li>
+                        <li> <a href="#leaderboard"><span>7.3</span> Leaderboard</a></li>
+                        
                     </ol>
                 </li>
                 <li><a href="#empirical"><span>8.</span> Empirical Laws of Interaction</a></li>
@@ -61,7 +58,7 @@
                 In acest document vom vorbi despre contextul de utilizare, audienta principala, etapele de dezvoltare ale arhitecturii proiectului,
                 modele de
                 design pentru interfata, interactiunea oferita utilizatorului de catre
-                aplicatia noastra Web, TrST (Traffic Signs Tutor), precum si modul in care este codata.
+                aplicatia noastra Web, TraST (Traffic Signs Tutor), precum si modul in care este codata.
             </p>
         </section>
         <section id="introducere" role="doc-introduction">
@@ -162,6 +159,48 @@
                 </p>
             </section>
         </section>
+
+        <section id="mobile">
+            <h2><span>7.</span> Mobile UI Design Patterns</h2>
+            <section id="meniu">
+                <h3><span>7.1</span> Menu</h3>
+                <img class="mobile-image" src="bottom.png">
+                <p>
+                    Meniul afiseaza sase destinatii in partea de sus a ecranului . Fiecare destinatie este reprezentata de o eticheta text. Cand o pictograma de navigare este apasata, utilizatorul  este dus la destinatia de navigare asociata pictogramei respective. 
+
+                </p>
+                <p>
+                    In partea de sus se afla 6 pictograme fiecare cu un anumit scop de a naviga catre pagina principala, cursul de legislatie, indicatoare si marcaje, chestionare DRPCIV, categorii permis si Leader board.
+                </p>
+            </section>
+            <section id="chestionare">
+                <h3><span>7.2</span> Chestionare</h3>
+                <img class="mobile-image" src="splash.jpg">
+                <p>
+                    Chestionarele ajuta utilizatorii sa se pregateasca pentru examen si le ofera mai multe exemple de intrebari ce se vor regasi la proba teoretica. Acestia au de ales intre trei variante de raspuns iar dupa finalizarea chestionarului vor primi punctajul obtinut.
+                </p>
+            </section>
+            <section id="leaderboard">
+                <h3><span>7.3</span> Leaderboard</h3>
+                <img class="mobile-image" src="empty.jpg">
+                <p>
+                    
+                    Le permite utilizatorilor sa vada pe ce pozitie se claseaza in comparatie cu ceilalti utilizatori in functie de scorul obtinut.
+
+                </p>
+            </section>
+            <section id="empirical">
+            <h2><span>8.</span>Empirical laws of interaction</h2>
+            <p>
+                Legea lui Fitts este un model predictiv al miscarii umane utilizat in primul rand in interactiunea om calculator. Aceasta lege stiintifica prevede ca timpul necesar pentru a se deplasa rapid intr-o zona tinta este o functie a raportului dintre distanta fata de tinta si latimea tintei. In urma interactiunii mele cu aplicatia, pot spune ca designul respecta aceasta lege. Ca exemplu pot specifica ca la inregistrare butonul de Creeaza cont are o latime corespunzatoare si se afla imediat sub formular.
+            </p>
+            <p>
+                Legea lui Hick este un principiu psihologic care precizeaza ca, cu cat o persoana are mai multe optiuni, cu atat va dura o decizie cu privire la ce optiune este cea mai buna. Este adesea folosita in proiectarea experientei utilizatorului. Aplicatia noastra se ocupa cu informatiile necesare elevilor care vor sa obtinuta permisul de conducere pentru o anumita categorie, deci daca un utilizator stie subiectul despre care este interesat acesta nu va fi influentat si de alte optiuni si poate fi focusat doar pe acele informatii.
+            </p>
+            <p>
+                Legea directoare în interacțiunea om-calculator și ergonomie este un model predictiv al mișcării umane care descrie timpul necesar pentru a naviga sau a conduce, printr-un tunel bidimensional. Din experienta mea cu aceasta aplicatia nu am regasit un tunel care sa dureze o perioada lunga de timp pentru a ajunge pe pagina pe care o cautam. Deci pot spune ca aceasta aplicatie respecta cele trei legi empirice.
+            </p>
+        </section>
         
         
         <section id="affordances">
@@ -174,6 +213,12 @@
             <p>
                 Aplicatia TraSt este una destul de predictiva pentru un utilizator care a interactionat si cu alte aplicatii software, dupa acea inregistrare clasica,
                 utilizatorul vede un meniu animat care ii pune la dispozitie paginile in care poate naviga pentru a invata,precum si alte butoane care il pot ajuta sa navigheze spre alte zone despre care ar putea fi interesat (Profil sau Logout).
+            </p>
+        </section>
+        <section id="flow">
+            <h2><span>10.</span>Flow</h2>
+            <p>
+                Este reprezentat de starea mentala pe care o simte utilizatorul atunci este total implicat intr-o anumita activitate. Un utilizator petrece in medie 2 ore atunci cand acceseaza aplicatia noastra ceea ce ne face sa intelegem ca are o stare mentala pozitiva atunci cand foloseste aplicatia si isi doreste sa invete cat mai bine, parcurgand teoria iar apoi exersand lucrand chestionare.
             </p>
         </section>
     </body>
