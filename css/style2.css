@@ -1,126 +1,108 @@
-body{
-    margin-right: 5%;
-    margin-left: 5%;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    
-}
 .clear{
-  clear: both;
+    clear: both;
 }
 .slide-toggle{
-  display: none;
+    display: none;
 }
 .slidemenu{
-  font-family: arial, sans-serif;
-  max-width: 800px;
-  margin: 50px auto;
-  overflow: hidden;
-  /* daaaaaaaaaaaaaaaa*/
+    font-family: arial, sans-serif;
+    max-width: 600px;
+    margin: 50px auto;
+    overflow: hidden;
+    /* daaaaaaaaaaaaaaaa*/
 }
 .slidemenu label{
-  width: 15%;
-  text-align: center;
-  display: block;
-  float: left;
-  color: #E58E37;
-  opacity: 0.2;
+    width: 25%;
+    text-align: center;
+    display: block;
+    float: left;
+    color: #eee;
+    opacity: 0.5;
 
 }
 .slidemenu label:hover{
-  cursor: pointer;
-  color: #E58E37;
+    cursor: pointer;
+    color: #eee;
 }
 
 .slidemenu label span{
-  display: block;
-  padding: 10px;    
+    display: block;
+    padding: 10px;
 }
 .slidemenu label span a{
-   color: white;
-    text-shadow:
-    -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-    1px 1px 0 #000; 
-   text-decoration:none   
+    color: #eee;
+    text-decoration:none
 }
 .slidemenu label .icon{
-  font-size: 20px;
-  border: solid 2px #E58E37;
-  text-align: center;
-  height: 50px;
-  width: 50px;
-  display: block;
-  margin: 0 auto;
-  line-height: 50px;
-  border-radius: 50%;
+    font-size: 20px;
+    border: solid 4px #eee;
+    text-align: center;
+    height: 50px;
+    width: 50px;
+    display: block;
+    margin: 0 auto;
+    line-height: 50px;
+    border-radius: 50%;
 }
 /*Bar Style*/
 
 .slider{
-  width: 90%;
-  height: 5px;
-  display: block;
-  background: #ccc;
-  margin-top: 30px;
-  border-radius: 5px;
+    width: 100%;
+    height: 5px;
+    display: block;
+    background: #ccc;
+    margin-top: 30px;
+    border-radius: 5px;
 }
 
 .slider .bar{
-  width: 15%;
-  height: 10px;
-  background: #E58E37;
-  border-radius: 10px;
+    width: 25%;
+    height: 10px;
+    background: red;
+    border-radius: 10px;
 }
 /*Animations*/
 .slidemenu label, .slider .bar {
-  transition: all 500ms ease-in-out;
-  -webkit-transition: all 500ms ease-in-out;
-  -moz-transition: all 500ms ease-in-out;
+    transition: all 500ms ease-in-out;
+    -webkit-transition: all 500ms ease-in-out;
+    -moz-transition: all 500ms ease-in-out;
 }
 /*Toggle*/
 
 .slidemenu .slide-toggle:checked + label{
-  opacity: 1;
+    opacity: 1.5;
 }
 
 
 .slidemenu #slide-item-1:checked ~ .slider .bar{ margin-left: 0; }
-.slidemenu #slide-item-2:checked ~ .slider .bar{ margin-left: 17%; }
-.slidemenu #slide-item-3:checked ~ .slider .bar{ margin-left: 34%; }
-.slidemenu #slide-item-4:checked ~ .slider .bar{ margin-left: 51%; }
-.slidemenu #slide-item-5:checked ~ .slider .bar{ margin-left: 68%; }
-.slidemenu #slide-item-6:checked ~ .slider .bar{ margin-left: 85%; }
+.slidemenu #slide-item-2:checked ~ .slider .bar{ margin-left: 25%; }
+.slidemenu #slide-item-3:checked ~ .slider .bar{ margin-left: 50%; }
+.slidemenu #slide-item-4:checked ~ .slider .bar{ margin-left: 75%; }
 
-h3 {
-  text-align: left;
-  font-family: arial;
-  color: #787878;
-  margin-left: 100px;
-  margin-top: 100px;
-  position: center;
+
+.row {
+    display: -ms-flexbox;
+    display:flex;
+    -ms-flex-wrap: wrap; /
+flex-wrap: wrap;
 }
 
-p {
-  text-indent: 50px;
-  text-align: left;
-  letter-spacing: 3px;
-  font-family: arial;
-  color: #787878;
-  margin-left: 100px;
-  margin-right: 100px;
+.cuprins {
+    -ms-flex: 15%; /* IE10 */
+    flex: 15%;
+    background-color: #f1f1f1;
+    padding: 20px;
 }
-buton-indicator{
-    margin-left: 0;
-    padding: 0;
-    min-height: 100vh;
-    background: #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: consolas;
+.cuprins a{
+    text-align: right;
+    color:black;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
 }
+
 .container
 {
     margin: 0.5px 0px 500px 10px;
@@ -131,16 +113,27 @@ buton-indicator{
     padding: 20px 0px;
     flex-flow: wrap;
 }
-@media screen and (max-width: 1200px){
+@media screen and (max-width: 615px){
     .container{
         width: 40%;
+        margin-left: 40px;
     }
 }
-@media screen and (max-width: 600px){
+@media screen and (max-width: 812px){
+    .container{
+        width: 40%;
+        margin-left: -60px;
+    }
+}
+@media screen and (min-width: 1024px){
     .container{
         width: 90%;
+        margin-left: 20px;
     }
 }
+
+
+
 .container .card
 {
     margin-left: 100px;
@@ -150,13 +143,13 @@ buton-indicator{
 .container .card .face
 {
     width: 300px;
-    height: 200px;
+    height: 270px;
     transition: 0.5s;
 }
 .container .card .face.face1
 {
     position: relative;
-    background: #ffffff;
+    background: #E58E37;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -165,7 +158,7 @@ buton-indicator{
 }
 .container .card:hover .face.face1
 {
-    background: #ffffff;
+    background: #E58E37;
     transform: translateY(0);
 }
 .container .card .face.face1.content
@@ -179,25 +172,30 @@ buton-indicator{
 }
 .container .card .face.face1 .content img
 {
-    margin-left: 10px;
-    max-width: 150px;
+    width: 70%;
+    height: 80%;
+     object-fit: contain; 
     justify-content: center;
     align-items: center;
     position: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
 }
 .container .card .face.face1 .content h3
 {
-    margin: 10px 0 0;
+    margin: 30px 0 0;
     padding: 0;
     color: #3c3c3c;
     text-align: center;
-    font-size: 0.8em;
-    font-family: arial;
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .container .card .face.face2
 {
     position: relative;
-    background: #fff;
+    background: #E58E37;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -215,9 +213,10 @@ buton-indicator{
     margin: 0;
     padding: 0;
 }
-.container .card .face.face2 .content a
+
+.buton-indicator
 {
-    margin: 15px 0 0;
+   margin: 15px 0 0;
     display: inline-block;
     text-decoration: none;
     font-weight: 900;
@@ -225,9 +224,6 @@ buton-indicator{
     padding: 5px;
     border: 1px solid #333;
 }
-.container .card .face.face2 .content a:hover
-{
-    background: #333;
-    color: #fff;
-}
+
+
 
