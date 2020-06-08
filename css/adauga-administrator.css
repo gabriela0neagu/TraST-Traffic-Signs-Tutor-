@@ -4,6 +4,7 @@ height: 100%;
 display: block;
 background-image: url("../img/road7.jpg");
 background-size: cover;
+background-position: center;
 background-color: black;
 background-attachment: fixed;
 color: white;
@@ -143,33 +144,6 @@ table td:nth-child(5)
  }
 
 
- .home{
-  display: flex;
-  background: url("../img/home.png") no-repeat;
-    width: 60px;
-    height: 60px;
-    background-position: center;
-    background-size: cover;
-    top: 40px;
-    right: 15px;
-    position: absolute;  
-    border-radius: 50%;
-}
-
- .logOut {
-    display: flex;
-    background: url("../img/logout.png") no-repeat;
-    width: 55px;
-    height: 55px;
-    background-position: center;
-    background-size: cover;
-    top: 100px;
-    right: 15px;
-    position: absolute;
-    border-radius: 50%;
-  }
-
-
    @keyframes reveal {
     80%{
       letter-spacing: 8px;
@@ -264,3 +238,84 @@ table td:nth-child(5)
   }
 }
 
+
+
+.buttons-container{
+  display: grid;
+  grid-gap: 10px;
+  justify-content: end;
+  position: absolute;
+  top: 5%;
+  right: 2%;
+}
+
+.btn{
+  background-color: rgba(229, 142, 55, 0.8);
+  border-radius: 50%;
+  margin: auto;
+  border-color: transparent;
+  border-style: outset;
+}
+
+.btn:focus{
+  outline: none;
+}
+
+.btn img{
+  width: 3vw;
+  height: auto;
+}
+
+.hide{
+  display: none;
+}
+
+.pulse {
+   --color: #ef6eae;
+   --hover: #ef8f6e;
+}
+
+.pulse:hover, .pulse:focus {
+   animation: pulse 1s;
+   box-shadow: 0 0 0 2em rgba(255, 255, 255, 0);
+}
+
+ @keyframes pulse {
+   0% {
+     box-shadow: 0 0 0 0 var(--hover);
+  }
+}
+
+
+
+@media screen and (max-width: 600px) {
+ 
+  .buttons-container{
+    width:40vw;
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    position: static;
+    margin: auto;
+    align-items: center;
+    justify-content: space-between;
+
+  }
+
+  .btn img{
+    display: inline-flex;
+    width: 8vw;
+    height: auto;
+  }
+}
+
+
+
+@media screen and (max-width: 700px) {
+ .btn img{
+    display: inline-flex;
+    width: 5vw;
+    height: auto;
+  }
+
+   }

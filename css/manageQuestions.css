@@ -1,12 +1,14 @@
 body{
-width: 99%;
+width: 100%;
 height: 100%;
-justify-content: center;
-background-image: url("../img/road7.jpg");
+display: block;
+background-image: url("../img/curslegislatie2.png");
 background-repeat: no-repeat;
 background-size: cover;
+background-position: center;
 background-attachment: fixed;
 color: white;
+position: absolute;
 }
 
 
@@ -18,7 +20,6 @@ color: white;
               radial-gradient(ellipse at bottom, #cc7a00, transparent, transparent);
   -webkit-background-clip: text;
   /*defines how far the background (color or image) should extend within an element*/
-  background-clip: text;
   color: transparent;
   font-family: 'Faster One', cursive;
   
@@ -196,38 +197,7 @@ table td:nth-child(9)
 }
 
 
-
- .home{
-  display: flex;
-  background: url("../img/home.png") no-repeat;
-    width: 60px;
-    height: 60px;
-    background-position: center;
-    background-size: cover;
-    top: 40px;
-    right: 15px;
-    position: absolute;  
-    border-radius: 50%;
-}
-
- .logOut {
-    display: flex;
-    background: url("../img/logout.png") no-repeat;
-    width: 55px;
-    height: 55px;
-    background-position: center;
-    background-size: cover;
-    top: 100px;
-    right: 15px;
-    position: absolute;
-    border-radius: 50%;
-  }
-
-
-
-
-
-@media screen and (min-width: 601px) {
+@media screen and (min-width: 1001px) {
   div.big-title {
     font-size: 120px;
   }
@@ -237,7 +207,7 @@ table td:nth-child(9)
   }  
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
   div.big-title {
     font-size: 70px;
   }  
@@ -249,7 +219,6 @@ table td:nth-child(9)
   table {
     border: 0;
     word-wrap: normal;
-    hyphens: auto;
   }
 
   table caption {
@@ -258,7 +227,7 @@ table td:nth-child(9)
   
   table thead {
     border: none;
-    clip: rect(0 0 0 0);
+    clip: rect(0, 0, 0, 0);
     height: 1px;
     margin: -1px;
     overflow: hidden;
@@ -307,5 +276,90 @@ table td:nth-child(9)
   table td:last-child {
     border-bottom: 0;
   }
+}
+
+
+.buttons-container{
+  display: grid;
+  grid-gap: 10px;
+  justify-content: end;
+  position: absolute;
+  top: 5%;
+  right: 2%;
+}
+
+.menu-btn{
+  background-color: rgba(229, 142, 55, 0.8);
+  border-radius: 50%;
+  margin: auto;
+  border-color: transparent;
+  border-style: outset;
+}
+
+.menu-btn:focus{
+  outline: none;
+}
+
+.menu-btn img{
+  width: 3vw;
+  height: auto;
+}
+
+.hide{
+  display: none;
+}
+
+.pulse {
+   --color: #ef6eae;
+   --hover: #ef8f6e;
+}
+
+.pulse:hover, .pulse:focus {
+   animation: pulse 1s;
+   box-shadow: 0 0 0 2em rgba(255, 255, 255, 0);
+}
+
+ @keyframes pulse {
+   0% {
+     box-shadow: 0 0 0 0 var(--hover);
+  }
+}
+
+
+
+@media screen and (max-width: 600px) {
+ 
+  .buttons-container{
+    width:40vw;
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    position: static;
+    margin: auto;
+    align-items: center;
+    justify-content: space-between;
+
+  }
+
+  .menu-btn img{
+    display: inline-flex;
+    width: 8vw;
+    height: auto;
+  }
+
+  .scrollBtn{
+    font-size: 10px;
+  }
+}
+
+
+
+@media screen and (max-width: 700px) {
+ .menu-btn img{
+    display: inline-flex;
+    width: 5vw;
+    height: auto;
+  }
+
 }
 

@@ -1,13 +1,13 @@
 
 *{
-   margin: 0;
+   margin:0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Lato', sans-serif;
 }
 
 body {
-      background-image: url("../img/curslegislatie.jpg");
+      background-image: url("../img/curslegislatie2.png");
  font-family: Arial, Helvetica, sans-serif;
    background-size: cover;
   background-attachment: fixed;
@@ -15,39 +15,6 @@ body {
 
 }
 
-  div.title {
-    font-size: 120px;
-  }
-  
-
-.title {
-  display: flex;
-  justify-content: center;
-  background: 50% 100% / 50% 50% no-repeat
-              radial-gradient(ellipse at bottom, #e58e37, transparent, transparent);
-  -webkit-background-clip: text;
-  /*defines how far the background (color or image) should extend within an element*/
-  background-clip: text;
-  color: transparent;
-  font-family: 'Faster One', cursive;
-  
-  animation: reveal 3000ms ease-in-out forwards 200ms,
-             glow 2500ms linear infinite 2000ms;
-}  
-
- @keyframes reveal {
-    80%{
-      letter-spacing: 8px;
-    }
-    100% {
-      background-size: 300% 300%;
-    }
-  }
-  @keyframes glow {
-    40% {
-      text-shadow: 0 0 8px #fff;
-    }
-  }
 
 .clear{
   clear: both;
@@ -56,7 +23,7 @@ body {
   display: none;
 }
 .slidemenu{
-  font-family: arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   max-width: 800px;
   margin: 50px auto;
   overflow: hidden;
@@ -100,6 +67,8 @@ body {
   line-height: 50px;
   border-radius: 50%;
 }
+
+
 /*Bar Style*/
 
 .slider{
@@ -140,11 +109,18 @@ body {
 .wrapper
 {
   display: flex;
-  justify-content: space-around;
+  flex-flow: row;
+  flex-wrap: wrap;
+  position: static;
+  margin-left: 2%;
+  margin-right: 2%;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.card{ width: 300px;
-  height: 300px;
+.card{ 
+  width: 20vw;
+  height: auto;
   padding: 2rem 1rem;
   background:#eee;
   position: relative;
@@ -224,191 +200,50 @@ body {
   transition: 0.4s ease-in-out;
 }
 
-@media screen and (max-width: 1000px) {
-  .slidemenu{
-  font-family: arial, sans-serif;
-  max-width: 600px;
-  margin: 50px auto;
-  overflow: hidden;
-  /* daaaaaaaaaaaaaaaa*/
- }
- .slidemenu label{
-  width: 15%;
-  text-align: center;
-  display: block;
-  float: left;
-  color: #E58E37;
-  opacity: 0.2;
 
- }
- .card{
-    width: 180px;
-    height: 180px;
-    padding: 10;
-    font-size: 15px;
-  }
-  .card .info p{
-  letter-spacing: 1px;
-  font-size: 10px;
-  margin-top: 8px;
-  margin-bottom: 20px;
+@media screen and (max-width: 640px) {
+
+  .wrapper{
+  display: flex;
+  flex-flow: column;
   }
 
- .card .info .btn{
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-  background: #fff;
-  color: #000;
-  font-size: 12px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.4s ease-in-out;
- }
- ul{
-  width: 50%;
-  margin-bottom: 10px;
- }
-}
-
-@media screen and (max-width: 800px) {
-  .slidemenu{
-  font-family: arial, sans-serif;
-  max-width: 300px;
-  margin: 10px auto;
-  overflow: hidden;
-  /* daaaaaaaaaaaaaaaa*/
- }
- .slidemenu label{
-  width: 10%;
-  text-align: center;
-  display: block;
-  float: left;
-  color: #E58E37;
-  opacity: 0.2;
- }
   .card{
-    width: 180px;
-    height: 180px;
+    width: 70vw;
+    height: auto;
+    margin-top: 2%;
+    margin-bottom: 30%;
   }
-  .info{
-   letter-spacing: 1px;
-   font-size: 8px;
-   margin-top: 4px;
-   margin-bottom: 10px;
-  }
- .btn{
-  font-size: 5px;
- }
- 
 }
+
+
+@media screen and (min-width: 640px) and (max-width: 1030px) {
+
+  .wrapper{
+  display: flex;
+  flex-flow: column;
+  }
+
+  .card{
+    width: 40vw;
+    height: auto;
+    margin-top: 2%;
+    margin-bottom: 30%;
+  }
+}
+
+
+
 
 @media screen and (max-width: 600px) {
- .slidemenu{
-  font-family: arial, sans-serif;
-  max-width:360px;
-  margin: 20px auto;
-  overflow: hidden;
-  /* daaaaaaaaaaaaaaaa*/
- }
- .slidemenu label{
-  width: 50%;
-  text-align: center;
-  display: block;
-  float: left;
-  color: #E58E37;
-  opacity: 0.2;
- }
- .slidemenu label span{
-  display: block;
-  padding: 50px;    
- }
- .slidemenu label span a
- {
-   color: white;
-    text-shadow:
-    -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-    1px 1px 0 #000; 
-   text-decoration:none  ;
-   font-size: 6px; 
+  .slidemenu label{
+    width: 50vw;
   }
-  .card{
-    width: 200px;
-    height: 200px;
-    padding: 10;
-    font-size: 10px;
+  .slidemenu label.icon {
+    float: right;
+    display: block;
   }
-  .card .info p{
-   letter-spacing: 1px;
-   font-size: 7px;
-   margin-top: 8px;
-   margin-bottom: 20px;
+  .slider {
+    display: none;
   }
- .card .info .btn{
-   text-decoration: none;
-   padding: 0.5rem 1rem;
-   background: #fff;
-   color: #000;
-   font-size: 5px;
-   font-weight: bold;
-   cursor: pointer;
-   transition: 0.4s ease-in-out;
-  }
- 
 }
-@media only screen and (max-width:500px) {
-  .slidemenu{
-  font-family: arial, sans-serif;
-  max-width:200px;
-  max-height: 100px;
-  margin: 50px auto;
-  overflow: hidden;
-  /* daaaaaaaaaaaaaaaa*/
- }
- .slidemenu label{
-  width: 25%;
-  text-align: center;
-  display: block;
-  float: left;
-  color: #E58E37;
-  opacity: 0.2;
- }
-  /* For mobile phones: */
-  
-  .wrapper 
- {
-  display: block;
- 
- }
- .card{
-    width: 200px;
-    height: 200px;
-    padding: 10;
-    font-size: 5px;
-  }
-  .card .info p{
-  letter-spacing: 1px;
-  font-size: 2px;
-  margin-top: 4px;
-  margin-bottom: 4px;
- }
- .card .info h1{
-  letter-spacing: 1px;
-  font-size: 3px;
-  margin-top: 4px;
-  margin-bottom: 5px;
- }
- .card .info .btn{
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-  background: #fff;
-  color: #000;
-  font-size: 3px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.4s ease-in-out;
- }
- 
-}
-

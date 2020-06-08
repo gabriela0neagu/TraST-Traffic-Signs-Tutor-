@@ -4,12 +4,13 @@
 }
 
 body {
-    background-image: url("../img/curslegislatie.jpg");
- font-family: Arial, Helvetica, sans-serif;
+    background-image: url("../img/curslegislatie2.png");
    background-size: cover;
   background-attachment: fixed;
   background-position: center;
+   font-family: Arial, Helvetica, sans-serif;
 }
+
 
 .clear{
   clear: both;
@@ -20,7 +21,8 @@ body {
 .slidemenu{
   font-family: arial, sans-serif;
   max-width: 800px;
-  margin: 50px auto;
+  margin: auto;
+  text-align: center;
   overflow: hidden;
   /* daaaaaaaaaaaaaaaa*/
 }
@@ -99,6 +101,7 @@ body {
 .slidemenu #slide-item-5:checked ~ .slider .bar{ margin-left: 68%; }
 .slidemenu #slide-item-6:checked ~ .slider .bar{ margin-left: 85%; }
 
+
 .row {  
   display: -ms-flexbox; 
   display:flex; 
@@ -106,13 +109,14 @@ body {
   flex-wrap: wrap;
 }
 
-.side {
-  -ms-flex: 15%; /* IE10 */
-  flex: 15%;
+.cuprins {
+ -ms-flex: 15%; 
+ flex: 15%;
  background-color: rgba(255, 146, 14, 0.6);
-  padding: 20px;
-}
-.side a{
+padding: 20px;
+ }
+
+.cuprins a{
   text-align: right;
   color:black;
   text-decoration: none;
@@ -122,6 +126,8 @@ body {
   cursor: pointer;
 
 }
+
+
 .continut 
 {-ms-flex: 70%; /* IE10 */
   flex: 70%;
@@ -141,12 +147,7 @@ body {
   justify-content: space-around;
  
 }
-.capitole1 {
-  display: flex;
-  width :100%;
-  justify-content: space-around;
- 
-}
+
 .capito1{
    width: 250px;
   height: 250px;
@@ -235,6 +236,15 @@ body {
   transition: 0.4s ease-in-out;
 }
 
+.footer {
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #f1f1f1;
+   color: white;
+   text-align: center;
+}
+
 .butoane:hover a{
   color: black;
   text-align: center;
@@ -244,6 +254,7 @@ body {
   display: flex;
 }
 .butoane{
+  background-color: #e58e37;
  width:200px;
   margin: auto;}
 
@@ -263,8 +274,10 @@ body {
   background-color: #e58e37;
    
 }
+
+
 #myBtn {
-  display: none;
+  display: block;
   position: fixed;
   bottom: 20px;
   right: 30px;
@@ -283,72 +296,89 @@ body {
   background-color: #555;
 }
 
-@media screen and (max-width: 1300px) {
 
-.capitole{
-    padding: 6;
+@media screen and (max-width: 850px) {
+   
+  .continut p{
     font-size: 15px;
   }
-  .capitole .capito1{
-     width: 150px;
-    height: 150px;
-  letter-spacing: 1px;
-  font-size: 15px;
-  margin-top: 8px;
-  margin-bottom: 20px;
-}
-.capitole .capito1 .info h3{
-  font-size: 11px;
-}
-.capitole .capito1 .info .btn{
-  font-size: 6px;
-}
-
-  }
-
-
-@media screen and (max-width: 400px) {
-   p{
-    font-size: 10px;
-  }
-  
   .row {   
     flex-direction: column;
   }
-  .capitole{
-
-    padding: 5;
-    font-size: 1px;
+  .row .cuprins{
+  font-size: 12px;
   }
-  .capitole .capito1{
-     width: 100px;
-    height: 100px;
-  letter-spacing: 1px;
-  font-size: 3px;
-  margin-top: 6px;
-  margin-bottom: 10px;
-}
-.capitole .capito1 .info h3{
-  font-size: 3px;
-}
-.capitole .capito1 .info .btn{
-  font-size: 3px;
-}
+  .navbar a {
+    float: none;
+    width: 90%;
+  }
 
-}
-
-@media screen and (max-width: 300px) {
- 
-  .row {   
+  .capitole{
+    display: flex;
     flex-direction: column;
+    text-align: center;
+    margin-left: 20%;
   }
-  .capitole{
-    padding: 10;
+
+  .capito1{
+    width: 50vw;
+    height: auto;
+    min-height: 150px;
     font-size: 10px;
+    margin-top: 70px;
+    margin-bottom: 20px;
   }
-  .capitole .capito1{
-  letter-spacing: 1px;
-  font-size: 8px;
-  margin-top: 8px;
-  margin-bottom: 20px;
+
+}
+
+
+@media screen and (max-width: 600px) {
+  .slidemenu label{
+    width: 40vw;
+  }
+  .slidemenu label.icon {
+    float: right;
+    display: block;
+  }
+  .slider {
+    display: none;
+  }
+
+   body{
+    margin-right: 0;  
+  }
+}
+
+
+@media screen and (min-width: 600px)  and (max-width: 1050px){
+
+ #myBtn{
+    margin-right: 15%;
+  }
+
+  .capitole{
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: 0;
+  }
+
+  .capito1{
+    flex: 0 40%;
+    width: 30vw;
+    height: 40vh;
+    font-size: 10px;
+    margin-top: 70px;
+    margin-bottom: 20px;
+  }
+
+}
+
+
+@media screen and (min-width: 1000px) and (max-width: 1050px)
+{
+  .capito1{
+    font-size: 30px;
+  }
 }

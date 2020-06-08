@@ -2,41 +2,56 @@ body{
 width: 99%;
 height: 100%;
 justify-content: center;
-background-image: url("img/font.jpg") ;
+background-image: url("../img/curslegislatie2.png");
+background-repeat: no-repeat;
 background-size: cover;
+background-attachment: fixed;
 color: white;
 }
 
-h1{
-	text-align: center;
-	font-size: 40px;
+.title{
+	 margin-left: 2%;
+  margin-top: 3%;
+  padding-left: 5%;
+  position: relative;
+  align-self: center;
+  width: 60%;
+  color: white;
+  font-family:'Fredericka the Great', cursive;
+  font-size: 300%;
+  border-bottom: 1px solid white;
+  border-left: 1px solid white;
 }
 
 .chenar{
+ display: flex;
+  flex-wrap: wrap;
+  background-color: rgb(32,32,32,0.3);
   border-top:  5px solid white;
   border-bottom:  5px solid white;
   border-left: 5px solid white;
   border-right:  5px solid white;
-  margin-left: 15%;
-  margin-right:15%;
-  margin-top: 10%;
+  margin-right: 10%;
+  margin-left: 10%;
 }
+
 .table{
-	  width: 90%;
- 	  height: 80%;
- 	  color: white;
- 	   text-shadow:
+  margin: 0 auto;
+  align-self: center;
+  width: 80%;
+  height: auto;
+  color: white;
+  font-size: 150%;
+  text-shadow:
     -1px -1px 0 #000,
     1px -1px 0 #000,
     -1px 1px 0 #000,
     1px 1px 0 #000; 
- 	  padding: 0px;
- 	    word-wrap: break-word;
-border-top:3px solid white;
-margin-left:15%; 
-    margin-right:15%;
-
+  padding-top: 3%;
+  padding-bottom: 3%;
+  word-wrap: break-word;
 }
+
 .alert-succes{
   
   margin-right:15%
@@ -51,77 +66,52 @@ margin-left:15%;
 }
 
 table th{
-	border-bottom: 1px solid white;
-	font-size: 27px;
+  border-bottom: 1px solid white;
+  font-size: 24px;
+  border-top: 1px solid white;
 }
 
-
-table th:nth-child(1){
-	border-right: 1px solid white;
-	border-top: 1px solid white;
-  border-left: 1px solid white;
-
- }
-
- table th:nth-child(5){
- 	border-right: 1px solid white;
- 	border-top: 1px solid white;
-  border-left: 1px solid white;
- 	
- }
- table th:nth-child(2){
- 	border-right: 1px solid white;
- 	border-top: 1px solid white;
-  border-left: 1px solid white;
- }
-  table th:nth-child(3){
- 	border-right: 1px solid white;
- 	border-top: 1px solid white;
-  border-left: 1px solid white;
- }
-
- table th:nth-child(4){
- 	border-right: 1px solid white;
- 	border-top: 1px solid white;
-  border-left: 1px solid white;
- }
-
- table th:nth-child(6){
- 	border-right: 1px solid white;
- 	border-top: 1px solid white;
-  border-left: 1px solid white;
- }
-  table th:nth-child(7){
- 	border-right: 1px solid white;
- 	border-top: 1px solid white;
-  border-left: 1px solid white;
- }
-
- table th:nth-child(8){
- 	border-right: 1px solid white;
- 	border-top: 1px solid white;
-  border-left: 1px solid white;
- }
- table th:nth-child(9){
- 	border-right: 1px solid white;
- 	border-top: 1px solid white;
-  border-left: 1px solid white;
- }
-
-
+  
 table td{
-	text-align: center; 
-    vertical-align: middle;
-    font-size: 100%;
-    line-height: 220%;
-    border-right: 1px solid white;
-    border-bottom:  1px solid white;
-    border-left:  1px solid white;
+  text-align: center; 
+  vertical-align: middle;
+  font-size: 100%;
+  line-height: 220%;
+ 
+  border-bottom:  1px solid white;
 }
 
-table td:nth-child(1){
- 	text-align: center;
- }
+table td:nth-child(8)
+{
+  border-right: 1px solid transparent; 
+  border-top: 1px solid transparent;
+  border-left: 1px solid transparent;
+  border-bottom: 1px solid white; 
+}
+
+table td:nth-child(9)
+{
+  border-right: 1px solid transparent; 
+  border-top: 1px solid transparent;
+  border-left: 1px solid transparent;
+  border-bottom: 1px solid white; 
+}
 
 
-
+.btn{
+  display: inline-block;
+  padding: 0.3em 1.2em;
+  margin:0 0.1em 0.1em 0;
+  border:0.16em solid rgba(255,255,255,0);
+  border-radius:2em;
+  box-sizing: border-box;
+  text-decoration:none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight:300;
+  color:#FFFFFF;
+  text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
+  text-align:center;
+  transition: all 0.2s;
+  word-wrap: break-word;
+  background-color: #E58E37;
+}

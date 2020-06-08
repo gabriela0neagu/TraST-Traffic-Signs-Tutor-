@@ -49,7 +49,7 @@ function getName(id){
     if (id==9)
         name="semafoare_dirijarea_circulatiei";
     if (id==10)
-        name="semnale_calea_ferata";
+        name="semnale_cale_ferata";
     if (id==11)
         name="disp_luminoase";
     if (id==12)

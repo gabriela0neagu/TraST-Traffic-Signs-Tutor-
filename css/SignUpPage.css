@@ -1,81 +1,55 @@
-html { 
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-content: flex-start;
-    align-items: flex-start;
-    display: flex;  
-    overflow: hidden;
-}
 
 body{
-	background-image: url("../img/idk2.jfif"); 
-	background-position: center center;
+	margin:0;
+	background-color: #d7cac4;
+  	background-image: url("../img/street2.png"),
+                      url("../img/mountains.png");
+  	background-size: cover;
+	background-attachment: fixed;
+	animation: goLeft 20s linear infinite;
 }
 
- .img{
-	height: 900%;
-	display: block;
-	background-position: center center;
-	
-	background-image: url("../img/idk2.jfif"); 
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	z-index: 0;
-	background-repeat: repeat-y;
-	animation: highway 4s linear infinite;
+
+@keyframes goLeft {
+  100% {
+    background-position: 400vw 0px,
+                         200vw 0px,
+                         100vw 0px;
+  }
 }
 
-@keyframes highway{
-	100%{
-		transform: translateY(100px);
-	}
+
+.human {
+  position: fixed;
+  height: 50%;
+  left: 20%;
+  bottom: 10%;
+  transform: translateX(-50%);
+  z-index: -1;
 }
 
-@media screen and (min-width: 750px) {
-	div.signup-form{
-		width: 300px;
-		}
-}
-
-@media screen and (max-width: 750px) {
-
-	div.title{
- 		font-size: 30px;
-		}
-
-	div.signup-form{
-		width: 200px;
-		margin-top: 40px;
-	}
-
-	div.home{
-    	width: 45px;
-    	height: 45px;
-    	right: 20px;
-  	}
-}
 
 .title{
 	font-family: 'Fredericka the Great', cursive;
-	color: #fff;
+	color: 	color: #1a001a;
 	font-size:50px;
-	margin: 0 auto;
+	margin: auto;
 }
+
 
 .signup-form
 {
-	padding: 20px;
 	text-align: center;
 	background: transparent;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	overflow: hidden;
-	top: 55%;
-	position: absolute;
+	margin: 10% auto; 
+    display: block; 
+    align-self: center;
+    overflow: hidden;
+    z-index: 100;
 }
+
+
+ .signup-form input:focus{ outline: inset 2px #E58E37; }
 
 .signup-form input{
 	display: block;
@@ -85,6 +59,7 @@ body{
 	text-align: center;
 	box-sizing: border-box;
     font-family: "Permanent Marker", cursive;
+    border: inset 2px #E58E37;
 }
 
 .txtb{
@@ -128,13 +103,94 @@ body{
 .home{
 	display: flex;
 	background: url("../img/home.png") no-repeat;
-    width: 60px;
-    height: 60px;
+    width: 4%;
+    height: 7%;
     background-position: center;
     background-size: cover;
-    top: 40px;
-    right: 80px;
+    top: 5%;
+    right: 5%;
     position: absolute;  
     border-radius: 50%;
+    z-index: 10;
 }
+
+
+@media screen and (min-width: 751px) {
+	div.signup-form{
+		width: 300px;
+		}
+}
+
+@media screen and (max-width: 750px) {
+
+	div.title{
+ 		font-size: 30px;
+		}
+
+	div.signup-form{
+		width: 200px;
+		margin-top: 40px;
+	}
+
+}
+
+
+.buttons-container{
+  display: grid;
+  grid-gap: 10px;
+  justify-content: end;
+  position: absolute;
+  top: 5%;
+  right: 2%;
+}
+
+.btn{
+  background-color: rgba(229, 142, 55, 0.8);
+  border-radius: 50%;
+  margin: auto;
+  border-color: transparent;
+  border-style: outset;
+}
+
+.btn:focus{
+  outline: none;
+}
+
+.btn img{
+  width: 3vw;
+  height: auto;
+}
+
+.hide{
+  display: none;
+}
+
+.pulse {
+   --color: #ef6eae;
+   --hover: #ef8f6e;
+}
+
+.pulse:hover, .pulse:focus {
+   animation: pulse 1s;
+   box-shadow: 0 0 0 2em rgba(255, 255, 255, 0);
+}
+
+ @keyframes pulse {
+   0% {
+     box-shadow: 0 0 0 0 var(--hover);
+  }
+}
+
+
+
+@media screen and (max-width: 600px) {
+ 
+  .btn img{
+    display: inline-flex;
+    width: 8vw;
+    height: auto;
+  }
+}
+
+
 

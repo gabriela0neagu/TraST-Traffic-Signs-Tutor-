@@ -5,15 +5,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#333641">
 <link href="https://fonts.googleapis.com/css?family=Akronim|Fredericka+the+Great|Londrina+Sketch|Akronim&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="../css/SignUpPage.css">
+<script defer src="../javascript/login.js"></script>
+
 <title>Sign Up</title>
 </head>
 
-<link rel="stylesheet" type="text/css" href="../css/SignUpPage.css">
 
 <body>
- <div class="img"> </div>
+  
+  
+<div class="buttons-container">
+  <button id = "homeBtn" class = "btn pulse " type = "button"> <img src ="../img/home.png"> </button>
+</div>
+  
+  <img class="human" src="../img/human2.gif">
+
   <div class="signup-form">
-    <form class=""  action="../php/signup.php"  method="post">
+    <form class="" action="../php/signup.php" method="post">
       <div class="title">Înregistrare</div>
     	<input type="text" name = "firstname"placeholder="Nume" class="txtb" required>
     	<input type="text" name = "lastname" placeholder="Prenume" class="txtb" required>
@@ -24,8 +33,6 @@
     	<a href="../html/LogIn.html"> Ai deja un cont?🚘 </a>
     </form>
   </div>
-
-  <div class="home" onclick="window.location.href = '../html/Trast.html';"> </div>
 
 </body>
 

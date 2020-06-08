@@ -3,8 +3,9 @@ body {
   display: block;
   justify-content: center;
   align-items: center;
-  background-image: url("../img/curslegislatie.jpg");
+  background-image: url("../img/curslegislatie2.png");
   background-size: cover;
+  background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
   word-break: break-all;
@@ -27,6 +28,7 @@ body {
   }
 }
 
+
 .clear{
   clear: both;
 }
@@ -45,7 +47,7 @@ body {
   text-align: center;
   display: block;
   float: left;
-  color: #E58E37;
+  color: white;
   opacity: 0.2;
 
 }
@@ -69,7 +71,7 @@ body {
 }
 .slidemenu label .icon{
   font-size: 22px;
-  border: solid 2px #E58E37;
+  border: solid 2px white;
   text-align: center;
   height: 50px;
   width: 50px;
@@ -114,6 +116,8 @@ body {
 .slidemenu #slide-item-4:checked ~ .slider .bar{ margin-left: 51%; }
 .slidemenu #slide-item-5:checked ~ .slider .bar{ margin-left: 68%; }
 .slidemenu #slide-item-6:checked ~ .slider .bar{ margin-left: 85%; }
+
+
 
 
 
@@ -206,3 +210,20 @@ body {
 }
 
 
+
+@media screen and (max-width: 600px) {
+  .slidemenu label{
+    width: 40vw;
+  }
+  .slidemenu label.icon {
+    float: right;
+    display: block;
+  }
+  .slider {
+    display: none;
+  }
+
+   body{
+    margin-right: 0;  
+  }
+}

@@ -56,3 +56,43 @@ for(i=0 ; i<usersArray.length; i++)
 	
 	//console.log((i+1) + ' ' + usersArray[i]['username'] + ' ' + usersArray[i]['score'])
 }
+
+
+
+
+
+function estabilishWhichButtonsToShow()
+{
+    if (window.XMLHttpRequest) {
+            xmlhttp = new XMLHttpRequest()
+        } else {
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP")
+        }
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4) {
+              answer = this.responseText
+            }
+        }
+        xmlhttp.open("GET","../php/checkLogged.php", false)
+        xmlhttp.send()
+
+
+        if(answer == 'logged')
+        {
+            logoutBtn.classList.remove('hide')
+        }
+        else
+        {
+            logoutBtn.classList.add('hide')
+        }
+}
+
+estabilishWhichButtonsToShow()
+
+homeBtn = document.getElementById('homeBtn') 
+logoutBtn = document.getElementById('logoutBtn') 
+rssBtn = document.getElementById('rssBtn')
+
+rssBtn.onclick = function() { window.document.location = '../rss.php'}
+homeBtn.onclick = function(){window.document.location = '../html/Trast.html'}
+logoutBtn.onclick = function(){window.document.location = '../php/logout.php'}

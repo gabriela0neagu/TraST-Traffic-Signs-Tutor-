@@ -150,3 +150,40 @@ for(i=0 ; i<usersArray.length; i++)
     }
 
 }
+
+
+
+function estabilishWhichButtonsToShow()
+{
+    if (window.XMLHttpRequest) {
+            xmlhttp = new XMLHttpRequest()
+        } else {
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP")
+        }
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4) {
+              answer = this.responseText
+            }
+        }
+        xmlhttp.open("GET","../php/checkLogged.php", false)
+        xmlhttp.send()
+
+
+        if(answer == 'logged')
+        {
+            logoutBtn.classList.remove('hide')
+        }
+        else
+        {
+            logoutBtn.classList.add('hide')
+        }
+}
+
+homeBtn = document.getElementById('homeBtn') 
+logoutBtn = document.getElementById('logoutBtn') 
+
+
+homeBtn.onclick = function(){window.document.location = '../html/Trast.html'}
+logoutBtn.onclick = function(){window.document.location = '../php/logout.php'}
+
+estabilishWhichButtonsToShow()

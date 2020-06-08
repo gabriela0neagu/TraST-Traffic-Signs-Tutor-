@@ -12,6 +12,11 @@
 </head>
 
 <body>
+	<div class="buttons-container">
+	  <button id = "homeBtn" class = "btn pulse" type = "button"> <img src ="../img/home.png"> </button>
+	  <button id = "logoutBtn" class="btn pulse" type = "button"> <img src ="../img/logout.png"> </button>
+	</div>
+
 	<div class="profile-info">
 		<div class="profile-picture"> 
 			<img src="../img/user2.png"> 
@@ -51,9 +56,6 @@
 			   </div>
 		</div>
 
-<div class="home" onclick="window.location.href = '../html/Trast.html';"> </div>
-
-<div class="<?php session_start(); if(isset($_SESSION['ID'])) echo 'logOut';?>" onclick="window.location.href = '../php/logout.php';"></div>
 
 </body>
 

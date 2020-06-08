@@ -1,6 +1,6 @@
 body {
-  background-image: url("../img/road7.jpg") ;
-  background-position: center center;
+  background-image: url("../img/curslegislatie2.png") ;
+  background-position: center;
   background-attachment: fixed;
   background-size: cover;
   background-color: #464646;
@@ -10,22 +10,19 @@ body {
  }
 
  .profile-info{
- 	margin-left: 2%; 
-    margin-top: 2%; 
-    width: 30%;
-    height: 30%;
-
+ 	margin-left: 3%; 
+  margin-top: 2%; 
+  width: 30%;
  }
 
  .profile-picture img
  {
  	position: static;  
  	background-size: cover;
-    background-position: center;
-    background-size: cover;   
-    height: 90%;
-    width: 80%;
-    border-style: groove;
+  background-position: center;
+  height: 80%;
+  width: 80%;
+  border-style: groove;
 	border-width:5px;
 	border-radius: 50%;
  }
@@ -33,6 +30,7 @@ body {
 .profile-bar{
 	background-color: transparent;
 	height: auto;
+  margin: auto;
 }
 
 
@@ -60,8 +58,8 @@ body {
 	width: 70%;
 	display: inline-flex;
 	flex-direction: column;
-    flex-wrap: wrap;
-    word-wrap: break-word;
+  flex-wrap: wrap;
+  word-wrap: break-word;
 }
 
 .title{
@@ -119,7 +117,7 @@ body {
 	 padding-top: 1%;
 	 padding-bottom: 1%;
 	 margin-top: 2%;
-     font-family: Arial, Helvetica, sans-serif;	 font-size: 100%;
+   font-family: Arial, Helvetica, sans-serif;	 font-size: 100%;
 	 border-style: inset;
 	 border-color: white;
 	 background-color: rgb(32,32,32,0.2);
@@ -132,7 +130,8 @@ body {
 	 padding-top: 1%;
 	 padding-bottom: 1%;
 	 margin-top: 2%;
- 	 font-family: Arial, Helvetica, sans-serif;	 font-size: 100%;
+ 	 font-family: Arial, Helvetica, sans-serif;	 
+   font-size: 100%;
 	 border-style: inset;
 	 border-color: white;
 }
@@ -190,28 +189,127 @@ body {
 }
 
 
-.home{
-  display: flex;
-  background: url("../img/home.png") no-repeat;
-    width: 60px;
-    height: 60px;
-    background-position: center;
-    background-size: cover;
-    top: 40px;
-    right: 15px;
-    position: absolute;  
-    border-radius: 50%;
+@media screen and (max-width: 600px) {
+  body{
+    display: block;
+    text-align: center;
+  }
+
+   .profile-info{
+    width: 90vw;
+    height: auto;
+    text-align: center;
+    margin: auto;
+   }
+
+  .bar-field{
+    width: 90vw;
+    display: inline-block;
+  }
+
+   .text-side{
+    width: 90vw;
+    height: auto; 
+    text-align: center;
+    margin: auto;
+    margin-top: 5%; 
+   }
+
+   .text{
+    display: inline-block;
+    width: 90vw;
+    padding: 0;
+   }
+
+   .buttonEdit{
+     height: auto;
+    width: 90vw;
+    margin: 4% auto; 
+    display: block; 
+    align-self: center;
+   }
 }
 
- .logOut {
-    display: flex;
-    background: url("../img/logout.png") no-repeat;
-    width: 55px;
-    height: 55px;
-    background-position: center;
-    background-size: cover;
-    top: 100px;
-    right: 15px;
-    position: absolute;
-    border-radius: 50%;
+
+
+.buttons-container{
+  display: grid;
+  grid-gap: 10px;
+  justify-content: end;
+  position: absolute;
+  top: 5%;
+  right: 2%;
+}
+
+.btn{
+  background-color: rgba(229, 142, 55, 0.8);
+  border-radius: 50%;
+  margin: auto;
+  border-color: transparent;
+  border-style: outset;
+}
+
+.btn:focus{
+  outline: none;
+}
+
+.btn img{
+  width: 3vw;
+  height: auto;
+}
+
+.hide{
+  display: none;
+}
+
+.pulse {
+   --color: #ef6eae;
+   --hover: #ef8f6e;
+}
+
+.pulse:hover, .pulse:focus {
+   animation: pulse 1s;
+   box-shadow: 0 0 0 2em rgba(255, 255, 255, 0);
+}
+
+ @keyframes pulse {
+   0% {
+     box-shadow: 0 0 0 0 var(--hover);
   }
+}
+
+
+
+@media screen and (max-width: 600px) {
+ 
+  .buttons-container{
+    width:40vw;
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    position: static;
+    margin: auto;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10%;
+    padding-top: 5%;
+  }
+
+  .btn img{
+    display: inline-flex;
+    width: 7vw;
+    height: auto;
+  }
+}
+
+
+@media screen and (max-width: 900px) {
+  .buttons-container{
+    right:1%;
+  }
+
+  .myBtn{
+    font-size: 10px;
+  }
+
+ }

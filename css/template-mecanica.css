@@ -1,13 +1,16 @@
+*{
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
 
 body {
-    background-image: url("../img/curslegislatie.jpg");
- font-family: Arial, Helvetica, sans-serif;
+    background-image: url("../img/curslegislatie2.png");
    background-size: cover;
   background-attachment: fixed;
   background-position: center;
+   font-family: Arial, Helvetica, sans-serif;
 
 }
-
 
 .clear{
   clear: both;
@@ -98,22 +101,22 @@ body {
 .slidemenu #slide-item-6:checked ~ .slider .bar{ margin-left: 85%; }
 
 
-
 .row {  
   display: -ms-flexbox; 
   display:flex; 
-  -ms-flex-wrap: wrap; /
+  -ms-flex-wrap: wrap; 
   flex-wrap: wrap;
 }
 
 .cuprins {
-  -ms-flex: 15%; /* IE10 */
-  flex: 15%;
+ -ms-flex: 15%; 
+ flex: 15%;
  background-color: rgba(255, 146, 14, 0.6);
-  padding: 20px;
-}
+padding: 20px;
+ }
+
 .cuprins a{
-  text-align: center;
+  text-align: right;
   color:black;
   text-decoration: none;
   padding: 0.5rem 1rem;
@@ -122,6 +125,7 @@ body {
   cursor: pointer;
 
 }
+
 
 /* Main column */
 .continut-capitol {   
@@ -181,7 +185,7 @@ body {
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
-  background-color: red;
+  background-color: #E58E37 ;
 }
 
 /* Caption text */
@@ -264,42 +268,55 @@ body {
   background-color: #555;
 }
 
-@media only screen and (max-width:800px) {
-  /* For tablets: */
-.slidemenu{
-  display: block;
-}
- .row {   
-    flex-direction: column;
-  }
-.titlu-c{
-    font-size: 12px;
-  }
-  .info-capitole{
-    font-size: 12px;
-  }
-  .galerie{
-    width: 50%;
-  }
-  .cuprins{
-    font-size: 11px
-  }
-}
-@media only screen and (max-width:500px) {
-  /* For mobile phones: */
+@media screen and (max-width: 700px) {
   .row {   
     flex-direction: column;
   }
-  .titlu-c{
-    font-size: 12px;
+
+  body{
+    margin-left: 0;
+    margin-right: 0;
   }
-  .info-capitole{
-    font-size: 12px;
-  }
-  .galerie{
-    width: 50%;
-  }
+
   .cuprins{
-    font-size: 11px
+    width: 110vw;
   }
+
+  .continut-capitol{
+    width: 110vw;
+  }
+}
+
+
+
+@media screen and (max-width: 600px) {
+  .slidemenu label{
+    width: 40vw;
+  }
+  .slidemenu label.icon {
+    float: right;
+    display: block;
+  }
+  .slider {
+    display: none;
+  }
+
+}
+
+
+@media screen (min-width: 600px) and (max-width: 1000px) {
+  
+  body{
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .cuprins{
+    width: 100vw;
+  }
+
+  .continut-capitol{
+    width: 100vw;
+  }
+
 }

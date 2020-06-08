@@ -1,177 +1,70 @@
-*
+body
 {
-	margin: 0;
-	padding: 0;
-}
-
-
-.hero
-{
-	height: 100vh;
-	width: 100%;
-	background-image: url("../img/sky3.jpg");
-	background-position: center;
-    background-size: cover;
-    position: relative;
-    overflow-x: hidden;
+	background-color: #d7cac4;
+  	background-image: url("../img/street2.png"),
+                      url("../img/mountains.png");
+  	background-size: cover;
+  	background-attachment: fixed;
+	animation: goLeft 20s linear infinite;
 }
 
 
 
-@media screen and (max-width: 750px) {
-
-
-	div.title{
- 		font-size: 30px;
-		}
-
-	div.login-form{
-		width: 200px;
-		margin-top: 40px;
-	}
-
-	div.home{
-    	width: 45px;
-    	height: 45px;
-    	right: 20px;
-  	}
-
+@keyframes goLeft {
+  100% {
+    background-position: 400vw 0px,
+                         200vw 0px,
+                         100vw 0px;
+  }
 }
 
 
-@media screen and (max-width: 1500px) {
-	div.car-animation{
-		position: fixed;
-	}
-}
-
-.highway{
-	background-position: center center;
-	height: 200px;
-	width: 5000%;
-	display: block;
-	background-image: url("../img/road2.png"); 
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	z-index: 1;
-	background-repeat: repeat-x;
-	animation: highway 2s linear infinite;
-}
-
-@keyframes highway{
-	100%{
-		transform: translateX(-800px);
-	}
-}
-
-
-.city{
-	height: 400px;
-	width: 500%;
-	background-image: url("../img/city.png");
-	position: absolute;
-	bottom: 150px;
-	left: 0;
-	right: 0;
-	display: block;
-	z-index: 1;
-	background-repeat: repeat-x;
-	animation: city 20s linear infinite;
-}
-
-@keyframes city{
-	100%{
-		transform: translateX(-1400px);
-	}
-}
-
-
-.car-animation{
-	display: flex;
-	justify-content: space-around;
-	align-content:  flex-start;
-}
 
 .car{
-	width: 300px;
-	left: 40%;
-	bottom: 100px;
-	transform: translateX(-50%);
 	position: fixed;
-	z-index: 2;
+  	right: 15%;
+  	bottom: 2%;
+  	height: 50%;
+	animation: suspension 1s linear infinite;
+	z-index: -1;
 }
 
-.car img{
-	width: 200%;
-	animation: car 1s linear infinite;
+
+@keyframes moveRight{
+	100%{
+		 background-position: 500vw 0px;
+	}
 }
 
-@keyframes car{
+
+@keyframes suspension{
 	100%{
 		transform: translateY(-1px);
 	}
-
 	50%{
 		transform: translateY(1px);
 	}
 	0%{
-		transform: translateY(-1px);
-	}
-}
-
-
-.wheel{
-	left: 50%;
-	bottom: 20%;
-	transform: translateX(-50%);
-	position: fixed;
-	z-index: 2;
-}
-
-.wheel img{
-	width: 72px;
-	height: 72px;
-	animation: wheel 1s linear infinite;
-}
-
-.back-wheel{
-	left: -220%;
-	position: fixed;
-}
-
-.front-wheel{
-	left:200%;
-	position: relative;
-}
-
-
-@keyframes wheel{
-	100%{
-		transform: rotate(360deg);
+		transform: :translateY(-1px);
 	}
 }
 
 .login-form
 {
-	width: 300px;
-	padding: 20px;
+	width: 20%;
+	overflow: hidden;
 	text-align: center;
 	background: transparent;
-	position: absolute;
-	top: 20%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	overflow: hidden;
-	z-index: 2;
+	margin: 10% auto; 
+    display: block; 
+    align-self: center;
+    z-index: 100;
 }
 
 
 .title{
-	margin-top: 100px;
 	font-family: 'Fredericka the Great', cursive;
-	color: #fff;
+	color: #1a001a;
 	font-size: 50px;
 }
 
@@ -183,8 +76,10 @@
 	text-align: center;
 	box-sizing: border-box;
     font-family: "Permanent Marker", cursive;
+    border: inset 2px #E58E37;
 }
 
+ .login-form input:focus{ outline: inset 2px #E58E37; }
 
 .txtb{
 	margin: 20px 0;
@@ -223,17 +118,93 @@
 	background: rgba(0,0,0, 0.3);
 }
 
-.home{
-	display: flex;
-	background: url("../img/home.png") no-repeat;
-    width: 60px;
-    height: 60px;
-    background-position: center;
-    background-size: cover;
-    top: 40px;
-    right: 80px;
-    position: absolute;  
-    border-radius: 50%;
-    z-index: 10;
+
+.buttons-container{
+  display: grid;
+  grid-gap: 10px;
+  justify-content: end;
+  position: absolute;
+  top: 5%;
+  right: 2%;
 }
 
+.btn{
+  background-color: rgba(229, 142, 55, 0.8);
+  border-radius: 50%;
+  margin: auto;
+  border-color: transparent;
+  border-style: outset;
+}
+
+.btn:focus{
+  outline: none;
+}
+
+.btn img{
+  width: 3vw;
+  height: auto;
+}
+
+.hide{
+  display: none;
+}
+
+.pulse {
+   --color: #ef6eae;
+   --hover: #ef8f6e;
+}
+
+.pulse:hover, .pulse:focus {
+   animation: pulse 1s;
+   box-shadow: 0 0 0 2em rgba(255, 255, 255, 0);
+}
+
+ @keyframes pulse {
+   0% {
+     box-shadow: 0 0 0 0 var(--hover);
+  }
+}
+
+
+
+@media screen and (max-width: 600px) {
+ 
+  .btn img{
+    display: inline-flex;
+    width: 8vw;
+    height: auto;
+  }
+}
+
+
+
+@media screen and (max-width: 750px) {
+
+	div.title{
+ 		font-size: 30px;
+		}
+
+	div.login-form{
+		width: 20vw;
+		margin-top: 40px;
+	}
+}
+
+
+
+
+@media screen and (max-width: 900px) {
+	div.login-form{
+			width: 40vw;
+		}
+}
+
+
+
+@media screen and (max-width: 560px) {
+.car{
+  		width: auto;
+  		height: 30%;
+  		right: 2%;
+  	}
+}

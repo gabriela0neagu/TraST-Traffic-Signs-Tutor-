@@ -13,13 +13,19 @@
 </head>
 
 <body>
+
+<div class="buttons-container">
+  <button id = "homeBtn" class = "btn pulse" type = "button"> <img src ="../img/home.png"> </button>
+  <button id = "logoutBtn" class="btn pulse" type = "button"> <img src ="../img/logout.png"> </button>
+</div>
+
 	<div class="big-title"> TraST </div>
 
 	<div class="organizer">
 
 		<div class="title"> Clasament </div>
 		    
-		<img class= "img" src="../img/rss.png">
+		<button id="rssBtn" class= "rss" type="button"> <img src="../img/rss.png"></button>
 	</div>
 
 	<div class="leaderboard-extern-box"> 
@@ -35,11 +41,6 @@
 		</table>
 
 	</div>
-
-
-<div class="home" onclick="window.location.href = '../html/Trast.html';"> </div>
-
-<div class="<?php session_start(); if(isset($_SESSION['ID'])) echo 'logOut';?>" onclick="window.location.href = '../php/logout.php';"></div>
 
 
 </body>
