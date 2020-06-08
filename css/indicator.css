@@ -1,83 +1,99 @@
+body {
+    background-image: url("../img/fundal-secundar.png");
+ font-family: Arial, Helvetica, sans-serif;
+   background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+
+}
 .clear{
-    clear: both;
+  clear: both;
 }
 .slide-toggle{
-    display: none;
+  display: none;
 }
 .slidemenu{
-    font-family: arial, sans-serif;
-    max-width: 600px;
-    margin: 50px auto;
-    overflow: hidden;
-    /* daaaaaaaaaaaaaaaa*/
+  font-family: arial, sans-serif;
+  max-width: 800px;
+  margin: 50px auto;
+  overflow: hidden;
+  /* daaaaaaaaaaaaaaaa*/
 }
 .slidemenu label{
-    width: 25%;
-    text-align: center;
-    display: block;
-    float: left;
-    color: #eee;
-    opacity: 0.5;
+  width: 15%;
+  text-align: center;
+  display: block;
+  float: left;
+  color: white;
+  opacity: 0.5;
 
 }
 .slidemenu label:hover{
-    cursor: pointer;
-    color: #eee;
+  cursor: pointer;
+  color: #E58E37;
 }
 
 .slidemenu label span{
-    display: block;
-    padding: 10px;
+  display: block;
+  padding: 10px;    
 }
 .slidemenu label span a{
-    color: #eee;
-    text-decoration:none
+   color: white;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000; 
+   text-decoration:none   
 }
 .slidemenu label .icon{
-    font-size: 20px;
-    border: solid 4px #eee;
-    text-align: center;
-    height: 50px;
-    width: 50px;
-    display: block;
-    margin: 0 auto;
-    line-height: 50px;
-    border-radius: 50%;
+  font-size: 20px;
+  border: solid 2px white;
+  text-align: center;
+  height: 50px;
+  width: 50px;
+  display: block;
+  margin: 0 auto;
+  line-height: 50px;
+  border-radius: 50%;
 }
 /*Bar Style*/
 
 .slider{
-    width: 100%;
-    height: 5px;
-    display: block;
-    background: #ccc;
-    margin-top: 30px;
-    border-radius: 5px;
+  width: 90%;
+  height: 5px;
+  display: block;
+  background: #ccc;
+  margin-top: 30px;
+  border-radius: 5px;
 }
 
 .slider .bar{
-    width: 25%;
-    height: 10px;
-    background: red;
-    border-radius: 10px;
+  width: 15%;
+  height: 10px;
+  background: #E58E37;
+  border-radius: 10px;
 }
 /*Animations*/
 .slidemenu label, .slider .bar {
-    transition: all 500ms ease-in-out;
-    -webkit-transition: all 500ms ease-in-out;
-    -moz-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
 }
 /*Toggle*/
 
 .slidemenu .slide-toggle:checked + label{
-    opacity: 1.5;
+  opacity: 1;
 }
 
 
 .slidemenu #slide-item-1:checked ~ .slider .bar{ margin-left: 0; }
-.slidemenu #slide-item-2:checked ~ .slider .bar{ margin-left: 25%; }
-.slidemenu #slide-item-3:checked ~ .slider .bar{ margin-left: 50%; }
-.slidemenu #slide-item-4:checked ~ .slider .bar{ margin-left: 75%; }
+.slidemenu #slide-item-2:checked ~ .slider .bar{ margin-left: 17%; }
+.slidemenu #slide-item-3:checked ~ .slider .bar{ margin-left: 34%; }
+.slidemenu #slide-item-4:checked ~ .slider .bar{ margin-left: 51%; }
+.slidemenu #slide-item-5:checked ~ .slider .bar{ margin-left: 68%; }
+.slidemenu #slide-item-6:checked ~ .slider .bar{ margin-left: 85%; }
+
 
 
 .row {
@@ -123,6 +139,7 @@ body{
     box-shadow: 0 5px 15px rgba(0,0,0,.5);
     display: flex;
     background: #E58E37;
+    margin-top: 3%;
     
  }
 
@@ -152,7 +169,7 @@ body{
     margin: 0;
     padding-left: 0;
     font-size: large;
-    color: #3c3c3c;
+    color: white;
     font-family: Arial, Helvetica, sans-serif;
 
  }
@@ -161,7 +178,7 @@ body{
     margin: 0;
     padding: 10px 0 0;
     text-align: justify;
-    color: #3c3c3c;
+    color: white;
     font-family: Arial, Helvetica, sans-serif;
 
 }
@@ -180,4 +197,20 @@ body{
         width: 90%;
         margin-top: 80px;
     }
+}
+@media screen and (max-width: 600px) {
+  .slidemenu label{
+    width: 40vw;
+  }
+  .slidemenu label.icon {
+    float: right;
+    display: block;
+  }
+  .slider {
+    display: none;
+  }
+  .box{margin-top:40%;}
+   body{
+    margin-right: 0;  
+  }
 }

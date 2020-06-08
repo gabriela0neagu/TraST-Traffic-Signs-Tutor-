@@ -9,7 +9,7 @@ $database = new CreateDb( "tw", "indicatoare_si_marcaje");
 
 ?>
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -64,6 +64,7 @@ $database = new CreateDb( "tw", "indicatoare_si_marcaje");
         ?>
     </div>
 
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
 </body>
 </html>
