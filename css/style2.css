@@ -227,3 +227,19 @@ flex-wrap: wrap;
 
 
 
+@media screen and (max-width: 600px) {
+  .slidemenu label{
+    width: 40vw;
+  }
+  .slidemenu label.icon {
+    float: right;
+    display: block;
+  }
+  .slider {
+    display: none;
+  }
+
+   body{
+    margin-right: 0;  
+  }
+}

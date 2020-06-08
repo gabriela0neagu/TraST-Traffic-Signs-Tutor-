@@ -1,8 +1,6 @@
 <?php
-
-
-class CreateDbcategorii
-{
+ class CreateDbcategorii
+ {
     public $servername;
     public $username;
     public $password;
@@ -78,4 +76,5 @@ class CreateDbcategorii
             return $result;
         }
     }
-}
+ }
+?>
