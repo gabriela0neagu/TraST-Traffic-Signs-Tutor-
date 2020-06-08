@@ -76,7 +76,7 @@ body {
     0px 0px 0 #000; 
 	margin-top: 2%;
 	margin-bottom: 8%;
- 	font-family:'Fredericka the Great', cursive;
+ 	 font-family: Arial, Helvetica, sans-serif;
     font-size: 50px;
 	color: white;
 	text-align: center;
@@ -220,7 +220,7 @@ body {
 	width: 100%;
 	left: 2%;
 	height: auto;
-	font-family: "Permanent", cursive;
+	 font-family: Arial, Helvetica, sans-serif;
 	color: white;
 	font-size: 20px;
 }
@@ -247,7 +247,7 @@ body {
 	height: auto;
 	border-radius: 100px;
 	text-align: center;
-	font-family: "Permanent", cursive;
+	 font-family: Arial, Helvetica, sans-serif;
 	font: 20px;
 }
 

@@ -63,7 +63,7 @@ body
 
 
 .title{
-	font-family: 'Fredericka the Great', cursive;
+	 font-family: Arial, Helvetica, sans-serif;
 	color: #1a001a;
 	font-size: 50px;
 }
@@ -75,7 +75,7 @@ body
 	height: 44px;
 	text-align: center;
 	box-sizing: border-box;
-    font-family: "Permanent Marker", cursive;
+     font-family: Arial, Helvetica, sans-serif;
     border: inset 2px #E58E37;
 }
 
@@ -111,7 +111,7 @@ body
 	transition: 0.8s;
 	display: block;
 	color: #000;
-	font-family: "Permanent Marker", cursive;
+	 font-family: Arial, Helvetica, sans-serif;
 }
 
 .login-form a:hover{

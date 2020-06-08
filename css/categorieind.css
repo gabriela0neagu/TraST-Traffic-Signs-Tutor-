@@ -33,7 +33,7 @@ body{
     background: #ffb156;
     padding: 30px;
     font-size: 12px;
-    font-family: 'Roboto', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     margin: 3px;
     max-width: 30%;
@@ -47,7 +47,7 @@ body{
     border-style: groove;
     width: 100%;
     background-color: rgb(32,32,32,0.2);
-    font-family: "Permanent Marker", cursive;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     padding-top: 2%;
     padding-bottom: 2%;
@@ -65,14 +65,14 @@ body{
     text-indent: 30px;
     text-align: justify;
     letter-spacing: 3px;
-    font-family: "Permanent Marker", cursive;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
 }
 .descriere{
     text-indent: 30px;
     text-align: justify;
     letter-spacing: 3px;
-    font-family: "Permanent Marker", cursive;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
     margin: auto;
 }

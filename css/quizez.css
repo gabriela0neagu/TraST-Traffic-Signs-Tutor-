@@ -36,7 +36,7 @@ body {
   display: none;
 }
 .slidemenu{
-  font-family: arial, sans-serif;
+   font-family: Arial, Helvetica, sans-serif;
   max-width: 800px;
   margin: 50px auto;
   overflow: hidden;
@@ -134,7 +134,7 @@ body {
 	border-style: groove;
 	width: 100%;
 	background-color: rgb(32,32,32,0.3);
-	font-family: "Permanent Marker", cursive;
+	 font-family: Arial, Helvetica, sans-serif;
 	font-size: 20px;
 	padding-top: 2%;
 	padding-bottom: 2%;
@@ -152,7 +152,7 @@ body {
 	margin-left: 2%;
 	margin-top: 5%;
 	margin-bottom: 5%;
-	font-family: "Permanent", cursive;
+	 font-family: Arial, Helvetica, sans-serif;
 	color: white;
 	font-size: 20px;
 	width: 30%;
@@ -184,7 +184,7 @@ body {
 	position: relative;
 	border-color: white;
 	border-radius: 10px;
-	font-family: "Permanent", cursive;
+	 font-family: Arial, Helvetica, sans-serif;
 	color: white;
   background-color: #E58E37;
   background-position: center;
@@ -203,7 +203,7 @@ body {
 	flex-wrap: wrap;
 	align-items: center;
 	height: auto;
-	font-family: "Permanent", cursive;
+	 font-family: Arial, Helvetica, sans-serif;
 	color: white;
 	font-size: 20px;
 	border-color: black;
