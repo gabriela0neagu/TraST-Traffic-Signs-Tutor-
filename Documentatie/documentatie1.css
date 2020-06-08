@@ -2,7 +2,7 @@ body {
     max-width: 21cm;
     margin: auto;
     line-height: 1.6;
-    font-weight: 300;
+    font-weight: 400;
     font-family: Roboto,sans-serif;
 }
 
@@ -25,6 +25,17 @@ a {
     background-color: transparent;
     list-style: none;
 }
+.box{
+    position: relative;
+  font-family: Arial;
+}
+.text{position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: orange;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;}
 
 .mobile-image {
     width: 30%;
