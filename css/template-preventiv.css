@@ -1,7 +1,6 @@
 *{
   box-sizing: border-box;
-  font-family: 'Lato', sans-serif;
-}
+ }
 
 body {
     background-image: url("../img/curslegislatie2.png");
@@ -19,7 +18,7 @@ body {
   display: none;
 }
 .slidemenu{
-  font-family: arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   max-width: 800px;
   margin: 50px auto;
   overflow: hidden;
