@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+        <title>Documentatie TraST</title>
+        <link rel="stylesheet" href="../css/documentatie.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    </head>
+    <body prefix="schema: http://schema.org">
+        <header>
+            <h1>Documentatie TraST</h1>
+        </header>
+        <div role="contentinfo">
+            <ol role="directory">
+                <li> <a href="#abstract"><span>1.</span> Abstract</a></li>
+                <li> <a href="#introducere"><span>2.</span> Introducere</a></li>
+                <ol role="directory">
+                        
+                        <li> <a href="#cerinte-proiect"><span>2.1</span> Cerinta proiect</a></li>
+                        <li> <a href="#structura-proiect"><span>2.2</span> Structura proiect</a></li>
+                        <li> <a href="#organizare-proiect"><span>2.3</span> Organizare proiect</a></li>
+                        <ol role="directory">
+                        
+                        <li> <a href="#interfata-proiect"><span>2.3.1</span> Interfata proiect</a></li>
+                        <li> <a href="#tehnologii"><span>2.3.2</span> Tehnologii utilizate</a></li>
+                        <li> <a href="#functionalitati"><span>2.3.3</span> Functionalitati</a></li>
+                       
+                    </ol>
+                       
+                    </ol>
+                <li> <a href="#utilizare"><span>3.</span> Utilizarea paginii</a></li>
+                <li> <a href="#audienta"><span>4.</span> Audienta</a></li>    
+            </ul>
+        </div>
+        <section typeof="sa:Abstract" id="abstract" role="doc-abstract">
+            <h2><span>1.</span> Abstract</h2>
+            <p>
+                In acest document vom vorbi despre etapele de dezvoltare a arhitecturii proiectului, contextul de utilizare, modele de
+                design pentru interfata, audienta principala si interactiunea oferita utilizatorului de catre aplicatia noastra Web, TraST (Traffic Signs Tutor).
+            </p>
+        </section>
+        <section id="introducere" role="doc-introduction">
+            <h2><span>2.</span> Introducere</h2>
+            <ul>
+                <section id="cerinte-proiect" >
+                <span><h3>2.1 Cerinta proiectului</h3></span>
+            <p>Cerinta proiectului pe care l-am realizat este dezvoltarea unei aplicatii Web ce ofera suport pentru invatarea semnelor rutiere si a regulilor de circulatie din Romania. Pagina pune la dispozitia utilizatorilor  pentru fiecare categorie de semne , informatii privind semnificatia , tipul,regulamentele in vigoare, relatii cu alte semne de interes, contextul de utilizare, cat si sugestii privind comportamentul soferului/pietonului. </p>
+        </section>
+        <section id="structura-proiect" >
+             <span><h3>2.2 Structura proiectului</h3></span>
+            <p>
+                TraST isi propune sa vina in ajutorul persoanelor ce doresc sa obtina permisul de conducere si sa stapaneasca teoria si legislatia in totalitate. Aceasta pune la dispozitia utilizatorului tot ce este nevoie pentru a promova examenul teorectic .
+            </p>
+            <p>
+                De asemenea sistemul monitorizeaza progresul inregistrat de catre fiecare utilizator in procesul de invatare si genereaza un clasament al celor mai sarguinciosi utilizatori, disponibil sub forma de flux de date RSS.
+            </p>
+            <p>
+                Aplicatia este structurata astfel incat urmand 3 pasi simpli utilizatorul va avea succes garantat!
+             </p>
+             <p>
+                In "Pasul 1 Legislatie si teorie" se regaseste intreaga teorie pentru legislatie impartita in 4 cursuri: Mecanica, Prim - ajutor, Conducere ecologica si Conduita preventiva.
+            </p>
+            In "Pasul 2 Indicatoare si marcaje" se regasesc explicate toate indicatoarele, semnele de circulatie, marcajele rutiere nationale si internationale pentru soferii incepatori .
+            <p>
+                </p>
+            In "Pasul 3 Chestionare DRPCIV" se regasesc o varietate larga de intrebari de la examenul oficial DRPCIV pentru categorii A, B, C, D, E, cu raspunsuri verificate de profesionisti si actualizate periodic in conformitate cu legislatia in vigoare .</p>
+        </section>
+            <section id="organizare-proiect" >
+            <span><h3>2.3 Organizarea proiectului</h3></span>
+            <section id="interfata-proiect" >
+            <span><h4>2.3.1 Interfata proiectului </h4></span>
+            <p>In urma discutiei realizate de catre membrii echipei s-a stabilit adoptarea unui design minimalist in cadrul paginii principale cu scopul de a evidentia  elementele cheie: titlul, meniul si butoanele de navigare. In ceea ce priveste paginile secundare, precum Legislatie,Indicatoare si marcaje, Chestionare si Profil etc. s-a urmarit organizarea informatiei intr-un mod cat mai compact, dar atractiv pentru utilizator, acoperind in totalitate normele legislative aflate in vigoare.</p>
+            <p>Laitmotivul paginii este redat prin folsirea unei nuante de portocaliu (#E58E37), iar din punct de vedere vizual TraST se remarca prin:<br>
+                <br>
+              <b>Font:</b>
+               <li> Titlul:'Faster One' face parte din gama Googleapis si a fost selectat dintre numeroasele fonturi existente pentru ca se imbina cu viziunea noastra  in ceea ce priveste ideea de miscare, rapiditate/viteza, completand conceptul de automotive</li>
+               <img src="titlu.png">
+               <li>
+                   Continut pagini: 'Arial, Helvetica', un font clasic care nu incarca vizual si care potriveste cu designul nostru minimalist
+                   <img src="scris.png">
+               </li>
+               <li> Butoane:'Arial, Helvetica', am abordat acelasi font folosit la continutul paginilor pentru a oferi unitate</li><br>
+
+             <b>Animatie</b>
+            <p> <li>Titlu: "reveal si flow" pentru a oferi dinamism paginii si pentru a amplifica efectul de miscare  </li>
+             <li>Autentificare si Logare: "parallax background effect" acesta realizeaza miscarea fundalului, pentru o interfata mai prietenoasa</li>
+             <li>Butoane: "pulse"  pentru a inbunatati experienta userului in aplicatie; efectele de hover ce realizeaza miscarea cardurilor</li><br>
+                <b>Background</b>
+                <p>S-a urmarit crearea unui traseu prin aplicatie , fiecare pagina avand in copozitia sa imagine ce infatiseaza o strada.</p></p>
+                 <img src="fundal-secundar.png">
+             </section>
+                 <section id="tehnologii" >
+         <span><h4>2.3.2 Tehnologii utilizate </h4></span>
+         <p>Partea de client a fost marcata in HTML5, codul fiind insotit de foi de stiluri CSS.In continuare am adoptat principiul responsive al design-ului web pentru a oferi utilizatorilor de pe orice device o experient placuta. De asemenea pe partea de backend s-a folosit Ajax pentru schimbul de date cu serverul prin intermediul requesturilor XMLHttp. Partea de server este acoperita de aplicatia Xampp, care ne-a pus la dispozitie Apache si MySQL.</p>
+         <p>Aplicatia utilizeaza pentru stocare si management baza de date MySQL. In aceasta se regasesc date priviind utilizatori autentificati si detalii despre progresul inregitrat. In aceiasi maniera s-a folosit baza de date pentru generarea eficienta, pe baza unui template a cursurilor de legislatie, marcaje, indicatoare, cat si pentru generarea chestionarelor.</p>
+         <p>Toate tranzactiile din si catre baza de date au fost realizate prin intermediul PHP, cum ar fi inserarea de noi utilizatori , updatarea intrebarilor din chestionare, administrarea drepturilor de admin etc.</p>
+         <p> Pentru generarea dinamica a profilului fiecarui utilizator si a clasamentului, s-au generat secvente de cod HTML din JavaScript, iar in cazul celei din urma este posibila exportarea ca flux de date RSS conform bazei de date.</p>
+     </section>
+         <section id="functionalitati" >
+           <span><h4>2.3.3 Functionalitati </h4></span>
+            <p>Am realizat functionalitatile pentru utilizator:<br>
+            <li>Logare</li><br>
+             <li>Inregistrare</li><br>
+             <li>Delogare</li><br>
+             <li>Rezolvarea de chestionare</li><br>
+             <li>Parcurgerea cursurilor de legislatie si a informatiilor despre marcaje si indicatoare</li><br>
+            <li> Vizualizarea clasamentului</li><br>
+            </p>
+            <p>Am realizat functionalitatile pentru administrator, care pe langa actiunile expuse in cadrul de mai sus, are urmatoarele posibilitati:<br>
+             <li>Anuleaza/Ofera drepturi de administrator utilizatorilor</li><br>
+              <li>Sterge conturile utilizatorilor neforiti</li><br>
+              <li>Insereaza/Sterge/Modifica intrebarile din chestionare</li><br>
+            </p>
+        </section>
+            <!----------------poza butoane admin-------------------------------------------->
+</section>
+        <section id="utilizare">
+            <h2><span>3.</span> Utilizarea paginii</h2>
+                Acestea reprezinta indicii despre modul in care trebuie utilizat un obiect, furnizat in mod obisnuit de obiectul insusi sau de contextul sau. De exemplu, chiar daca nu ati vazut niciodata o cana de cafea, utilizarea ei este desul de naturala. Manerul este format pentru a prinde usor, iar vasul are o deschidere mare in partea superioara, cu un put gol in interior.
+            </p>
+            <p>
+                Aplicatia TraSt este una destul de predictiva pentru un utilizator care a interactionat si cu alte aplicatii software. Initial un utilizator nelogat are acces la pagina principala si la restul resurselor, singurul deficient fiind faptul ca nu-i este inregistrat progresul.<br></p>
+
+                <p>Utilizarea aplicatiei la capacitate maxima este creare unui cont de utilizator sau logarea in cazul in care utilizatorul are deja un cont.</p>
+                    <p> Existenta unor hinturi incadrul formularelor de Autentificare, respectiv Logare il poate ajuta pe utilizator in situati in care est confuz despre cum ar trebui sa completeze. Tot aici se gaseste  functia de validare care il ajuta pe utilizator sa inteleaga cum ar trebui sa completeze anumite campuri pentru a finaliza
+                    cu succes introducerea anumitor date. In imaginea de mai jos se poate vedea ca in momentul in care un utilizator doreste sa
+                    isi creeze un cont i se specifica in ce format ar trebui sa fie <b>emailul </b>.    
+                </p> </p>
+                <!--poza login signup-->
+                Pentru un proces de invatare eficient recomandam respectarea pasilor ce sunt enumerati in pagina de profil. Astfel utilizatorul este invitat initial sa parcurga cursurile dedicate Legilatiei Rutiere, ca mai apoi sa vizualizeze seria de marcaje si indicatoare puse la dizpozitie.<br></p>
+               <p> Acesta poate verifica in pagina profilului ce procent a reusit sa acopere din informatiile disponibile in functie de ramura abordata.<br></p>
+                <p>Pentru a verifica cunostiintel dobanite pe parcurs va apela la rezolvarea chestionarelor cu intrebari in conformitate cu cele aprobate de DRPCIV in functie de categoria selectata.Aplicatia vine in ajutorul utilizatorului cu o pagina descriptiva unde se gasesc informatii despre fiecare categorie. Tot in acest cadru, scorul total afisat pe profil este calculat in functie de primul rezultat obtinut in urma efectuarii unui chestionar, insa utilizatorul are dreptul de a realiza de un numar nedefinit acelasi chestionar.<br></p>
+                <p>De asemena pagina de profil permite vizualizarea rezultatelor obtinute la fiecare chestionar rezolvat integral, insotit de unul dintre cele doua calificative Admis/Respins.
+<!-- diagrama use case ------ poze -------------------------->
+            </p>
+        </section>
+            
+              <section id="audienta">
+            <h2><span>4.</span> Audienta</h2>
+            <p>
+                TraSt este o aplicatie ce se adreseaza unui public larg. Nu existe limită maximă de vârstă pentru deținerea unui permis de conducere. Acesta rămâne valabil atâta timp cât, din punct de vedere medical, sunteți apt să conduceți, dar trebuie să îndepliniți următoarele cerințe cu privire la vârsta minimă: 
+                <ul>
+                    <li>16 ani <ul><li>Mopede, categoria AM</li>
+                        <li>Motociclete ușoare, categoria A1</li>
+                        <li>Cvadricicluri, categoria B1</li>
+                        </ul>
+                    </li>
+                    <li>18 ani <ul><li>Motociclete standard, categoria A2 - În general, pentru a obține un permis categoria A2, trebuie să fi condus cel puțin 2 ani o motocicletă din categoria A1. Altfel, puteți obține direct permisul în momentul în care împliniți o vârstă minimă superioară, de regulă 24 de ani.</li>
+                        <li>Mașini, categoria B, BE</li>
+                        <li>Vehicule de mărime medie, categoria C1, C1E</li>
+                        </ul>
+                    </li>
+                    <li>20 ani <ul><li>Motociclete grele, categoria A - În general, pentru a obține un permis categoria A, aveți nevoie de cel puțin 2 ani de experiență la categoria A2. Altfel, puteți obține direct permisul în momentul în care împliniți o vârstă minimă superioară, de regulă 24 de ani.</li>
+                        </ul>
+                    </li>
+                    <li>21 ani <ul><li>Vehicule mari, categoria C, CE</li>
+                        <li>Microbuze, categoria D1, D1E</li>
+                        </ul>
+                    </li>
+                    <li>24 ani<ul> <li> Autobuze, categoria D, DE</li></ul></li>
+                </ul>
+            </p>
+            <p>
+                Criterii medicale minime <br>
+Înainte de a vă elibera permisul de conducere, autoritățile trebuie să verifice dacă, din punct de vedere medical, sunteți apt să conduceți. De asemenea, ar putea fi nevoie să efectuați un control medical ori de câte ori vă reînnoiți permisul de conducere sau după ce împliniți o anumită vârstă. În cazul șoferilor de camion sau de autobuz, controalele medicale se efectuează o dată la 5 ani.
+            </p>
+        </section>
+
+        
+    </body>
+</html>
