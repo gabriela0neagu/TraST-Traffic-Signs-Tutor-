@@ -7,9 +7,9 @@
 }
 
 body {
-      background-image: url("../img/curslegislatie2.png");
- font-family: Arial, Helvetica, sans-serif;
-   background-size: cover;
+  background-image: url("../img/curslegislatie2.png");
+  font-family: Arial, Helvetica, sans-serif;
+  background-size: cover;
   background-attachment: fixed;
   background-position: center;
 
@@ -27,8 +27,8 @@ body {
   max-width: 800px;
   margin: 50px auto;
   overflow: hidden;
-  /* daaaaaaaaaaaaaaaa*/
 }
+
 .slidemenu label{
   width: 15%;
   text-align: center;
@@ -217,22 +217,30 @@ body {
 }
 
 
-@media screen and (min-width: 640px) and (max-width: 1030px) {
+@media screen and (min-width: 640px) and (max-width: 1000px) {
 
   .wrapper{
   display: flex;
-  flex-flow: column;
-  }
+  flex:auto;
+ }
 
   .card{
     width: 40vw;
-    height: auto;
+    height: 40vh;
     margin-top: 2%;
     margin-bottom: 30%;
   }
 }
 
+@media screen and (min-width: 1000px) and (max-width: 1030px){
 
+  .card{
+    width: 30vw;
+    height: 30vh;
+    margin-top: 2%;
+    margin-bottom: 30%;
+  }
+} 
 
 
 @media screen and (max-width: 600px) {
